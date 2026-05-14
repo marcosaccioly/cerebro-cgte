@@ -4,11 +4,11 @@ O cérebro institucional da Coordenadoria do Cefor / Ifes (CGTE). 10 servidores,
 
 As pastas SÃO o sistema. Nada para rodar. Nada para fazer deploy. Sem mensalidade.
 
-## Para quem e
+## Para quem é
 
 - **Marquito (gestor)** -- registra demandas, distribui trabalho, aprova HITL nos gates do Kanboard. Acompanha tudo via cases + git.
 - **Servidores da CGTE** -- (V1.X em diante) cada um ativa seu especialista quando entra. Onboarding de ~3h.
-- **AI agente (Claude Code)** -- le `CLAUDE.md` na entrada e roteia pela hierarquia de camadas.
+- **AI agente (Claude Code)** -- lê `CLAUDE.md` na entrada e roteia pela hierarquia de camadas.
 
 ## Versão atual: V0
 
@@ -17,7 +17,7 @@ V0 entrega o mínimo viável:
 - **2 especialistas ativos:** `00_orchestrator/` (roteia) e `01_gestor/` (decide / aprova).
 - **7 esqueletos:** `02_educacao/` a `08_ciencia/`. Cada um vira ativo quando o servidor da área sentar com Marquito ~3h.
 - **Bridge Kanboard** -- TypeScript que fala JSON-RPC com `board.cefor.ifes.edu.br`. 4 operações essenciais. HITL obrigatório.
-- **Bridge GitLab** -- envelopa `git push` / `git pull` com HITL em arquivos sensiveis.
+- **Bridge GitLab** -- envelopa `git push` / `git pull` com HITL em arquivos sensíveis.
 - **Case de validação** -- `cases/CASE-2026-0001-validacao-v0/` mostra a equipe como uma demanda real percorre os agentes.
 
 ## Os 3 fluxos da V0
@@ -49,17 +49,17 @@ Todos os três fluxos terminam num card aprovado no board 47, com handoffs YAML 
 Pre-requisitos: `bun`, `git`, `claude-code`, acesso a rede do Ifes (para `board.cefor.ifes.edu.br`).
 
 1. Clone o repo.
-2. Rode `setup` no Claude Code. O agente le `setup/questionnaire.md` e pergunta as configurações faltantes (credenciais Kanboard, voz, etc.).
+2. Rode `setup` no Claude Code. O agente lê `setup/questionnaire.md` e pergunta as configurações faltantes (credenciais Kanboard, voz, etc.).
 3. Copie `.env.example` para `.env` e preencha credenciais. Não commitar.
 4. Sente com o agente para a sessão de voz CGTE + Marquito (~1h). Sem isso, qualquer chain que escreva em nome da CGTE fica bloqueada.
 5. Rode `status` para confirmar o estado V0.
 
-## O que NÃO e
+## O que NÃO é
 
-- **Não e CRM** -- sem banco de contatos, sem pipeline visual, sem integrações pagas.
-- **Não e SaaS** -- nada para logar, nada para manter, sem mensalidade.
-- **Não e substituto do Kanboard** -- o Kanboard institucional permanece a verdade oficial. O workspace orquestra a escrita no board, nunca paralelo.
-- **Não e autopilot** -- toda escrita no board e toda comunicação em nome da CGTE passa por HITL.
+- **Não é CRM** -- sem banco de contatos, sem pipeline visual, sem integrações pagas.
+- **Não é SaaS** -- nada para logar, nada para manter, sem mensalidade.
+- **Não é substituto do Kanboard** -- o Kanboard institucional permanece a verdade oficial. O workspace orquestra a escrita no board, nunca paralelo.
+- **Não é autopilot** -- toda escrita no board e toda comunicação em nome da CGTE passa por HITL.
 
 ## Mapa do repo
 
@@ -72,7 +72,7 @@ cerebro-cgte/
 |-- .gitignore
 |-- setup/questionnaire.md          (onboarding)
 |-- _config/
-|   |-- HANDOFF_SCHEMA.md           (envelope YAML canonico)
+|   |-- HANDOFF_SCHEMA.md           (envelope YAML canônico)
 |   |-- workflow-chains.yaml        (chains V0 + previsão V1+)
 |   |-- business-rules.md           (HITL, gates, escopo)
 |   |-- quality-standards.md        (bar de qualidade por especialista)
@@ -91,7 +91,7 @@ cerebro-cgte/
 |-- _bridges/                       (infra, não especialista)
 |   |-- kanboard/
 |   `-- gitlab/
-|-- cases/                          (cada demanda real e um case)
+|-- cases/                          (cada demanda real é um case)
 |   `-- CASE-2026-0001-validacao-v0/
 `-- ops/
     `-- friday-review.md
@@ -119,17 +119,17 @@ Kanboard board 47
    `  card criado, coluna "Início autorizado"
 ```
 
-Todo arrow e um arquivo YAML em `cases/.../handoffs/`. Abra os arquivos. O trabalho e o artefato; o artefato e o trabalho.
+Todo arrow é um arquivo YAML em `cases/.../handoffs/`. Abra os arquivos. O trabalho é o artefato; o artefato é o trabalho.
 
 ## Caminho de V0 para V1.X
 
 Cada servidor que entra ativa um especialista:
 
-1. Servidor le `ops/new-hire-day-one.md` (criar em V1.X) antes de sentar com Marquito.
+1. Servidor lê `ops/new-hire-day-one.md` (criar em V1.X) antes de sentar com Marquito.
 2. Sessão de ~3h: preenche `identity.md`, `rules.md`, `examples.md`, `handoff.md` da pasta dele.
 3. Atualiza `_config/workflow-chains.yaml` com a chain que termina no novo especialista.
-4. Válida em uma demanda real, gestor olhando junto.
-5. A partir dai, `00_orchestrator/` passa a rotear demandas daquela área direto para o novo especialista (sem passar pelo gestor primeiro).
+4. Valida em uma demanda real, gestor olhando junto.
+5. A partir daí, `00_orchestrator/` passa a rotear demandas daquela área direto para o novo especialista (sem passar pelo gestor primeiro).
 
 ## Origem
 

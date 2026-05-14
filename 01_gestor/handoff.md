@@ -9,13 +9,13 @@ Um handoff de `00_orchestrator/` (em V0, sempre). O envelope traz:
 - `payload.routing_rationale:` o 3-line plan do orchestrator (situação / especialista / por que). Leia primeiro.
 - Um dos três payloads V0:
   - `tarefa_propria` -- gestor mesmo vai executar
-  - `tarefa_distribuir` -- precisa de alguem da equipe; pode vir com `responsavel: a_decidir`
+  - `tarefa_distribuir` -- precisa de alguém da equipe; pode vir com `responsavel: a_decidir`
   - `demanda_extraordinaria` -- categoria não mapeada, gestor decide o caminho
 
 Em V1+, além do orchestrator, eu posso receber:
 
 - Handoff de especialista ativo pedindo aprovação em gate institucional (ex: especialista terminou e quer mover card para "Em aprovação").
-- Handoff de `_bridges/gitlab/` sobre merge sensivel que pede HITL.
+- Handoff de `_bridges/gitlab/` sobre merge sensível que pede HITL.
 
 ## O que eu produzo
 
@@ -63,7 +63,7 @@ payload:
 
 ## Mapa de chain
 
-Em V0, eu apareco em todas as três chains como passo do meio:
+Em V0, eu apareço em todas as três chains como passo do meio:
 
 - `anotar_tarefa_propria`: `00_orchestrator -> 01_gestor -> _bridges/kanboard`
 - `distribuir_tarefa`: `00_orchestrator -> 01_gestor -> _bridges/kanboard`
@@ -79,7 +79,7 @@ Em V1+, novas chains aparecem com saídas para especialistas ativos, mas eu cont
 handoff_id: HO-001
 from_role: 00_orchestrator
 to_role: 01_gestor
-ask: "Criar card no projeto 47 para slides do MOOC X com Marquito como responsavel."
+ask: "Criar card no projeto 47 para slides do MOOC X com Marquito como responsável."
 payload:
   routing_rationale: { ... }
   tarefa_propria: { ... }

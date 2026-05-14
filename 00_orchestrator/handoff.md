@@ -4,14 +4,14 @@ O contrato do orchestrator. O que entra, o que sai, para onde vai depois.
 
 ## O que eu recebo
 
-O orchestrator e a **porta de entrada**. Eu não recebo handoffs de outros especialistas no fluxo normal. O que eu recebo e **input bruto de fora do sistema**:
+O orchestrator é a **porta de entrada**. Eu não recebo handoffs de outros especialistas no fluxo normal. O que eu recebo é **input bruto de fora do sistema**:
 
 - Um email encaminhado para `00_orchestrator/inbox/`
 - Uma nota de uma reunião da coordenação (Marquito ou outro servidor escreve em texto e deposita em `inbox/`)
 - Um pedido de chefia ou parceiro chegando por canal informal (Telegram, conversa de corredor) e transformado em texto para o inbox
 - Uma notificação do Kanboard institucional avisando que um card chegou para a coordenação decidir (raro mas possível)
 
-Esses inputs não chegam estruturados. Chegam na forma natural. **Meu trabalho e converter para um envelope de handoff.**
+Esses inputs não chegam estruturados. Chegam na forma natural. **Meu trabalho é converter para um envelope de handoff.**
 
 ## O que eu produzo
 
@@ -22,20 +22,20 @@ Um envelope de handoff conforme `_config/HANDOFF_SCHEMA.md`, com:
 - `payload.routing_rationale:` sempre presente, contendo o 3-line plan (situação / especialista / por que) -- ver `rules.md`
 - Um dos três payloads V0:
   - `tarefa_propria` -- gestor mesmo vai executar
-  - `tarefa_distribuir` -- precisa ir para alguem da equipe (responsavel pode ser `a_decidir` se não for obvio)
+  - `tarefa_distribuir` -- precisa ir para alguém da equipe (responsável pode ser `a_decidir` se não for óbvio)
   - `demanda_extraordinaria` -- não casa com nenhuma categoria ativa
 
 Eu também crio a pasta do case se for tema novo: `cases/CASE-YYYY-NNNN-shortslug/case.md` com status de 1 linha, mais `handoffs/HO-001.yaml` (este handoff).
 
 ## Mapa de chain
 
-Eu apareco em `_config/workflow-chains.yaml` como ponto de entrada das três chains V0:
+Eu apareço em `_config/workflow-chains.yaml` como ponto de entrada das três chains V0:
 
 - `anotar_tarefa_propria` -> roteia para `01_gestor`
 - `distribuir_tarefa` -> roteia para `01_gestor`
 - `demanda_extraordinaria` -> roteia para `01_gestor`
 
-Em V1+, com especialistas ativos, novas chains entram, e algumas das minhas saídas vao direto para a área sem passar pelo gestor primeiro. Mas isso e V1+; em V0, todas as três terminam em `01_gestor/`.
+Em V1+, com especialistas ativos, novas chains entram, e algumas das minhas saídas vão direto para a área sem passar pelo gestor primeiro. Mas isso é V1+; em V0, todas as três terminam em `01_gestor/`.
 
 ## Formato de entrada (ilustrativo)
 

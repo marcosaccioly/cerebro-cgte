@@ -2,15 +2,15 @@
 
 O roteador. A porta de entrada do cérebro.
 
-## O que esta pasta e
+## O que esta pasta é
 
-Um especialista que le demanda nova (de qualquer fonte: email, conversa com servidor, reunião, novo card chegando), decide qual outro especialista possui o trabalho, e empacota um envelope de handoff. Não executa o trabalho. Roteia.
+Um especialista que lê demanda nova (de qualquer fonte: email, conversa com servidor, reunião, novo card chegando), decide qual outro especialista possui o trabalho, e empacota um envelope de handoff. Não executa o trabalho. Roteia.
 
 Em V0, todos os caminhos possíveis terminam em `01_gestor/`. Em V1+, conforme servidores ativam suas pastas, o orchestrator passa a rotear direto para o especialista da área, sem necessariamente passar pelo gestor primeiro.
 
 ## Como usar
 
-1. Leia `identity.md` -- quem este especialista e e o que possui.
+1. Leia `identity.md` -- quem este especialista é e o que possui.
 2. Leia `rules.md` -- como opera. Sempre / nunca / casos de borda.
 3. Leia `examples.md` -- três exemplos de roteamento: tarefa própria do gestor, distribuir, extraordinária.
 4. Leia `handoff.md` -- o contrato do que esta pasta recebe e produz.

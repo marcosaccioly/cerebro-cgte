@@ -17,7 +17,7 @@ Eu mesmo vou fazer. Sem dependencia de outro servidor."
 ```
 Situação: Marquito mesmo vai preparar slides do MOOC X, prazo 2026-05-23.
 Especialista: 01_gestor
-Por que: E trabalho do próprio gestor, casa com chain anotar_tarefa_propria. Categoria MOOC do board 47.
+Por que: É trabalho do próprio gestor, casa com chain anotar_tarefa_propria. Categoria MOOC do board 47.
 ```
 
 **Handoff produzido:**
@@ -29,7 +29,7 @@ to_role: 01_gestor
 agent_owner: marquito
 created_at: 2026-05-14
 status: open
-ask: "Criar card no projeto 47 para slides do MOOC X com Marquito como responsavel."
+ask: "Criar card no projeto 47 para slides do MOOC X com Marquito como responsável."
 payload:
   routing_rationale:
     situacao: "Marquito mesmo vai preparar slides do MOOC X, prazo 2026-05-23."
@@ -39,7 +39,7 @@ payload:
     titulo: "Preparar slides do MOOC X"
     categoria_board_47: "MOOC"
     prazo: 2026-05-23
-    descricao: "Slides para o módulo de abertura do MOOC X. Material de referência disponivel em pasta institucional."
+    descricao: "Slides para o módulo de abertura do MOOC X. Material de referência disponível em pasta institucional."
     link_origem: "reunião://coordenacao-2026-05-14"
 ```
 
@@ -58,7 +58,7 @@ para o site do Ifes. Prazo: até quinta, 22/05. Quem da CGTE pode fazer?"
 ```
 Situação: Reitoria pediu notícia institucional sobre Programa Y, prazo 2026-05-22.
 Especialista: 01_gestor
-Por que: Demanda externa precisa ser distribuida (eixo Comunicação -> Conteúdo Digital). Em V0, gestor decide responsavel. Em V1+, iria direto para 04_comunicacao.
+Por que: Demanda externa precisa ser distribuída (eixo Comunicação -> Conteúdo Digital). Em V0, gestor decide responsável. Em V1+, iria direto para 04_comunicacao.
 ```
 
 **Handoff produzido:**
@@ -70,7 +70,7 @@ to_role: 01_gestor
 agent_owner: marquito
 created_at: 2026-05-14
 status: open
-ask: "Distribuir notícia sobre Programa Y; precisa de responsavel da área de Comunicação."
+ask: "Distribuir notícia sobre Programa Y; precisa de responsável da área de Comunicação."
 payload:
   routing_rationale:
     situacao: "Reitoria pediu notícia institucional sobre Programa Y, prazo 22/05."
@@ -94,7 +94,7 @@ payload:
 ```
 Mensagem de servidor da Pro-Reitoria de Pesquisa, 14/05:
 "Voces podem ajudar a montar um piloto de uso de IA para revisão de textos
-acadêmicos dos servidores? Não e curso, não e produção audiovisual. E um
+acadêmicos dos servidores? Não é curso, não é produção audiovisual. É um
 experimento controlado com 5-10 pessoas durante 2 meses, com métricas."
 ```
 
@@ -123,7 +123,7 @@ payload:
   demanda_extraordinaria:
     descricao: "Pro-Reitoria de Pesquisa pediu piloto controlado de uso de IA para revisão de textos acadêmicos. Híbrido pesquisa + serviço, 2 meses, 5-10 pessoas, com métricas."
     categorias_consideradas: ["Produção Científica", "Inteligência Artificial", "Formação e Capacitação"]
-    por_que_nenhuma_serve: "Produção Científica e para a CGTE publicar; aqui são os servidores da Pesquisa publicando. IA cobre a ferramenta, não a operação de piloto. Formação e curso, não e o caso. Cabe uma nova categoria 'Experimento Aplicado' ou aceitar como IA com nota de escopo."
+    por_que_nenhuma_serve: "Produção Científica é para a CGTE publicar; aqui são os servidores da Pesquisa publicando. IA cobre a ferramenta, não a operação de piloto. Formação é curso, não é o caso. Cabe uma nova categoria 'Experimento Aplicado' ou aceitar como IA com nota de escopo."
     sugestao: "criar nova categoria no board 47"
 ```
 
@@ -131,8 +131,8 @@ payload:
 
 ## O que esses exemplos tem em comum
 
-- O 3-line plan acontece **antes** do handoff. O plan e o trabalho; o handoff e o artefato.
+- O 3-line plan acontece **antes** do handoff. O plan é o trabalho; o handoff é o artefato.
 - O `ask` cabe em uma frase. Onde poderia ser duas, foi dividido ou comprimido.
-- `payload.routing_rationale` sempre presente -- o receptor le primeiro.
-- Toda demanda vira um case mesmo que pareca trivial. Sem case, sem rastreabilidade.
+- `payload.routing_rationale` sempre presente -- o receptor lê primeiro.
+- Toda demanda vira um case mesmo que pareça trivial. Sem case, sem rastreabilidade.
 - Em V0, todo handoff de saída do orchestrator vai para `01_gestor/`. Em V1+, alguns iriam direto para especialistas ativos.

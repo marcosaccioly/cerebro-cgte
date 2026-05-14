@@ -15,7 +15,7 @@ to_role: 01_gestor
 agent_owner: marquito
 created_at: 2026-05-14
 status: open
-ask: "Criar card no projeto 47 para slides do MOOC X com Marquito como responsavel."
+ask: "Criar card no projeto 47 para slides do MOOC X com Marquito como responsável."
 payload:
   routing_rationale:
     situacao: "Marquito mesmo vai preparar slides do MOOC X, prazo 2026-05-23."
@@ -25,17 +25,17 @@ payload:
     titulo: "Preparar slides do MOOC X"
     categoria_board_47: "MOOC"
     prazo: 2026-05-23
-    descricao: "Slides para o módulo de abertura do MOOC X. Material de referência disponivel em pasta institucional."
+    descricao: "Slides para o módulo de abertura do MOOC X. Material de referência disponível em pasta institucional."
 ```
 
 **Ação do gestor:**
 
 1. Status do HO-001 -> `in_progress`.
 2. Mapear categoria "MOOC" para `category_id` via `reference/projetos-cgte.yaml`.
-3. Mapear responsavel "marquito" para `owner_id` via `_bridges/kanboard/usuarios-cgte.yaml`.
+3. Mapear responsável "marquito" para `owner_id` via `_bridges/kanboard/usuarios-cgte.yaml`.
 4. Preencher `kanboard_card_request` completo.
 5. Chamar `_bridges/kanboard/criar-tarefa` que mostra o payload e pede HITL.
-6. Gestor le, aprova com `y`.
+6. Gestor lê, aprova com `y`.
 7. Bridge cria o card, retorna `card_id`.
 
 **Handoff produzido (HO-002):**
@@ -55,7 +55,7 @@ payload:
     card_id: null
     campos:
       title: "Preparar slides do MOOC X"
-      description: "Slides para o módulo de abertura do MOOC X. Material de referência disponivel em pasta institucional."
+      description: "Slides para o módulo de abertura do MOOC X. Material de referência disponível em pasta institucional."
       category_id: 12              # MOOC
       owner_id: 5                  # marquito
       column_id: 3                 # Início autorizado
@@ -71,7 +71,7 @@ Status do HO-001 vira `done`. Case fica `active` até o card chegar em coluna te
 
 ---
 
-## Exemplo 2: Receber `distribuir_tarefa` com responsavel a decidir
+## Exemplo 2: Receber `distribuir_tarefa` com responsável a decidir
 
 **Handoff recebido (HO-001 de `00_orchestrator`):**
 ```yaml
@@ -82,7 +82,7 @@ to_role: 01_gestor
 agent_owner: marquito
 created_at: 2026-05-14
 status: open
-ask: "Distribuir notícia sobre Programa Y; precisa de responsavel da área de Comunicação."
+ask: "Distribuir notícia sobre Programa Y; precisa de responsável da área de Comunicação."
 payload:
   tarefa_distribuir:
     titulo: "Notícia institucional sobre lançamento do Programa Y"
@@ -97,10 +97,10 @@ payload:
 
 1. HO-001 -> `in_progress`.
 2. Olhar capacidade da semana de quem cobre Comunicação na CGTE (consultar `_bridges/kanboard/listar-tarefas-projeto` para a coluna "Em execução" do projeto 47, filtrar por owner).
-3. Decidir: e a Servidora A. Documentar critério: "Servidora A cobre Conteúdo Digital, esta com 2 cards em execução, capacidade ok."
+3. Decidir: é a Servidora A. Documentar critério: "Servidora A cobre Conteúdo Digital, está com 2 cards em execução, capacidade ok."
 4. Preencher `kanboard_card_request` com `owner_id` da Servidora A.
 5. HITL na CLI, gestor aprova.
-6. Bridge cria card. Card vai para "Início autorizado" do board (gate institucional -- so depois que a Servidora A confirmar e mover, vira "Em execução").
+6. Bridge cria card. Card vai para "Início autorizado" do board (gate institucional -- só depois que a Servidora A confirmar e mover, vira "Em execução").
 
 **Handoff produzido (HO-002):**
 ```yaml
@@ -132,7 +132,7 @@ payload:
     link: "https://board.cefor.ifes.edu.br/?controller=TaskViewController&action=show&task_id=1488"
 ```
 
-Em V1+, quando 04_comunicacao estiver ativo, o orchestrator poderia rotear direto para ele e o gestor entraria so para aprovar o gate "Início autorizado" -> "Em execução".
+Em V1+, quando 04_comunicacao estiver ativo, o orchestrator poderia rotear direto para ele e o gestor entraria só para aprovar o gate "Início autorizado" -> "Em execução".
 
 ---
 
@@ -159,8 +159,8 @@ payload:
 **Ação do gestor:**
 
 1. HO-001 -> `in_progress`.
-2. Decisão: aceitar como "Inteligência Artificial" com escopo de piloto. Criar nova categoria so após friday-review se padrão se repetir.
-3. Definir responsavel: o gestor mesmo coordena o piloto, com participação do servidor da área de IA quando ativado.
+2. Decisão: aceitar como "Inteligência Artificial" com escopo de piloto. Criar nova categoria só após friday-review se padrão se repetir.
+3. Definir responsável: o gestor mesmo coordena o piloto, com participação do servidor da área de IA quando ativado.
 4. Atualizar este case com a decisão no `case.md` em "Notas".
 5. Preencher `kanboard_card_request`.
 6. HITL. Aprovar.
