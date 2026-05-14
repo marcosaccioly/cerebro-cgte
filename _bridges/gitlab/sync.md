@@ -1,10 +1,10 @@
 # sync -- regras de sensibilidade e HITL
 
-Fonte autoritativa das regras que `sync.ts` aplica. Mudancas aqui sao mudancas no comportamento.
+Fonte autoritativa das regras que `sync.ts` aplica. Mudanças aqui são mudanças no comportamento.
 
 ## Lista de arquivos sensiveis
 
-Arquivos que disparam HITL obrigatorio antes de auto-merge ou auto-push:
+Arquivos que disparam HITL obrigatório antes de auto-merge ou auto-push:
 
 ```
 _config/voice/cgte.md
@@ -32,7 +32,7 @@ _config/workflow-chains.yaml
 
 ## Arquivos nao-sensiveis (auto-merge / auto-push OK)
 
-Tudo que nao bate com a lista acima. Em pratica:
+Tudo que não bate com a lista acima. Em prática:
 
 ```
 cases/**
@@ -48,7 +48,7 @@ _bridges/kanboard/operations/**
 _bridges/kanboard/projetos-cgte.yaml, usuarios-cgte.yaml
 ```
 
-Os arquivos `_bridges/kanboard/facade.ts` e `_bridges/gitlab/sync.ts` em si sao infra -- nao sao "sensiveis institucionais" no sentido do HITL, mas tem que rodar sempre. Em uma equipe maior, alteracoes neles passariam por PR. Em V0 com 1 dev (Marquito), auto-merge OK.
+Os arquivos `_bridges/kanboard/facade.ts` e `_bridges/gitlab/sync.ts` em si são infra -- não são "sensiveis institucionais" no sentido do HITL, mas tem que rodar sempre. Em uma equipe maior, alterações neles passariam por PR. Em V0 com 1 dev (Marquito), auto-merge OK.
 
 ## Fluxo de HITL no sync
 
@@ -58,7 +58,7 @@ Os arquivos `_bridges/kanboard/facade.ts` e `_bridges/gitlab/sync.ts` em si sao 
 2. `git diff HEAD..origin/<branch> --name-only` -- lista arquivos que mudariam.
 3. Filtra a lista contra a regra de sensibilidade.
 4. Se houver arquivo sensivel: mostra o diff completo dos arquivos sensiveis, pede HITL (`y` para aceitar, `n` para abortar).
-5. Se nao houver: auto-merge (fast-forward) sem perguntar.
+5. Se não houver: auto-merge (fast-forward) sem perguntar.
 6. Se houver conflito de merge (independente de sensibilidade): HITL com diff dos arquivos em conflito.
 
 ### `push`
@@ -66,7 +66,7 @@ Os arquivos `_bridges/kanboard/facade.ts` e `_bridges/gitlab/sync.ts` em si sao 
 1. `git status --short` + `git diff --cached --name-only` -- lista arquivos staged.
 2. Filtra contra a regra de sensibilidade.
 3. Se houver arquivo sensivel: mostra o diff dos sensiveis, pede HITL.
-4. Se nao houver: auto-push.
+4. Se não houver: auto-push.
 
 ### `status`
 
@@ -74,7 +74,7 @@ Read-only. Mostra estado local e remote. Sem HITL.
 
 ## O que o HITL mostra
 
-Padrao consistente com o bridge Kanboard: imprime o conteudo, pede `y` para confirmar (qualquer outra coisa cancela).
+Padrão consistente com o bridge Kanboard: imprime o conteúdo, pede `y` para confirmar (qualquer outra coisa cancela).
 
 ```
 === HITL git push ===
@@ -91,6 +91,6 @@ Aprovar push? Digite `y` para confirmar, qualquer outra coisa cancela.
 
 ## Onde a regra evolui
 
-- Adicionou novo arquivo sensivel? Atualize a lista neste arquivo. `sync.ts` carrega a lista daqui (parseada do markdown ou copiada na implementacao).
-- Mudanca nao trivial nas regras: discutir no `friday-review.md` antes.
+- Adicionou novo arquivo sensivel? Atualize a lista neste arquivo. `sync.ts` carrega a lista daqui (parseada do markdown ou copiada na implementação).
+- Mudança não trivial nas regras: discutir no `friday-review.md` antes.
 - Em V1.X, se o time crescer, pode entrar PR no GitLab Ifes como gate adicional (substitui HITL local em parte). Mas isso e V1.X+.

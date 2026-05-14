@@ -2,76 +2,76 @@
 
 Categorias ativas e mapeamento para os especialistas. Esta e a fonte de verdade local da taxonomia institucional. Se uma categoria mudar no Kanboard, atualize aqui primeiro -- outros arquivos apontam para este.
 
-> Os IDs de categoria abaixo sao placeholders. A primeira chamada de `listar-tarefas-projeto` do `_bridges/kanboard/` traz os IDs reais, que ai sao escritos em `_bridges/kanboard/projetos-cgte.yaml`. Este arquivo lista os nomes legiveis e a quem cada categoria pertence.
+> Os IDs de categoria abaixo são placeholders. A primeira chamada de `listar-tarefas-projeto` do `_bridges/kanboard/` traz os IDs reais, que ai são escritos em `_bridges/kanboard/projetos-cgte.yaml`. Este arquivo lista os nomes legíveis e a quem cada categoria pertence.
 
 ## Eixos e categorias
 
-### Eixo Educacao -> `02_educacao/` (V1+)
+### Eixo Educação -> `02_educacao/` (V1+)
 
-| Categoria do board 47 | Descricao curta |
+| Categoria do board 47 | Descrição curta |
 |---|---|
-| MOOC | Cursos online massivos abertos. Slides, roteiros, gravacoes, plataforma. |
-| Conteudo Educacional | Material didatico geral nao-MOOC. Ebooks, apostilas, atividades. |
-| Formacao e Capacitacao | Treinamentos institucionais para servidores. |
-| Programacao Visual Educacional | Layout / diagramacao especifica de material didatico. |
+| MOOC | Cursos online massivos abertos. Slides, roteiros, gravações, plataforma. |
+| Conteúdo Educacional | Material didático geral nao-MOOC. Ebooks, apostilas, atividades. |
+| Formação e Capacitação | Treinamentos institucionais para servidores. |
+| Programação Visual Educacional | Layout / diagramação específica de material didático. |
 
 ### Eixo Audiovisual -> `03_audiovisual/` (V1+)
 
-| Categoria | Descricao curta |
+| Categoria | Descrição curta |
 |---|---|
-| Producao Audiovisual | Videos curtos / longos institucionais e educacionais. |
-| Evento / Transmissao | Lives, transmissoes, eventos com producao audiovisual. |
+| Produção Audiovisual | Vídeos curtos / longos institucionais e educacionais. |
+| Evento / Transmissão | Lives, transmissões, eventos com produção audiovisual. |
 
-### Eixo Comunicacao -> `04_comunicacao/` (V1+)
+### Eixo Comunicação -> `04_comunicacao/` (V1+)
 
-| Categoria | Descricao curta |
+| Categoria | Descrição curta |
 |---|---|
-| Comunicacao Visual | Banners, identidade visual, layout de pecas. |
-| Conteudo Digital | Noticias, posts, materiais para canais digitais oficiais. |
+| Comunicação Visual | Banners, identidade visual, layout de pecas. |
+| Conteúdo Digital | Notícias, posts, materiais para canais digitais oficiais. |
 
 ### Eixo Acessibilidade -> `05_acessibilidade/` (V1+)
 
-| Categoria | Descricao curta |
+| Categoria | Descrição curta |
 |---|---|
-| Acessibilidade | Adequacao geral, audiodescricao, legendagem (alem de libras). |
+| Acessibilidade | Adequacao geral, audiodescrição, legendagem (além de libras). |
 | Libras Interpretacao | Interpretacao em libras ao vivo ou gravada. |
 | Libras Traducao | Traducao previa de roteiros e materiais para libras. |
 
 ### Eixo Tech / Sistemas -> `06_tech_sistemas/` (V1+)
 
-| Categoria | Descricao curta |
+| Categoria | Descrição curta |
 |---|---|
 | Interface Digital | Desenvolvimento e ajustes de interfaces (sistemas internos, sites). |
-| Inteligencia Artificial | Aplicacao / piloto / desenvolvimento de IA em contexto educacional. |
+| Inteligência Artificial | Aplicação / piloto / desenvolvimento de IA em contexto educacional. |
 
 ### Eixo Institucional -> `07_institucional/` (V1+)
 
-| Categoria | Descricao curta |
+| Categoria | Descrição curta |
 |---|---|
 | Gestao / PGD | Programa de Gestao por Desempenho, relatorios institucionais. |
-| Comissao | Trabalhos de comissao institucional, reunioes, atas, documentos. |
-| Colaboracao Institucional | Acoes em parceria com outras coordenadorias, pro-reitorias, parceiros. |
+| Comissão | Trabalhos de comissão institucional, reuniões, atas, documentos. |
+| Colaboracao Institucional | Ações em parceria com outras coordenadorias, pro-reitorias, parceiros. |
 
-### Eixo Ciencia -> `08_ciencia/` (V1+)
+### Eixo Ciência -> `08_ciencia/` (V1+)
 
-| Categoria | Descricao curta |
+| Categoria | Descrição curta |
 |---|---|
-| Producao Cientifica | Artigos, papers, submissoes academicas em nome da CGTE. |
+| Produção Científica | Artigos, papers, submissões acadêmicas em nome da CGTE. |
 
 ## Como esta lista evolui
 
-- Categoria nova so e criada apos `demanda_extraordinaria` aparecer e o gestor decidir criar (registrado em `friday-review.md`).
-- Categoria existente que parou de ser usada por 3+ meses entra em revisao no friday-review. Nao remova sem discutir -- pode ser ciclo sazonal.
+- Categoria nova so e criada após `demanda_extraordinaria` aparecer e o gestor decidir criar (registrado em `friday-review.md`).
+- Categoria existente que parou de ser usada por 3+ meses entra em revisão no friday-review. Não remova sem discutir -- pode ser ciclo sazonal.
 - Atualizar este arquivo, depois `_config/business-rules.md` (espelho), depois `_bridges/kanboard/projetos-cgte.yaml` se o `category_id` mudar.
 
 ## Colunas do board 47 (ordem)
 
-(Validar com Marquito apos primeira chamada de `_bridges/kanboard/` -- os nomes / ordem aqui sao a melhor reconstrucao a partir do handoff.)
+(Validar com Marquito após primeira chamada de `_bridges/kanboard/` -- os nomes / ordem aqui são a melhor reconstrução a partir do handoff.)
 
-1. **Backlog** -- demanda registrada mas nao priorizada.
-2. **Inicio autorizado** -- gate institucional. Card pronto para comecar. Padrao de destino V0 para `criar-tarefa`.
-3. **Em execucao** -- trabalho ativo.
-4. **Em aprovacao** -- gate institucional. Card aguardando aprovacao do gestor / chefia.
-5. **Concluido** -- terminado.
+1. **Backlog** -- demanda registrada mas não priorizada.
+2. **Início autorizado** -- gate institucional. Card pronto para comecar. Padrão de destino V0 para `criar-tarefa`.
+3. **Em execução** -- trabalho ativo.
+4. **Em aprovação** -- gate institucional. Card aguardando aprovação do gestor / chefia.
+5. **Concluído** -- terminado.
 
-A coluna destino em criar-tarefa e quase sempre "Inicio autorizado" (gate inicial).
+A coluna destino em criar-tarefa e quase sempre "Início autorizado" (gate inicial).

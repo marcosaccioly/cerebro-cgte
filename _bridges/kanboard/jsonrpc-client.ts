@@ -4,7 +4,7 @@
  * V0: usado direto pelo facade.
  * V1+: pode ser substituido por mcp-client.ts quando issue upstream #11 fixar.
  *
- * Configuracao via .env:
+ * Configuração via .env:
  *   KANBOARD_API_URL    -- ex: https://board.cefor.ifes.edu.br/jsonrpc.php
  *   KANBOARD_API_USER   -- ex: api.cgte
  *   KANBOARD_API_TOKEN  -- token gerado no painel admin do Kanboard

@@ -8,7 +8,7 @@
  * mesmo quando passados). Em V0 usamos jsonrpc-client.ts direto.
  *
  * Quando o issue for fixado:
- *   1. Implementar este modulo casando a interface JsonRpcClient.
+ *   1. Implementar este módulo casando a interface JsonRpcClient.
  *   2. No facade.ts, trocar `new JsonRpcClient()` por `new McpClient()`.
  *   3. Validar com case de teste antes de declarar swap completo.
  *   4. Manter jsonrpc-client.ts como fallback por 30 dias antes de remover.

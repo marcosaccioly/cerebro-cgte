@@ -2,9 +2,9 @@
  * criar-tarefa.ts -- cria card novo no projeto 47 (ou outro projeto explicito).
  *
  * Fluxo:
- *   1. Le o ultimo handoff aberto do case que aponta para _bridges/kanboard.
- *   2. Valida que o payload e um kanboard_card_request com operacao=criar-tarefa.
- *   3. HITL: mostra payload, pede aprovacao.
+ *   1. Le o último handoff aberto do case que aponta para _bridges/kanboard.
+ *   2. Válida que o payload e um kanboard_card_request com operação=criar-tarefa.
+ *   3. HITL: mostra payload, pede aprovação.
  *   4. Chama Kanboard API (createTask).
  *   5. Atualiza o handoff com resultado_bridge (card_id, link) e status=done.
  */
@@ -23,13 +23,13 @@ export async function criarTarefa(client: JsonRpcClient, args: CliArgs): Promise
   }
 
   // V0: leitura / escrita do handoff e feita pelo agente Claude que invoca
-  // a operacao, nao por este script. Este script foca em validar payload,
+  // a operação, não por este script. Este script foca em validar payload,
   // pedir HITL e tocar a API. O Claude le o handoff, monta o payload,
   // executa este script com o payload como variavel de ambiente / stdin,
-  // e re-escreve o handoff com resultado_bridge. Padrao adaptado de Austin:
+  // e re-escreve o handoff com resultado_bridge. Padrão adaptado de Austin:
   // tooling fino, orquestracao pelo agente.
   //
-  // Em V1.X esta funcao pode ler / escrever o YAML direto, caso a chain de
+  // Em V1.X esta função pode ler / escrever o YAML direto, caso a chain de
   // ferramentas estabilize.
 
   const payloadRaw = process.env.KANBOARD_PAYLOAD;

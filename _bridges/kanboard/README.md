@@ -1,37 +1,37 @@
 # _bridges/kanboard
 
-Bridge TypeScript que fala com o Kanboard institucional. NAO e especialista. E infraestrutura -- modulos chamados pelo `01_gestor/` apos HITL aprovado.
+Bridge TypeScript que fala com o Kanboard institucional. NÃO e especialista. E infraestrutura -- módulos chamados pelo `01_gestor/` após HITL aprovado.
 
-## Por que TypeScript dentro do workspace, nao skill
+## Por que TypeScript dentro do workspace, não skill
 
-Nenhum skill oficial cobre "bridge institucional para Kanboard". Em vez de criar dependencia externa, este bridge fica versionado junto com o workspace. Mudancas na infra do board ficam visiveis no git do cerebro-cgte.
+Nenhum skill oficial cobre "bridge institucional para Kanboard". Em vez de criar dependencia externa, este bridge fica versionado junto com o workspace. Mudanças na infra do board ficam visiveis no git do cerebro-cgte.
 
-Tudo aqui usa Bun (`bun run ...`). Nao usar npm / npx.
+Tudo aqui usa Bun (`bun run ...`). Não usar npm / npx.
 
 ## API alvo
 
-JSON-RPC do Kanboard. Endpoint configurado em `.env` como `KANBOARD_API_URL`. Autenticacao basica via `KANBOARD_API_USER` + `KANBOARD_API_TOKEN`.
+JSON-RPC do Kanboard. Endpoint configurado em `.env` como `KANBOARD_API_URL`. Autenticação basica via `KANBOARD_API_USER` + `KANBOARD_API_TOKEN`.
 
-Em V0, falamos com o board real (producao). Nao ha mock / sandbox. Por isso o HITL e nao-negociavel.
+Em V0, falamos com o board real (produção). Não ha mock / sandbox. Por isso o HITL e nao-negociavel.
 
 ## MCP vs JSON-RPC direto
 
 Existe um servidor MCP para Kanboard, mas ele tem issue upstream (#11) que afeta o envio de campos opcionais. Em V0 usamos JSON-RPC direto via `jsonrpc-client.ts`. Quando o issue for fixado, `mcp-client.ts` (desabilitado em V0) pode substituir o jsonrpc -- swap de uma linha no `facade.ts`.
 
-## Operacoes V0 (4)
+## Operações V0 (4)
 
-| Operacao | Arquivo | Para que serve |
+| Operação | Arquivo | Para que serve |
 |---|---|---|
-| `criar-tarefa` | `operations/criar-tarefa.ts` | Cria card novo. Padrao destino: coluna "Inicio autorizado". |
-| `mover-tarefa` | `operations/mover-tarefa.ts` | Move card entre colunas. Util quando gestor aprova gate. |
+| `criar-tarefa` | `operations/criar-tarefa.ts` | Cria card novo. Padrão destino: coluna "Início autorizado". |
+| `mover-tarefa` | `operations/mover-tarefa.ts` | Move card entre colunas. Útil quando gestor aprova gate. |
 | `adicionar-comentario` | `operations/adicionar-comentario.ts` | Comenta em card. Voz CGTE / Marquito conforme caso. |
-| `listar-tarefas-projeto` | `operations/listar-tarefas-projeto.ts` | Le tarefas do projeto. Unica operacao read; nao precisa HITL. |
+| `listar-tarefas-projeto` | `operations/listar-tarefas-projeto.ts` | Le tarefas do projeto. Única operação read; não precisa HITL. |
 
-Outras operacoes entram em V1.X conforme padroes emergirem (mover entre projetos, anexar arquivo, criar subtask, etc.).
+Outras operações entram em V1.X conforme padrões emergirem (mover entre projetos, anexar arquivo, criar subtask, etc.).
 
-## HITL obrigatorio em escrita
+## HITL obrigatório em escrita
 
-Toda operacao de escrita (`criar-tarefa`, `mover-tarefa`, `adicionar-comentario`) chama `facade.requireHitl(payload)` antes de tocar a API. O facade:
+Toda operação de escrita (`criar-tarefa`, `mover-tarefa`, `adicionar-comentario`) chama `facade.requireHitl(payload)` antes de tocar a API. O facade:
 
 1. Imprime o payload completo formatado na CLI.
 2. Pergunta `Aprovar? (y/n/editar)`.
@@ -39,11 +39,11 @@ Toda operacao de escrita (`criar-tarefa`, `mover-tarefa`, `adicionar-comentario`
 4. Se `n`: aborta, registra motivo no handoff.
 5. Se `editar`: devolve o controle ao caller para corrigir.
 
-A operacao `listar-tarefas-projeto` e read-only -- nao passa por HITL.
+A operação `listar-tarefas-projeto` e read-only -- não passa por HITL.
 
 ## Mapeamento de IDs
 
-`projetos-cgte.yaml` e `usuarios-cgte.yaml` mantem o mapeamento entre nomes legiveis (categoria "MOOC") e IDs do Kanboard (12). Esses arquivos sao gerados / atualizados manualmente apos a primeira chamada de `listar-tarefas-projeto` retornar metadata real.
+`projetos-cgte.yaml` e `usuarios-cgte.yaml` mantem o mapeamento entre nomes legíveis (categoria "MOOC") e IDs do Kanboard (12). Esses arquivos são gerados / atualizados manualmente após a primeira chamada de `listar-tarefas-projeto` retornar metadata real.
 
 Em V0, o gestor edita esses arquivos a mao se algo mudar. Em V1.X, pode entrar um script `sync-metadata.ts` que regenera automaticamente quando alguma categoria sumir / surgir.
 
@@ -53,12 +53,12 @@ Em V0, o gestor edita esses arquivos a mao se algo mudar. Em V1.X, pode entrar u
 bun run _bridges/kanboard/facade.ts criar-tarefa --case CASE-2026-0001-validacao-v0
 ```
 
-O facade le o handoff aberto do case que aponta para `_bridges/kanboard` e executa a operacao com HITL.
+O facade le o handoff aberto do case que aponta para `_bridges/kanboard` e executa a operação com HITL.
 
 ## Tratamento de falha
 
 - **Falha de rede / API offline:** registra erro no handoff (`status: open` mantido, `error_log` adicionado em payload). Gestor retentea quando rede voltar.
-- **Falha de autenticacao:** mensagem clara para validar `.env`. Nao retentea.
+- **Falha de autenticação:** mensagem clara para validar `.env`. Não retentea.
 - **Card duplicado:** retorno da API e capturado. Bridge informa o `card_id` existente. Gestor decide se atualiza o card existente ou re-titula este.
 
 ## Arquivos
