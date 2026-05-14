@@ -1,0 +1,93 @@
+# projetos-cgte.yaml
+#
+# Mapeamento autoritativo de IDs do Kanboard institucional para nomes legiveis.
+# Atualizar apos primeira chamada de listar-tarefas-projeto retornar metadata real.
+#
+# Em V0:
+#   - Os IDs aqui sao placeholders. A primeira execucao do bridge deve preencher.
+#   - Editar a mao quando categoria / coluna / usuario mudar no board.
+#   - Se virar pesado, V1.X pode trazer um script sync-metadata.ts.
+
+projetos:
+  - id: 47
+    nome: "CGTE - Atividades"
+    papel: principal
+    colunas:
+      # Os IDs abaixo sao placeholders. Substituir apos primeira leitura real do board.
+      - id: 1
+        nome: "Backlog"
+      - id: 3
+        nome: "Inicio autorizado"
+        gate: true                 # gate institucional
+      - id: 5
+        nome: "Em execucao"
+      - id: 7
+        nome: "Em aprovacao"
+        gate: true                 # gate institucional
+      - id: 9
+        nome: "Concluido"
+    categorias:
+      # IDs placeholder; substituir apos primeira leitura real.
+      - id: 12
+        nome: "MOOC"
+        eixo: educacao
+      - id: 13
+        nome: "Conteudo Educacional"
+        eixo: educacao
+      - id: 14
+        nome: "Formacao e Capacitacao"
+        eixo: educacao
+      - id: 15
+        nome: "Programacao Visual Educacional"
+        eixo: educacao
+      - id: 16
+        nome: "Producao Audiovisual"
+        eixo: audiovisual
+      - id: 17
+        nome: "Evento / Transmissao"
+        eixo: audiovisual
+      - id: 18
+        nome: "Comunicacao Visual"
+        eixo: comunicacao
+      - id: 21
+        nome: "Conteudo Digital"
+        eixo: comunicacao
+      - id: 22
+        nome: "Acessibilidade"
+        eixo: acessibilidade
+      - id: 23
+        nome: "Libras Interpretacao"
+        eixo: acessibilidade
+      - id: 25
+        nome: "Libras Traducao"
+        eixo: acessibilidade
+      - id: 26
+        nome: "Interface Digital"
+        eixo: tech_sistemas
+      - id: 24
+        nome: "Inteligencia Artificial"
+        eixo: tech_sistemas
+      - id: 27
+        nome: "Gestao / PGD"
+        eixo: institucional
+      - id: 28
+        nome: "Comissao"
+        eixo: institucional
+      - id: 29
+        nome: "Colaboracao Institucional"
+        eixo: institucional
+      - id: 30
+        nome: "Producao Cientifica"
+        eixo: ciencia
+
+  - id: 58
+    nome: "CGTE - Projetos"
+    papel: secundario
+
+  - id: 60
+    nome: "CGTE - Audiovisual"
+    papel: secundario
+
+  - id: 73
+    nome: "CGTE - Informacoes fixas e recorrentes"
+    papel: secundario

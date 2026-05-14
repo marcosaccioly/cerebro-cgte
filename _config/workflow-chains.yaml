@@ -1,0 +1,88 @@
+# workflow-chains.yaml
+#
+# Qual proximo-passo e valido a partir de qual estado.
+#
+# Lendo este arquivo: cada chain e uma sequencia nomeada de handoffs. Os "steps"
+# descrevem as transicoes from -> to e a condicao que torna aquela transicao apropriada.
+# Um especialista prestes a enviar um handoff deve olhar aqui para confirmar que o
+# destino e um proximo-passo valido. Se o movimento que voce quer fazer nao esta em
+# nenhuma chain, adicione aqui primeiro (Friday review) em vez de quebrar o padrao.
+#
+# Papeis ativos V0:
+#   00_orchestrator | 01_gestor | _bridges/kanboard | _bridges/gitlab
+#
+# Papeis esqueleto V0 (ativam em V1.X):
+#   02_educacao | 03_audiovisual | 04_comunicacao | 05_acessibilidade |
+#   06_tech_sistemas | 07_institucional | 08_ciencia
+
+workflow_chains:
+
+  - name: anotar_tarefa_propria
+    description: Gestor descreve em linguagem natural uma tarefa nova que ele mesmo vai executar. Vira card no Kanboard apos HITL.
+    steps:
+      - from: 00_orchestrator
+        to: 01_gestor
+        when: "Demanda nova e trabalho do proprio gestor (nao distribuivel)."
+      - from: 01_gestor
+        to: _bridges/kanboard
+        when: "Gestor preencheu kanboard_card_request, aprovou HITL, pronto para criar card."
+
+  - name: distribuir_tarefa
+    description: Gestor recebe demanda externa, descreve, indica responsavel. Vira card no Kanboard com assignee apos HITL.
+    steps:
+      - from: 00_orchestrator
+        to: 01_gestor
+        when: "Demanda nova precisa ser distribuida para a equipe."
+      - from: 01_gestor
+        to: _bridges/kanboard
+        when: "Gestor decidiu o responsavel, preencheu kanboard_card_request, aprovou HITL."
+
+  - name: demanda_extraordinaria
+    description: Demanda que nao cabe em nenhuma categoria ativa. Orchestrator nao roteia sozinho -- pede ao gestor decidir.
+    steps:
+      - from: 00_orchestrator
+        to: 01_gestor
+        when: "Categoria do board 47 nao cobre a demanda; gestor decide criar / recusar / redirecionar."
+      - from: 01_gestor
+        to: _bridges/kanboard
+        when: "Gestor decidiu criar uma nova categoria ou aceitar como excecao; preencheu kanboard_card_request com a categoria escolhida e aprovou HITL."
+
+# ============================================================
+# V1+ (esqueletos -- ativar conforme servidores entram)
+# ============================================================
+#
+# Quando um especialista esqueleto vira ativo, descomentar e ajustar a chain
+# correspondente. Lembre que toda chain V1+ que escreve em nome da CGTE depende
+# de _config/voice/cgte.md ja preenchida.
+#
+#  - name: transcricao_reuniao_multi_especialista
+#    description: Reuniao transcrita gera multiplas saidas em paralelo (PGD, email, video, noticia, artigo). Previsto para V2 quando 05_acessibilidade, 07_institucional, 04_comunicacao, 03_audiovisual, 08_ciencia estiverem ativos.
+#    steps:
+#      - from: 00_orchestrator
+#        to: 05_acessibilidade
+#        when: "Reuniao com conteudo a divulgar e necessidade de libras."
+#      - from: 05_acessibilidade
+#        to: 01_gestor
+#        when: "Traducao pronta; gestor aprova rota das saidas."
+#      - from: 01_gestor
+#        to: 07_institucional
+#        when: "Saida PGD necessaria."
+#      - from: 01_gestor
+#        to: 04_comunicacao
+#        when: "Saidas de comunicacao necessarias (email + noticia)."
+#      - from: 01_gestor
+#        to: 03_audiovisual
+#        when: "Saida em video necessaria."
+#      - from: 01_gestor
+#        to: 08_ciencia
+#        when: "Saida academica necessaria (artigo)."
+
+# ============================================================
+# Adicionar uma chain:
+#   1. Nomeie pela situacao, nao pelo papel (ex: "transcricao_reuniao_multi_especialista", nao "gestor_para_especialistas").
+#   2. Descricao em uma frase.
+#   3. Cada step tem from, to, when. Opcional: note (para loop ou comportamento especial).
+#   4. Se voce esta adicionando o mesmo step a tres chains, isso e um padrao -- promova para chain propria.
+#
+# Remover uma chain:
+#   Nao remova, a menos que a situacao tenha realmente parado de acontecer. Marque deprecada com comentario.

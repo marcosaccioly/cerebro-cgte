@@ -1,0 +1,25 @@
+handoff_id: HO-001
+case_id: CASE-2026-0001-validacao-v0
+from_role: 00_orchestrator
+to_role: 01_gestor
+agent_owner: marquito
+created_at: 2026-05-14
+status: done
+ask: "Criar card no projeto 47 para preparar slides do MOOC X com Marquito como responsavel."
+
+payload:
+  routing_rationale:
+    situacao: "Marquito mesmo vai preparar slides do MOOC X, prazo 2026-05-23. Demanda saiu da reuniao de coordenacao de 14/05."
+    especialista: 01_gestor
+    por_que: "Trabalho do proprio gestor; chain anotar_tarefa_propria; categoria MOOC do board 47."
+
+  tarefa_propria:
+    titulo: "Preparar slides do MOOC X"
+    categoria_board_47: "MOOC"
+    prazo: 2026-05-23
+    descricao: "Slides para o modulo de abertura do MOOC X. Material de referencia disponivel em pasta institucional."
+    link_origem: "reuniao://coordenacao-2026-05-14"
+
+  context:
+    eixo: "Educacao"
+    nota: "Case didatico de validacao V0 -- mostra a chain anotar_tarefa_propria end-to-end."

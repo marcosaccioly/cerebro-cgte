@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+
+node_modules/
+bun.lockb
+
+# logs locais
+*.log
+
+# arquivos do editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

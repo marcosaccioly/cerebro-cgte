@@ -1,0 +1,36 @@
+# projetos-cgte.yaml
+#
+# Mapa local dos projetos do Kanboard institucional que a CGTE usa.
+# Espelho leve, para o gestor lembrar -- o mapeamento autoritativo de IDs
+# fica em _bridges/kanboard/projetos-cgte.yaml (preenchido apos primeira chamada
+# de listar-tarefas-projeto retornar os IDs reais).
+
+projetos:
+  - id: 47
+    nome: "CGTE - Atividades"
+    papel: "principal"
+    descricao: "Board onde toda demanda nova vira card em V0. Toda chain V0 termina aqui."
+    ativo_v0: true
+
+  - id: 58
+    nome: "CGTE - Projetos"
+    papel: "secundario"
+    descricao: "Projetos de longo prazo da CGTE. Cards podem ser movidos do 47 para ca quando viram projeto."
+    ativo_v0: false   # nao gera chain V0; movimentacao manual
+
+  - id: 60
+    nome: "CGTE - Audiovisual"
+    papel: "secundario"
+    descricao: "Especificidades de producao audiovisual com gerencia propria de pipeline."
+    ativo_v0: false
+
+  - id: 73
+    nome: "CGTE - Informacoes fixas e recorrentes"
+    papel: "secundario"
+    descricao: "Materiais de referencia, processos recorrentes, info que vive por muito tempo."
+    ativo_v0: false
+
+# Em V0:
+# - Toda criacao de card via _bridges/kanboard/criar-tarefa vai para o projeto 47.
+# - Os projetos secundarios (58, 60, 73) podem receber cards movidos manualmente do 47.
+# - Movimentacao entre projetos via API nao e operacao V0 (entra em V1.X se virar padrao).

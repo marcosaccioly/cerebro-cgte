@@ -1,0 +1,28 @@
+# usuarios-cgte.yaml
+#
+# Mapeamento de servidores CGTE para user_id do Kanboard.
+# Atualizar a mao quando alguem entra / sai. Em V1.X pode entrar script de sync.
+
+usuarios:
+  - kanboard_user_id: 5            # placeholder; substituir apos primeira chamada de getAllUsers
+    username: "marquito"
+    nome_completo: "Marcos Vinicius Forecchi Accioly"
+    papel: "gestor"
+    voice_file: "_config/voice/marquito.md"
+    ativo_v0: true
+
+  # ============================================================
+  # SERVIDORES (V1.X -- conforme entrarem como especialistas ativos)
+  # ============================================================
+  # Adicionar conforme servidor for ativado. Padrao do registro:
+  #
+  # - kanboard_user_id: <real do board>
+  #   username: "<username_kanboard>"
+  #   nome_completo: "<nome>"
+  #   papel: "servidor"
+  #   eixo: "<educacao | audiovisual | comunicacao | acessibilidade | tech_sistemas | institucional | ciencia>"
+  #   especialista_pasta: "02_educacao"     # exemplo
+  #   ativo_v0: false
+  #
+  # Quando a pasta-especialista virar ativa, mover ativo_v0 para true e o usuario
+  # passa a ser owner_id valido em tarefa_distribuir.
