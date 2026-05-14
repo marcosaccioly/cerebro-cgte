@@ -1,7 +1,7 @@
 /**
- * listar-tarefas-projeto.ts -- le tarefas de um projeto. UNICA operacao read-only.
+ * listar-tarefas-projeto.ts -- le tarefas de um projeto. ÚNICA operação read-only.
  *
- * Nao passa por HITL (nao escreve nada). Util para:
+ * Não passa por HITL (não escreve nada). Útil para:
  *   - Ver capacidade da equipe antes de distribuir.
  *   - Conferir estado de cards relacionados a um case.
  *   - Auditar diff entre o que o workspace pensa que escreveu e o que o board mostra.
@@ -31,7 +31,7 @@ export async function listarTarefasProjeto(client: JsonRpcClient, args: CliArgs)
     process.exit(2);
   }
 
-  // status_id=1 e o filtro de tarefas ativas (nao fechadas) no Kanboard.
+  // status_id=1 e o filtro de tarefas ativas (não fechadas) no Kanboard.
   const tarefas = await client.call<KanboardTask[]>("getAllTasks", {
     project_id: projeto,
     status_id: 1,

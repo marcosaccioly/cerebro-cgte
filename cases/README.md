@@ -21,23 +21,23 @@ CASE-YYYY-NNNN-shortslug/
 |   |-- HO-001.yaml
 |   |-- HO-002.yaml
 |   `-- ...
-`-- artifacts/                    rascunhos, comunicacoes, materiais produzidos no case
+`-- artifacts/                    rascunhos, comunicações, materiais produzidos no case
     `-- .gitkeep
 ```
 
 ## Ordem de leitura ao abrir um case pela primeira vez
 
 1. `case.md` -- estado atual, parties, datas, status.
-2. Secao "Log de handoffs" em `case.md` -- resumo cronologico.
+2. Seção "Log de handoffs" em `case.md` -- resumo cronologico.
 3. `handoffs/HO-001.yaml` em diante, em ordem.
 4. `artifacts/` -- abra os artefatos quando os handoffs apontarem.
 
-Nao leia artefatos antes dos handoffs. Os handoffs sao a narrativa; os artefatos sao os produtos.
+Não leia artefatos antes dos handoffs. Os handoffs são a narrativa; os artefatos são os produtos.
 
 ## Quando um case "termina"
 
-Status muda para `closed` (deu certo) ou `dead` (recusada / abandonada) em `case.md`. Cases nao sao deletados. Servem como historico para reuse-before-rebuild quando outra demanda parecida aparecer.
+Status muda para `closed` (deu certo) ou `dead` (recusada / abandonada) em `case.md`. Cases não são deletados. Servem como histórico para reuse-before-rebuild quando outra demanda parecida aparecer.
 
 ## Cases pre-carregados (V0)
 
-- `CASE-2026-0001-validacao-v0/` -- case didatico que mostra a equipe como uma demanda real percorre os agentes nas 3 chains V0. Nao apagar.
+- `CASE-2026-0001-validacao-v0/` -- case didático que mostra a equipe como uma demanda real percorre os agentes nas 3 chains V0. Não apagar.

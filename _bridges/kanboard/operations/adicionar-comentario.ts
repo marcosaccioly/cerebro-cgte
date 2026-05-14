@@ -1,7 +1,7 @@
 /**
  * adicionar-comentario.ts -- adiciona comentario em card existente.
  *
- * V0: passa por HITL como qualquer outra escrita. Comentarios sao publicos
+ * V0: passa por HITL como qualquer outra escrita. Comentarios são publicos
  * dentro da CGTE; voz importa.
  */
 

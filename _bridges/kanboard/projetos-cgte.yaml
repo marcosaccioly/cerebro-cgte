@@ -1,10 +1,10 @@
 # projetos-cgte.yaml
 #
-# Mapeamento autoritativo de IDs do Kanboard institucional para nomes legiveis.
-# Atualizar apos primeira chamada de listar-tarefas-projeto retornar metadata real.
+# Mapeamento autoritativo de IDs do Kanboard institucional para nomes legíveis.
+# Atualizar após primeira chamada de listar-tarefas-projeto retornar metadata real.
 #
 # Em V0:
-#   - Os IDs aqui sao placeholders. A primeira execucao do bridge deve preencher.
+#   - Os IDs aqui são placeholders. A primeira execução do bridge deve preencher.
 #   - Editar a mao quando categoria / coluna / usuario mudar no board.
 #   - Se virar pesado, V1.X pode trazer um script sync-metadata.ts.
 
@@ -13,45 +13,45 @@ projetos:
     nome: "CGTE - Atividades"
     papel: principal
     colunas:
-      # Os IDs abaixo sao placeholders. Substituir apos primeira leitura real do board.
+      # Os IDs abaixo são placeholders. Substituir após primeira leitura real do board.
       - id: 1
         nome: "Backlog"
       - id: 3
-        nome: "Inicio autorizado"
+        nome: "Início autorizado"
         gate: true                 # gate institucional
       - id: 5
-        nome: "Em execucao"
+        nome: "Em execução"
       - id: 7
-        nome: "Em aprovacao"
+        nome: "Em aprovação"
         gate: true                 # gate institucional
       - id: 9
-        nome: "Concluido"
+        nome: "Concluído"
     categorias:
-      # IDs placeholder; substituir apos primeira leitura real.
+      # IDs placeholder; substituir após primeira leitura real.
       - id: 12
         nome: "MOOC"
-        eixo: educacao
+        eixo: educação
       - id: 13
-        nome: "Conteudo Educacional"
-        eixo: educacao
+        nome: "Conteúdo Educacional"
+        eixo: educação
       - id: 14
-        nome: "Formacao e Capacitacao"
-        eixo: educacao
+        nome: "Formação e Capacitação"
+        eixo: educação
       - id: 15
-        nome: "Programacao Visual Educacional"
-        eixo: educacao
+        nome: "Programação Visual Educacional"
+        eixo: educação
       - id: 16
-        nome: "Producao Audiovisual"
+        nome: "Produção Audiovisual"
         eixo: audiovisual
       - id: 17
-        nome: "Evento / Transmissao"
+        nome: "Evento / Transmissão"
         eixo: audiovisual
       - id: 18
-        nome: "Comunicacao Visual"
-        eixo: comunicacao
+        nome: "Comunicação Visual"
+        eixo: comunicação
       - id: 21
-        nome: "Conteudo Digital"
-        eixo: comunicacao
+        nome: "Conteúdo Digital"
+        eixo: comunicação
       - id: 22
         nome: "Acessibilidade"
         eixo: acessibilidade
@@ -65,20 +65,20 @@ projetos:
         nome: "Interface Digital"
         eixo: tech_sistemas
       - id: 24
-        nome: "Inteligencia Artificial"
+        nome: "Inteligência Artificial"
         eixo: tech_sistemas
       - id: 27
         nome: "Gestao / PGD"
         eixo: institucional
       - id: 28
-        nome: "Comissao"
+        nome: "Comissão"
         eixo: institucional
       - id: 29
         nome: "Colaboracao Institucional"
         eixo: institucional
       - id: 30
-        nome: "Producao Cientifica"
-        eixo: ciencia
+        nome: "Produção Científica"
+        eixo: ciência
 
   - id: 58
     nome: "CGTE - Projetos"
@@ -89,5 +89,5 @@ projetos:
     papel: secundario
 
   - id: 73
-    nome: "CGTE - Informacoes fixas e recorrentes"
+    nome: "CGTE - Informações fixas e recorrentes"
     papel: secundario

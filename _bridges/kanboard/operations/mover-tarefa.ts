@@ -2,7 +2,7 @@
  * mover-tarefa.ts -- move card entre colunas do mesmo projeto.
  *
  * V0: alvo principal e atravessar gates institucionais
- *   ("Inicio autorizado" -> "Em execucao", "Em execucao" -> "Em aprovacao", etc).
+ *   ("Início autorizado" -> "Em execução", "Em execução" -> "Em aprovação", etc).
  */
 
 import { JsonRpcClient } from "../jsonrpc-client.ts";

@@ -1,14 +1,14 @@
 /**
  * facade.ts -- ponto de entrada do bridge Kanboard
  *
- * Dispatch das 4 operacoes V0:
+ * Dispatch das 4 operações V0:
  *   criar-tarefa | mover-tarefa | adicionar-comentario | listar-tarefas-projeto
  *
- * Toda operacao de escrita passa por HITL antes de tocar a API.
- * A operacao de leitura (listar-tarefas-projeto) nao passa por HITL.
+ * Toda operação de escrita passa por HITL antes de tocar a API.
+ * A operação de leitura (listar-tarefas-projeto) não passa por HITL.
  *
  * Uso:
- *   bun run _bridges/kanboard/facade.ts <operacao> [opcoes]
+ *   bun run _bridges/kanboard/facade.ts <operação> [opcoes]
  *
  * Exemplos:
  *   bun run facade.ts criar-tarefa --case CASE-2026-0001-validacao-v0
@@ -61,7 +61,7 @@ function parseArgs(argv: string[]): CliArgs {
 }
 
 /**
- * HITL: imprime o payload final na CLI e pede aprovacao explicita.
+ * HITL: imprime o payload final na CLI e pede aprovação explicita.
  * Retorna `true` apenas se o usuario digitou exatamente `y`.
  * Qualquer outra entrada (`n`, `editar`, ENTER vazio) e tratada como recusa.
  *

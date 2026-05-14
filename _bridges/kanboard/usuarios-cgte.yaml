@@ -4,7 +4,7 @@
 # Atualizar a mao quando alguem entra / sai. Em V1.X pode entrar script de sync.
 
 usuarios:
-  - kanboard_user_id: 5            # placeholder; substituir apos primeira chamada de getAllUsers
+  - kanboard_user_id: 5            # placeholder; substituir após primeira chamada de getAllUsers
     username: "marquito"
     nome_completo: "Marcos Vinicius Forecchi Accioly"
     papel: "gestor"
@@ -14,15 +14,15 @@ usuarios:
   # ============================================================
   # SERVIDORES (V1.X -- conforme entrarem como especialistas ativos)
   # ============================================================
-  # Adicionar conforme servidor for ativado. Padrao do registro:
+  # Adicionar conforme servidor for ativado. Padrão do registro:
   #
   # - kanboard_user_id: <real do board>
   #   username: "<username_kanboard>"
   #   nome_completo: "<nome>"
   #   papel: "servidor"
-  #   eixo: "<educacao | audiovisual | comunicacao | acessibilidade | tech_sistemas | institucional | ciencia>"
+  #   eixo: "<educação | audiovisual | comunicação | acessibilidade | tech_sistemas | institucional | ciência>"
   #   especialista_pasta: "02_educacao"     # exemplo
   #   ativo_v0: false
   #
   # Quando a pasta-especialista virar ativa, mover ativo_v0 para true e o usuario
-  # passa a ser owner_id valido em tarefa_distribuir.
+  # passa a ser owner_id válido em tarefa_distribuir.

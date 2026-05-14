@@ -6,10 +6,10 @@
  *   bun run _bridges/gitlab/sync.ts push
  *   bun run _bridges/gitlab/sync.ts status
  *
- * As regras de sensibilidade vivem em sync.md. Esta implementacao mantem
+ * As regras de sensibilidade vivem em sync.md. Esta implementação mantem
  * a lista hardcoded em sincronia com o markdown. Se o md mudar, atualize aqui.
  *
- * Padrao de HITL: imprime o que vai mudar, exige `y` para confirmar.
+ * Padrão de HITL: imprime o que vai mudar, exige `y` para confirmar.
  * Qualquer outra resposta cancela. Anti-autopilot deliberado.
  */
 
@@ -51,7 +51,7 @@ async function gitStatus(): Promise<void> {
 }
 
 async function listChangedFilesPush(): Promise<string[]> {
-  // Arquivos staged + nao staged (workdir) -- queremos cobrir tudo que ainda vai virar commit.
+  // Arquivos staged + não staged (workdir) -- queremos cobrir tudo que ainda vai virar commit.
   const result = await $`git diff HEAD --name-only`.text();
   return result.split("\n").map((s) => s.trim()).filter(Boolean);
 }
