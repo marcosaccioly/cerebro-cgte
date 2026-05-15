@@ -14,11 +14,11 @@ As pastas SÃO o sistema. Nada para rodar. Nada para fazer deploy. Sem mensalida
 
 V0 entrega o mínimo viável:
 
-- **2 especialistas ativos:** `00_orchestrator/` (roteia) e `01_gestor/` (decide / aprova).
-- **7 esqueletos:** `02_educacao/` a `08_ciencia/`. Cada um vira ativo quando o servidor da área sentar com Marquito ~3h.
+- **2 especialistas ativos:** `00-orquestrador/` (roteia) e `01-gestor/` (decide / aprova).
+- **7 esqueletos:** `02-educacao/` a `08-ciencia/`. Cada um vira ativo quando o servidor da área sentar com Marquito ~3h.
 - **Bridge Kanboard** -- TypeScript que fala JSON-RPC com `board.cefor.ifes.edu.br`. 4 operações essenciais. HITL obrigatório.
 - **Bridge GitLab** -- envelopa `git push` / `git pull` com HITL em arquivos sensíveis.
-- **Case de validação** -- `cases/CASE-2026-0001-validacao-v0/` mostra a equipe como uma demanda real percorre os agentes.
+- **Case de validação** -- `casos/CASO-2026-0001-validacao-v0/` mostra a equipe como uma demanda real percorre os agentes.
 
 ## Os 3 fluxos da V0
 
@@ -26,30 +26,30 @@ V0 entrega o mínimo viável:
 demanda externa
    |
    v
-00_orchestrator  (3-line plan: situação / especialista / por que)
+00-orquestrador  (3-line plan: situação / especialista / por que)
    |
    v
-01_gestor
+01-gestor
    |
    +--> anotar tarefa própria (gestor mesmo executa)
    +--> distribuir tarefa (assignee na equipe)
    +--> demanda extraordinária (sem categoria ativa)
    |
    v
-_bridges/kanboard  (HITL antes de escrever)
+_pontes/kanboard  (HITL antes de escrever)
    |
    v
 Kanboard institucional (board 47)
 ```
 
-Todos os três fluxos terminam num card aprovado no board 47, com handoffs YAML versionados no git para auditoria.
+Todos os três fluxos terminam num card aprovado no board 47, com entregas YAML versionados no git para auditoria.
 
 ## Setup
 
 Pre-requisitos: `bun`, `git`, `claude-code`, acesso a rede do Ifes (para `board.cefor.ifes.edu.br`).
 
 1. Clone o repo.
-2. Rode `setup` no Claude Code. O agente lê `setup/questionnaire.md` e pergunta as configurações faltantes (credenciais Kanboard, voz, etc.).
+2. Rode `setup` no Claude Code. O agente lê `configuracao/questionario.md` e pergunta as configurações faltantes (credenciais Kanboard, voz, etc.).
 3. Copie `.env.example` para `.env` e preencha credenciais. Não commitar.
 4. Sente com o agente para a sessão de voz CGTE + Marquito (~1h). Sem isso, qualquer chain que escreva em nome da CGTE fica bloqueada.
 5. Rode `status` para confirmar o estado V0.
@@ -67,70 +67,70 @@ Pre-requisitos: `bun`, `git`, `claude-code`, acesso a rede do Ifes (para `board.
 cerebro-cgte/
 |-- README.md                       (este arquivo)
 |-- CLAUDE.md                       (L0 -- mapa para AI)
-|-- CONTEXT.md                      (L1 -- roteamento)
+|-- CONTEXTO.md                      (L1 -- roteamento)
 |-- .env.example                    (template de credenciais; copiar para .env e preencher)
 |-- .gitignore
-|-- setup/questionnaire.md          (onboarding)
-|-- _config/
-|   |-- HANDOFF_SCHEMA.md           (envelope YAML canônico)
-|   |-- workflow-chains.yaml        (chains V0 + previsão V1+)
-|   |-- business-rules.md           (HITL, gates, escopo)
-|   |-- quality-standards.md        (bar de qualidade por especialista)
+|-- configuracao/questionario.md          (onboarding)
+|-- _configuracao/
+|   |-- ESQUEMA_ENTREGA.md           (envelope YAML canônico)
+|   |-- cadeias-fluxo.yaml        (chains V0 + previsão V1+)
+|   |-- regras-negocio.md           (HITL, gates, escopo)
+|   |-- padroes-qualidade.md        (bar de qualidade por especialista)
 |   `-- voice/
 |       |-- cgte.md                 (voz institucional; placeholder bloqueante em V0)
 |       `-- marquito.md             (voz pessoal do gestor; placeholder bloqueante em V0)
-|-- 00_orchestrator/                (ATIVO V0 -- roteia)
-|-- 01_gestor/                      (ATIVO V0 -- Marquito)
-|-- 02_educacao/                    (esqueleto V0 -- ativa em V1.X)
-|-- 03_audiovisual/                 (esqueleto V0)
-|-- 04_comunicacao/                 (esqueleto V0)
-|-- 05_acessibilidade/              (esqueleto V0)
-|-- 06_tech_sistemas/               (esqueleto V0)
-|-- 07_institucional/               (esqueleto V0)
-|-- 08_ciencia/                     (esqueleto V0)
-|-- _bridges/                       (infra, não especialista)
+|-- 00-orquestrador/                (ATIVO V0 -- roteia)
+|-- 01-gestor/                      (ATIVO V0 -- Marquito)
+|-- 02-educacao/                    (esqueleto V0 -- ativa em V1.X)
+|-- 03-audiovisual/                 (esqueleto V0)
+|-- 04-comunicacao/                 (esqueleto V0)
+|-- 05-acessibilidade/              (esqueleto V0)
+|-- 06-tecnologia/               (esqueleto V0)
+|-- 07-institucional/               (esqueleto V0)
+|-- 08-ciencia/                     (esqueleto V0)
+|-- _pontes/                       (infra, não especialista)
 |   |-- kanboard/
 |   `-- gitlab/
-|-- cases/                          (cada demanda real é um case)
-|   `-- CASE-2026-0001-validacao-v0/
-`-- ops/
-    `-- friday-review.md
+|-- casos/                          (cada demanda real é um case)
+|   `-- CASO-2026-0001-validacao-v0/
+`-- operacoes/
+    `-- revisao-sexta.md
 ```
 
 ## Como uma demanda flui (case de validação)
 
-Walk pelo `cases/CASE-2026-0001-validacao-v0/`:
+Walk pelo `casos/CASO-2026-0001-validacao-v0/`:
 
 ```
 demanda nova: "preparar slides do MOOC X"
    |
    v
-00_orchestrator
-   |  HO-001 -- 3-line plan, roteia para 01_gestor
+00-orquestrador
+   |  EN-001 -- 3-line plan, roteia para 01-gestor
    v
-01_gestor
-   |  HO-002 -- payload kanboard_card_request,
-   |          chamada a _bridges/kanboard/criar-tarefa
+01-gestor
+   |  EN-002 -- payload kanboard_card_request,
+   |          chamada a _pontes/kanboard/criar-tarefa
    v
-_bridges/kanboard
+_pontes/kanboard
    |  HITL: gestor confere payload, aprova
    v
 Kanboard board 47
    `  card criado, coluna "Início autorizado"
 ```
 
-Todo arrow é um arquivo YAML em `cases/.../handoffs/`. Abra os arquivos. O trabalho é o artefato; o artefato é o trabalho.
+Todo arrow é um arquivo YAML em `casos/.../entregas/`. Abra os arquivos. O trabalho é o artefato; o artefato é o trabalho.
 
 ## Caminho de V0 para V1.X
 
 Cada servidor que entra ativa um especialista:
 
-1. Servidor lê `ops/new-hire-day-one.md` (criar em V1.X) antes de sentar com Marquito.
-2. Sessão de ~3h: preenche `identity.md`, `rules.md`, `examples.md`, `handoff.md` da pasta dele.
-3. Atualiza `_config/workflow-chains.yaml` com a chain que termina no novo especialista.
+1. Servidor lê `operacoes/new-hire-day-one.md` (criar em V1.X) antes de sentar com Marquito.
+2. Sessão de ~3h: preenche `identidade.md`, `regras.md`, `exemplos.md`, `entrega.md` da pasta dele.
+3. Atualiza `_configuracao/cadeias-fluxo.yaml` com a chain que termina no novo especialista.
 4. Valida em uma demanda real, gestor olhando junto.
-5. A partir daí, `00_orchestrator/` passa a rotear demandas daquela área direto para o novo especialista (sem passar pelo gestor primeiro).
+5. A partir daí, `00-orquestrador/` passa a rotear demandas daquela área direto para o novo especialista (sem passar pelo gestor primeiro).
 
 ## Origem
 
-Saiu do pipeline de Solution Design (`solution-design/cgte-icm-kanboard-bridge/`). Arquitetura escolhida no Stage 03: ICM Padrão B Austin-puro (referência viva em `dianas-real-estate-austin`). Handoff completo em `solution-design/stages/04-brief/output/cgte-icm-kanboard-bridge-handoff-builder.md`.
+Saiu do pipeline de Solution Design (`solution-design/cgte-icm-kanboard-bridge/`). Arquitetura escolhida no Stage 03: ICM Padrão B Austin-puro (referência viva em `dianas-real-estate-austin`). Entrega completo em `solution-design/stages/04-brief/output/cgte-icm-kanboard-bridge-entrega-builder.md`.
