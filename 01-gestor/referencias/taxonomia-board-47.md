@@ -6,7 +6,7 @@ Categorias ativas e mapeamento para os especialistas. Esta e a fonte de verdade 
 
 ## Eixos e categorias
 
-### Eixo Educação -> `02-educacao/` (V1+)
+### Eixo Design Educacional -> `02-design-educacional/` (V1+)
 
 | Categoria do board 47 | Descrição curta |
 |---|---|

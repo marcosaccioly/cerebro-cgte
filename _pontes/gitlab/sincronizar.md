@@ -40,7 +40,7 @@ casos/**
 01-gestor/identidade.md, regras.md, exemplos.md, entrega.md, README.md
 01-gestor/referencias/**
 01-gestor/saida/**
-02-educacao/** a 08-ciencia/**
+02-design-educacional/** a 08-ciencia/**
 operacoes/**
 README.md (raiz)
 CLAUDE.md, CONTEXTO.md

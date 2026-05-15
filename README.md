@@ -15,7 +15,8 @@ As pastas SÃO o sistema. Nada para rodar. Nada para fazer deploy. Sem mensalida
 V0 entrega o mínimo viável:
 
 - **2 especialistas ativos:** `00-orquestrador/` (roteia) e `01-gestor/` (decide / aprova).
-- **7 esqueletos:** `02-educacao/` a `08-ciencia/`. Cada um vira ativo quando o servidor da área sentar com Marquito ~3h.
+- **1 rascunho V1:** `02-design-educacional/` -- preenchido pelo gestor em 2026-05-15, aguardando validação do servidor da área.
+- **6 esqueletos:** `03-audiovisual/` a `08-ciencia/`. Cada um vira ativo quando o servidor da área sentar com Marquito ~3h.
 - **Bridge Kanboard** -- TypeScript que fala JSON-RPC com `board.cefor.ifes.edu.br`. 4 operações essenciais. HITL obrigatório.
 - **Bridge GitLab** -- envelopa `git push` / `git pull` com HITL em arquivos sensíveis.
 - **Case de validação** -- `casos/CASO-2026-0001-validacao-v0/` mostra a equipe como uma demanda real percorre os agentes.
@@ -81,7 +82,7 @@ cerebro-cgte/
 |       `-- marquito.md             (voz pessoal do gestor; placeholder bloqueante em V0)
 |-- 00-orquestrador/                (ATIVO V0 -- roteia)
 |-- 01-gestor/                      (ATIVO V0 -- Marquito)
-|-- 02-educacao/                    (esqueleto V0 -- ativa em V1.X)
+|-- 02-design-educacional/          (rascunho V1 -- aguardando servidor da área)
 |-- 03-audiovisual/                 (esqueleto V0)
 |-- 04-comunicacao/                 (esqueleto V0)
 |-- 05-acessibilidade/              (esqueleto V0)

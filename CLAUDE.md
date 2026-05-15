@@ -10,7 +10,7 @@ O alvo da V0 é dar ao gestor (Marquito) condição de registrar e distribuir tr
 
 ## Estado V0 vs V1+
 
-- **V0 (esta versão):** 2 workspaces ativos (`00-orquestrador/`, `01-gestor/`) + 7 esqueletos (`02-educacao/` a `08-ciencia/`).
+- **V0 (esta versão):** 2 workspaces ativos (`00-orquestrador/`, `01-gestor/`) + 6 esqueletos (`03-audiovisual/` a `08-ciencia/`) + 1 em rascunho (`02-design-educacional/`).
 - **V1+:** Conforme cada servidor de área entra, ativa o workspace correspondente em ~3h de onboarding (preencher os 4 arquivos em `<workspace>/contrato/` -- `identidade.md`, `regras.md`, `exemplos.md`, `entrega.md`).
 
 ## Folder Map
@@ -25,7 +25,7 @@ cerebro-cgte/
 │
 ├── 00-orquestrador/       ATIVO V0  -- roteia demanda nova
 ├── 01-gestor/             ATIVO V0  -- HITL, decide cards no Kanboard
-├── 02-educacao/           esqueleto -- MOOC, Conteúdo Educacional, Formação
+├── 02-design-educacional/ rascunho  -- MOOC, Conteúdo Educacional, Formação, Co-criação pedagógica
 ├── 03-audiovisual/        esqueleto -- Produção Audiovisual, Evento
 ├── 04-comunicacao/        esqueleto -- Comunicação Visual, Conteúdo Digital
 ├── 05-acessibilidade/     esqueleto -- Acessibilidade, Libras

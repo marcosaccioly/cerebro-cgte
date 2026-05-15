@@ -31,7 +31,7 @@ Um roteamento e **bom** quando:
 Um roteamento e **não bom** quando:
 
 - Roteou para o gestor sem 3-line plan ("você decide tudo").
-- Inventou um especialista (ex: routear para `02-educacao/` em V0 quando esta pasta ainda e esqueleto).
+- Inventou um especialista (ex: routear para `02-design-educacional/` em V0 quando esta pasta ainda e esqueleto).
 - Tentou qualificar / decidir em vez de rotear.
 
 ## Decisão do gestor (`01-gestor/`)
