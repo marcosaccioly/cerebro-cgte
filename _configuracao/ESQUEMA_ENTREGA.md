@@ -35,7 +35,7 @@ carga:
 |---|---|---|
 | `id_entrega` | sim | Formato `EN-NNN`. Numerado dentro de um case na ordem de criação. |
 | `id_caso` | sim | Formato `CASO-YYYY-NNNN-shortslug`. Mesmo valor em todos os entregas do mesmo case. |
-| `papel_origem` | sim | Nome da pasta-especialista origem. Um de: `00-orquestrador`, `01-gestor`, `02-educacao`, ..., `08-ciencia`, `_pontes/kanboard`, `_pontes/gitlab`. |
+| `papel_origem` | sim | Nome da pasta-especialista origem. Um de: `00-orquestrador`, `01-gestor`, `02-design-educacional`, `03-audiovisual`, ..., `08-ciencia`, `_pontes/kanboard`, `_pontes/gitlab`. |
 | `papel_destino` | sim | Nome da pasta-especialista destino. Mesma lista. Deve ser um proximo-passo válido de `papel_origem` em `cadeias-fluxo.yaml`. |
 | `dono_agente` | sim | Qual humano possui o entrega. Casa com filename em `_configuracao/voz/` (sem o `.md`). Em V0, quase sempre `marquito`. Em V1+, vira o servidor da área. |
 | `criado_em` | sim | ISO date (`YYYY-MM-DD`). Quando o emissor escreveu o entrega. |

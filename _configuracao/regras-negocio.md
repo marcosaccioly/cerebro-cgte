@@ -48,10 +48,10 @@ Auto-merge so em arquivos nao-sensiveis sem conflito. Qualquer outro caso pede a
 
 A taxonomia ativa do board 47 cobre os 8 eixos. Cada categoria mapeia para um especialista (V0: todos roteados via gestor; V1+: para o especialista direto):
 
-- **MOOC** -> `02-educacao/` (V1+)
-- **Conteúdo Educacional** -> `02-educacao/` (V1+)
-- **Formação e Capacitação** -> `02-educacao/` (V1+)
-- **Programação Visual Educacional** -> `02-educacao/` (V1+)
+- **MOOC** -> `02-design-educacional/` (V1+)
+- **Conteúdo Educacional** -> `02-design-educacional/` (V1+)
+- **Formação e Capacitação** -> `02-design-educacional/` (V1+)
+- **Programação Visual Educacional** -> `02-design-educacional/` (V1+) -- *estrutura pedagógica; produção visual em `04-comunicacao/`*
 - **Produção Audiovisual** -> `03-audiovisual/` (V1+)
 - **Evento / Transmissão** -> `03-audiovisual/` (V1+)
 - **Comunicação Visual** -> `04-comunicacao/` (V1+)

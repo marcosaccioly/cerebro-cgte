@@ -21,7 +21,7 @@ usuarios:
   #   nome_completo: "<nome>"
   #   papel: "servidor"
   #   eixo: "<educação | audiovisual | comunicação | acessibilidade | tech_sistemas | institucional | ciência>"
-  #   especialista_pasta: "02-educacao"     # exemplo
+  #   especialista_pasta: "02-design-educacional"     # exemplo
   #   ativo_v0: false
   #
   # Quando a pasta-especialista virar ativa, mover ativo_v0 para true e o usuario

@@ -12,7 +12,7 @@
 #   00-orquestrador | 01-gestor | _pontes/kanboard | _pontes/gitlab
 #
 # Papéis esqueleto V0 (ativam em V1.X):
-#   02-educacao | 03-audiovisual | 04-comunicacao | 05-acessibilidade |
+#   02-design-educacional | 03-audiovisual | 04-comunicacao | 05-acessibilidade |
 #   06-tecnologia | 07-institucional | 08-ciencia
 
 workflow_chains:
