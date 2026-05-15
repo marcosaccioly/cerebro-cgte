@@ -6,7 +6,7 @@ Três exemplos cobrindo as três chains V0: `anotar_tarefa_propria`, `distribuir
 
 ## Exemplo 1: Tarefa própria do gestor (`anotar_tarefa_propria`)
 
-**Demanda chegando (de `inbox/`):**
+**Demanda chegando (de `../entrada/`):**
 ```
 Marquito, anotação da reunião de coordenação de hoje (14/05):
 "Preciso preparar os slides do MOOC X (eixo Educação -> MOOC) até próxima sexta.
@@ -47,7 +47,7 @@ carga:
 
 ## Exemplo 2: Distribuir tarefa para a equipe (`distribuir_tarefa`)
 
-**Demanda chegando (de `inbox/`):**
+**Demanda chegando (de `../entrada/`):**
 ```
 Email da chefia (Reitoria), 14/05:
 "Precisamos de uma notícia institucional sobre o lançamento do Programa Y
@@ -90,7 +90,7 @@ carga:
 
 ## Exemplo 3: Demanda fora das categorias ativas (`demanda_extraordinaria`)
 
-**Demanda chegando (de `inbox/`):**
+**Demanda chegando (de `../entrada/`):**
 ```
 Mensagem de servidor da Pro-Reitoria de Pesquisa, 14/05:
 "Voces podem ajudar a montar um piloto de uso de IA para revisão de textos
@@ -135,4 +135,4 @@ carga:
 - O `pedido` cabe em uma frase. Onde poderia ser duas, foi dividido ou comprimido.
 - `payload.routing_rationale` sempre presente -- o receptor lê primeiro.
 - Toda demanda vira um case mesmo que pareça trivial. Sem case, sem rastreabilidade.
-- Em V0, todo entrega de saída do orchestrator vai para `01-gestor/`. Em V1+, alguns iriam direto para especialistas ativos.
+- Em V0, todo entrega de saída do orchestrator vai para `../../01-gestor/`. Em V1+, alguns iriam direto para especialistas ativos.

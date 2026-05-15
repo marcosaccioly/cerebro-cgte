@@ -4,7 +4,7 @@ O contrato do gestor. O que entra, o que sai, para onde vai depois.
 
 ## O que eu recebo
 
-Um entrega de `00-orquestrador/` (em V0, sempre). O envelope traz:
+Um entrega de `../../00-orquestrador/` (em V0, sempre). O envelope traz:
 
 - `payload.routing_rationale:` o 3-line plan do orchestrator (situação / especialista / por que). Leia primeiro.
 - Um dos três payloads V0:
@@ -15,17 +15,17 @@ Um entrega de `00-orquestrador/` (em V0, sempre). O envelope traz:
 Em V1+, além do orchestrator, eu posso receber:
 
 - Entrega de especialista ativo pedindo aprovação em gate institucional (ex: especialista terminou e quer mover card para "Em aprovação").
-- Entrega de `_pontes/gitlab/` sobre merge sensível que pede HITL.
+- Entrega de `../../_pontes/gitlab/` sobre merge sensível que pede HITL.
 
 ## O que eu produzo
 
-Em V0, quase sempre uma chamada para `_pontes/kanboard/`:
+Em V0, quase sempre uma chamada para `../../_pontes/kanboard/`:
 
 ```yaml
 id_entrega: EN-NNN
 id_caso: CASO-YYYY-NNNN-shortslug
 papel_origem: 01-gestor
-papel_destino: _pontes/kanboard
+papel_destino: ../../_pontes/kanboard
 dono_agente: marquito
 criado_em: YYYY-MM-DD
 status: done                                    # depois que o bridge confirmou
@@ -65,9 +65,9 @@ carga:
 
 Em V0, eu apareço em todas as três chains como passo do meio:
 
-- `anotar_tarefa_propria`: `00-orquestrador -> 01-gestor -> _pontes/kanboard`
-- `distribuir_tarefa`: `00-orquestrador -> 01-gestor -> _pontes/kanboard`
-- `demanda_extraordinaria`: `00-orquestrador -> 01-gestor -> _pontes/kanboard`
+- `anotar_tarefa_propria`: `00-orquestrador -> 01-gestor -> ../../_pontes/kanboard`
+- `distribuir_tarefa`: `00-orquestrador -> 01-gestor -> ../../_pontes/kanboard`
+- `demanda_extraordinaria`: `00-orquestrador -> 01-gestor -> ../../_pontes/kanboard`
 
 Toda chain V0 passa por mim e termina no bridge.
 
@@ -90,7 +90,7 @@ carga:
 ```yaml
 id_entrega: EN-002
 papel_origem: 01-gestor
-papel_destino: _pontes/kanboard
+papel_destino: ../../_pontes/kanboard
 pedido: "Criar card aprovado no projeto 47, categoria MOOC, coluna Início autorizado."
 carga:
   kanboard_card_request: { ... com hitl_aprovado_em e hitl_aprovado_por preenchidos ... }

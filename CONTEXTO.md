@@ -1,8 +1,10 @@
-# CONTEXT -- roteamento de workflow
+# CONTEXTO -- roteamento de workflow entre os 9 workspaces
 
-Como demandas se movem pelas pastas. Leia na entrada de qualquer tarefa: diz qual especialista possui o que e como o entrega entre eles funciona.
+Como demandas se movem pelos workspaces do cerebro-cgte. Leia na entrada de qualquer tarefa cross-workspace: diz qual especialista possui o que e como a entrega entre eles funciona.
 
-## Os 9 especialistas (V0: 2 ativos + 7 esqueletos)
+Cada um dos 9 especialistas é um **workspace MWP próprio** com seu `CLAUDE.md`, `CONTEXTO.md`, `contrato/`, `configuracao/questionario.md`, `etapas/` e `referencias/`. Este arquivo coordena entre eles.
+
+## Os 9 workspaces (V0: 2 ativos + 7 esqueletos)
 
 | Pasta | Status V0 | Propósito | Inputs | Outputs |
 |---|---|---|---|---|
@@ -47,13 +49,13 @@ Bridges não são especialistas. São módulos de infraestrutura que o `01-gesto
 - **`_pontes/kanboard/`** -- TypeScript que fala com a API JSON-RPC do Kanboard institucional. Toda escrita passa por HITL (gestor aprova o payload antes do envio). 4 operações em V0: `criar-tarefa`, `listar-tarefas-projeto`, `adicionar-comentario`, `mover-tarefa`.
 - **`_pontes/gitlab/`** -- TypeScript que envelopa `git push` / `git pull` com HITL em merges sensíveis. Lista mínima de arquivos sensíveis: `_configuracao/voz/`, `_configuracao/regras-negocio.md`, `_configuracao/ESQUEMA_ENTREGA.md`, `.env*`.
 
-## Quando ativar um especialista (V1.X)
+## Quando ativar um workspace esqueleto (V1.X)
 
-Ativação acontece quando o servidor da área entra. Servidor + gestor sentam ~3h e preenchem os 4 arquivos: `identidade.md`, `regras.md`, `exemplos.md`, `entrega.md`. Onboarding referenciado em `operacoes/new-hire-day-one.md` (a criar em V1.X).
+Ativação acontece quando o servidor da área entra. Servidor + gestor sentam ~3h e preenchem os 4 arquivos em `<workspace>/contrato/`: `identidade.md`, `regras.md`, `exemplos.md`, `entrega.md`. O passo a passo está no questionário do workspace: `<workspace>/configuracao/questionario.md`. Onboarding institucional referenciado em `operacoes/new-hire-day-one.md` (a criar em V1.X).
 
-A pasta-esqueleto só vira ativa quando:
+O workspace esqueleto só vira ativo quando:
 
-- O servidor existe e é o owner do conteúdo (gestor pode rascunhar `identidade.md` antes, mas o servidor edita / valida).
+- O servidor existe e é o owner do conteúdo (gestor pode rascunhar `contrato/identidade.md` antes, mas o servidor edita / valida).
 - O especialista tem pelo menos 1 chain V1+ que termina nele em `_configuracao/cadeias-fluxo.yaml`.
 - O servidor sabe que existe um workspace, sabe como abrir um case e validou em uma demanda real (com gestor olhando junto).
 

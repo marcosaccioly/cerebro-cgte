@@ -76,7 +76,7 @@ cerebro-cgte/
 |   |-- cadeias-fluxo.yaml        (chains V0 + previsão V1+)
 |   |-- regras-negocio.md           (HITL, gates, escopo)
 |   |-- padroes-qualidade.md        (bar de qualidade por especialista)
-|   `-- voice/
+|   `-- voz/
 |       |-- cgte.md                 (voz institucional; placeholder bloqueante em V0)
 |       `-- marquito.md             (voz pessoal do gestor; placeholder bloqueante em V0)
 |-- 00-orquestrador/                (ATIVO V0 -- roteia)
@@ -126,7 +126,7 @@ Todo arrow é um arquivo YAML em `casos/.../entregas/`. Abra os arquivos. O trab
 Cada servidor que entra ativa um especialista:
 
 1. Servidor lê `operacoes/new-hire-day-one.md` (criar em V1.X) antes de sentar com Marquito.
-2. Sessão de ~3h: preenche `identidade.md`, `regras.md`, `exemplos.md`, `entrega.md` da pasta dele.
+2. Sessão de ~3h: preenche `contrato/identidade.md`, `contrato/regras.md`, `contrato/exemplos.md`, `contrato/entrega.md` da pasta dele.
 3. Atualiza `_configuracao/cadeias-fluxo.yaml` com a chain que termina no novo especialista.
 4. Valida em uma demanda real, gestor olhando junto.
 5. A partir daí, `00-orquestrador/` passa a rotear demandas daquela área direto para o novo especialista (sem passar pelo gestor primeiro).

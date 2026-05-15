@@ -31,10 +31,10 @@ carga:
 **Ação do gestor:**
 
 1. Status do EN-001 -> `in_progress`.
-2. Mapear categoria "MOOC" para `category_id` via `reference/projetos-cgte.yaml`.
-3. Mapear responsável "marquito" para `owner_id` via `_pontes/kanboard/usuarios-cgte.yaml`.
+2. Mapear categoria "MOOC" para `category_id` via `../referencias/projetos-cgte.yaml`.
+3. Mapear responsável "marquito" para `owner_id` via `../../_pontes/kanboard/usuarios-cgte.yaml`.
 4. Preencher `kanboard_card_request` completo.
-5. Chamar `_pontes/kanboard/criar-tarefa` que mostra o payload e pede HITL.
+5. Chamar `../../_pontes/kanboard/criar-tarefa` que mostra o payload e pede HITL.
 6. Gestor lê, aprova com `y`.
 7. Bridge cria o card, retorna `card_id`.
 
@@ -43,7 +43,7 @@ carga:
 id_entrega: EN-002
 id_caso: CASO-2026-0002-slides-mooc-x
 papel_origem: 01-gestor
-papel_destino: _pontes/kanboard
+papel_destino: ../../_pontes/kanboard
 dono_agente: marquito
 criado_em: 2026-05-14
 status: done
@@ -96,7 +96,7 @@ carga:
 **Ação do gestor:**
 
 1. EN-001 -> `in_progress`.
-2. Olhar capacidade da semana de quem cobre Comunicação na CGTE (consultar `_pontes/kanboard/listar-tarefas-projeto` para a coluna "Em execução" do projeto 47, filtrar por owner).
+2. Olhar capacidade da semana de quem cobre Comunicação na CGTE (consultar `../../_pontes/kanboard/listar-tarefas-projeto` para a coluna "Em execução" do projeto 47, filtrar por owner).
 3. Decidir: é a Servidora A. Documentar critério: "Servidora A cobre Conteúdo Digital, está com 2 cards em execução, capacidade ok."
 4. Preencher `kanboard_card_request` com `owner_id` da Servidora A.
 5. HITL na CLI, gestor aprova.
@@ -107,7 +107,7 @@ carga:
 id_entrega: EN-002
 id_caso: CASO-2026-0003-noticia-programa-y
 papel_origem: 01-gestor
-papel_destino: _pontes/kanboard
+papel_destino: ../../_pontes/kanboard
 dono_agente: marquito
 criado_em: 2026-05-14
 status: done
@@ -170,7 +170,7 @@ carga:
 id_entrega: EN-002
 id_caso: CASO-2026-0004-piloto-ia-revisao
 papel_origem: 01-gestor
-papel_destino: _pontes/kanboard
+papel_destino: ../../_pontes/kanboard
 dono_agente: marquito
 criado_em: 2026-05-14
 status: done
@@ -197,7 +197,7 @@ carga:
     link: "https://board.cefor.ifes.edu.br/?controller=TaskViewController&action=show&task_id=1489"
 ```
 
-A decisão "criar nova categoria" eventual vai pra `_configuracao/regras-negocio.md` e `reference/taxonomia-board-47.md` -- e isso entra no `revisao-sexta.md` da semana.
+A decisão "criar nova categoria" eventual vai pra `../../_configuracao/regras-negocio.md` e `../referencias/taxonomia-board-47.md` -- e isso entra no `../../operacoes/revisao-sexta.md` da semana.
 
 ---
 
@@ -205,6 +205,6 @@ A decisão "criar nova categoria" eventual vai pra `_configuracao/regras-negocio
 
 - HITL e o passo mais importante. Sem ele, V0 falha mesmo que a chain inteira funcione.
 - O `caso.md` fica atualizado em cada entrega. Auditoria depende disso.
-- Categoria do board e mapeada explicitamente, nunca inferida. `reference/taxonomia-board-47.md` e a fonte.
-- Em V0, o destino do `papel_destino` do gestor e quase sempre `_pontes/kanboard`. Em V1+, pode ser também um especialista ativo.
+- Categoria do board e mapeada explicitamente, nunca inferida. `../referencias/taxonomia-board-47.md` e a fonte.
+- Em V0, o destino do `papel_destino` do gestor e quase sempre `../../_pontes/kanboard`. Em V1+, pode ser também um especialista ativo.
 - Decisões extraordinárias geram entrada para o `friday-review`.

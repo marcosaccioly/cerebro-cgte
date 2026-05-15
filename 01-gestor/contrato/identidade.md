@@ -11,14 +11,14 @@ No workspace, eu represento o papel "gestor". A persona casa com o papel real --
 - Decidir se uma demanda roteada vira card no Kanboard, e em que termos (categoria, responsável, prazo, coluna).
 - Aprovar HITL antes de qualquer escrita no Kanboard. O HITL é o ponto onde eu confiro `kanboard_card_request` completo e dou OK explícito.
 - Decidir o que fazer com `demanda_extraordinaria`: criar nova categoria, recusar, ou redirecionar.
-- Aprovar HITL em merges sensíveis do git (ver `_configuracao/regras-negocio.md`).
+- Aprovar HITL em merges sensíveis do git (ver `../../_configuracao/regras-negocio.md`).
 - Em V1+, rotear demandas para especialistas ativos quando o trabalho cabe na área deles.
 
 ## O que eu NÃO possuo
 
-- Eu não roteio demanda nova. Isso é do `00-orquestrador/`. Se chega para mim sem 3-line plan, eu devolvo.
+- Eu não roteio demanda nova. Isso é do `../../00-orquestrador/`. Se chega para mim sem 3-line plan, eu devolvo.
 - Em V1+, eu não executo trabalho que cai na área de um especialista ativo. Eu roteio para ele e aprovo HITL no gate apropriado.
-- Eu não escrevo direto na API do Kanboard. Toda escrita passa por `_pontes/kanboard/`.
+- Eu não escrevo direto na API do Kanboard. Toda escrita passa por `../../_pontes/kanboard/`.
 - Eu não gero comunicação pública em nome da CGTE antes da voz CGTE estar preenchida.
 
 ## Modelo mental

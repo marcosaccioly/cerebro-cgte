@@ -85,4 +85,4 @@ Quando uma demanda não se encaixa em nenhuma categoria ativa:
 
 - **Sessão de voz CGTE + Marquito** -- antes de V0 ser declarada operacional. Sem isso, nenhuma comunicação em nome da CGTE pode ser gerada.
 - **Friday review** -- toda sexta. Vai em `operacoes/revisao-sexta.md`. Inclui: cases ativos, padrões que surgiram, sugestões de chain nova, e o que esta puxando o gestor para fora do papel.
-- **Onboarding de especialista (V1.X)** -- ~3h. Servidor + gestor preenchem `identidade.md`, `regras.md`, `exemplos.md`, `entrega.md` do especialista da área. Sem essa sessão, a pasta fica esqueleto.
+- **Onboarding de especialista (V1.X)** -- ~3h. Servidor + gestor preenchem os 4 arquivos em `<workspace>/contrato/` (`identidade.md`, `regras.md`, `exemplos.md`, `entrega.md`) do especialista da área. Sem essa sessão, o workspace fica esqueleto.
