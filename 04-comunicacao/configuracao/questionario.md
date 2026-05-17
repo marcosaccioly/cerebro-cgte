@@ -8,6 +8,7 @@
 
 Você está ativando o especialista **04-comunicacao** (Comunicação). Esta sessão dura ~3h e produz:
 
+0. **Decisão de nome** -- Marquito sinalizou em 2026-05-17 que o nome "comunicacao" pode estar errado para o escopo real (banners + identidade visual + layout + conteúdo de canais). Avaliar renomear para `04-design/` -- ver Q0.
 1. `contrato/identidade.md` preenchido (quem você é no papel).
 2. `contrato/regras.md` preenchido (sempre / nunca / casos de borda).
 3. `contrato/exemplos.md` preenchido (3 exemplos reais).
@@ -17,6 +18,14 @@ Você está ativando o especialista **04-comunicacao** (Comunicação). Esta ses
 Depois desta sessão, este workspace **deixa de ser esqueleto**. Você passa a receber entregas de `../00-orquestrador/` (ou outros) e produz entregas que vão para o gestor ou direto para bridges.
 
 ## Perguntas
+
+### Q0: O nome "comunicacao" ainda é o melhor para este workspace?
+
+- **Contexto da dúvida (registrada por Marquito em 2026-05-17):** o escopo concreto deste workspace -- banners, identidade visual, layout de peças, capas, thumbnails (Comunicação Visual) + notícias, posts, materiais de canais (Conteúdo Digital) -- é o que o MEC chama de **Design** no ensino superior brasileiro. O nome "comunicacao" pega bem a parte de "Conteúdo Digital" mas perde a parte visual / de design. Hipótese a avaliar: renomear `04-comunicacao/` → `04-design/`.
+- **Decisão a tomar nesta sessão:** servidor + gestor decidem se renomeiam ou mantêm. Se renomear, fazer com `git mv` (preserva histórico) e atualizar refs cruzadas listadas abaixo.
+- **Refs cruzadas que precisariam ser atualizadas se renomear:** `CLAUDE.md` raiz (mapa + L0), `CONTEXTO.md` raiz (tabela 9 workspaces), `README.md` raiz, `_configuracao/cadeias-fluxo.yaml`, `00-orquestrador/contrato/entrega.md` + `exemplos.md`, `00-orquestrador/referencias/arvore-decisao-roteamento.md`, `01-gestor/contrato/exemplos.md`, `01-gestor/referencias/taxonomia-board-47.md`, `02-design-educacional/` (CLAUDE.md, CONTEXTO.md, README.md, identidade.md, entrega.md, exemplos.md, questionario.md, glossario, tipologia).
+- **Categorias do board 47 não mudam:** "Comunicação Visual" e "Conteúdo Digital" são a verdade institucional. A decisão é só sobre o nome interno da pasta.
+- **Onde grava a decisão:** atualizar este arquivo (remover Q0 ou registrar que foi mantido), atualizar nome em `CLAUDE.md` deste workspace, e -- se renomeado -- atualizar todas as refs acima.
 
 ### Q1: Quem é o servidor responsável?
 
