@@ -14,3 +14,6 @@ bun.lockb
 *.swp
 .DS_Store
 Thumbs.db
+
+# crash dumps (bash/cygwin)
+*.stackdump
