@@ -2,110 +2,162 @@
 #
 # Mapeamento de usuarios do Kanboard (projeto 47) para user_id real.
 # IDs REAIS via varredura (getProjectUsers) em 2026-06-26.
-# Roster CGTE validado por Marquito em 2026-06-26.
+# Roster + eixos validados por Marquito em 2026-06-26.
 #
 # Campos:
 #   equipeCGTE: true = integra a equipe da CGTE; false = aparece no board mas e externo.
-#   situacao:  observacao de vinculo (afastamento, bolsa, etc.).
-#   eixo:      area de atuacao -- a mapear no onboarding de cada area (TODO).
-#   ativo_v0:  true so para quem ja opera como especialista ativo na V0.
-#   papel:     gestor | servidor | bolsista | grupo | sistema | externo
+#   eixo:       area principal de atuacao (mapeia para workspace correspondente).
+#   eixo_sec:   area secundaria, quando a pessoa atua em mais de uma frente.
+#   situacao:   observacao de vinculo (afastamento, bolsa, remoto, etc.).
+#   papel:      gestor | servidor | bolsista | estagiaria | grupo | sistema | externo
+#   ativo_v0:   true so para quem ja opera como especialista ativo na V0.
+#
+# Eixos -> workspace:
+#   audiovisual            -> 03-audiovisual
+#   design-educacional     -> 02-design-educacional
+#   comunicacao            -> 04-comunicacao
+#   acessibilidade-libras  -> 05-acessibilidade
+#   tecnologia             -> 06-tecnologia
+#   pedagogico-adm         -> (sem workspace dedicado hoje)
 #
 # Use o kanboard_user_id como owner_id ao distribuir tarefa.
 
 usuarios:
   # ============================================================
-  # CGTE (13)
+  # GESTAO
   # ============================================================
   - kanboard_user_id: 3
     username: "marquito"
     nome_completo: "Marcos Vinicius Forecchi Accioly"
     papel: "gestor"
     equipeCGTE: true
-    eixo: null
+    cargo: "programador visual"
+    eixo: design-educacional      # cargo de origem; papel atual e gestor
     voice_file: "_configuracao/voz/marquito.md"
     ativo_v0: true
-  - kanboard_user_id: 14
-    nome_completo: "Monia Lavra Vignati"
-    papel: "servidor"
-    equipeCGTE: true
-    situacao: "afastada para doutorado (mantem vinculo com o setor)"
-    eixo: null
-    ativo_v0: false
+
+  # ============================================================
+  # AUDIOVISUAL (03-audiovisual)
+  # Nota: area usa pouco / quase nada o Kanboard hoje -- ver _inbox de melhoria.
+  # ============================================================
   - kanboard_user_id: 16
     username: "tiago"
     nome_completo: "Tiago Corrente"
     papel: "servidor"
     equipeCGTE: true
-    eixo: null
-    ativo_v0: false
-  - kanboard_user_id: 34
-    nome_completo: "Leonardo da Silva Coutinho"
-    papel: "servidor"
-    equipeCGTE: true
-    eixo: null
-    ativo_v0: false
-  - kanboard_user_id: 39
-    nome_completo: "Andréia Cristina Carvalho Cáo"
-    papel: "servidor"
-    equipeCGTE: true
-    eixo: null
-    ativo_v0: false
-  - kanboard_user_id: 41
-    nome_completo: "Juliana Cristina da Silva Cassaro"
-    papel: "servidor"
-    equipeCGTE: true
-    situacao: "coordenou a pesquisa de geracao de enunciados com IA"
-    eixo: null
-    ativo_v0: false
-  - kanboard_user_id: 44
-    nome_completo: "Elton Vinícius Silva"
-    papel: "servidor"
-    equipeCGTE: true
-    eixo: null
+    eixo: audiovisual
     ativo_v0: false
   - kanboard_user_id: 64
     nome_completo: "Darlan Machado Pinto"
     papel: "servidor"
     equipeCGTE: true
-    eixo: null
+    eixo: audiovisual
+    ativo_v0: false
+  - kanboard_user_id: 34
+    nome_completo: "Leonardo da Silva Coutinho"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: audiovisual
+    eixo_sec: tecnologia          # tecnico em informatica; testes de tecnologia/ferramentas
+    ativo_v0: false
+  - kanboard_user_id: null        # ainda nao usa o Kanboard
+    nome_completo: "Maria Fernanda"
+    papel: "estagiaria"
+    equipeCGTE: true
+    eixo: audiovisual
+    situacao: "estagiaria; ainda nao cadastrada/ativa no Kanboard"
+    ativo_v0: false
+
+  # ============================================================
+  # DESIGN / PROGRAMACAO VISUAL (02-design-educacional)
+  # ============================================================
+  - kanboard_user_id: 44
+    nome_completo: "Elton Vinícius Silva"
+    papel: "servidor"
+    equipeCGTE: true
+    cargo: "programador visual"
+    eixo: design-educacional
+    ativo_v0: false
+  - kanboard_user_id: 39
+    nome_completo: "Andréia Cristina Carvalho Cáo"
+    papel: "servidor"
+    equipeCGTE: true
+    cargo: "programador visual"
+    eixo: design-educacional
+    ativo_v0: false
+  - kanboard_user_id: 41
+    nome_completo: "Juliana Cristina da Silva Cassaro"
+    papel: "servidor"
+    equipeCGTE: true
+    cargo: "programador visual"
+    eixo: design-educacional
+    situacao: "coordenou a pesquisa de geracao de enunciados com IA"
+    ativo_v0: false
+  - kanboard_user_id: 14
+    nome_completo: "Monia Lavra Vignati"
+    papel: "servidor"
+    equipeCGTE: true
+    cargo: "programador visual"
+    eixo: design-educacional
+    situacao: "afastada para doutorado (mantem vinculo com o setor)"
+    ativo_v0: false
+
+  # ============================================================
+  # ACESSIBILIDADE / LIBRAS (05-acessibilidade)
+  # ============================================================
+  - kanboard_user_id: 100
+    nome_completo: "Eliana Burgarelli"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: acessibilidade-libras
+    situacao: "referencia/coordenacao informal de Libras; traduz e interpreta"
     ativo_v0: false
   - kanboard_user_id: 68
     nome_completo: "Clara Marques Bodart"
     papel: "servidor"
     equipeCGTE: true
+    eixo: acessibilidade-libras
     situacao: "afastada para doutorado (mantem vinculo com o setor)"
-    eixo: null
-    ativo_v0: false
-  - kanboard_user_id: 88
-    nome_completo: "Rutinelli da Penha Fávero"
-    papel: "servidor"
-    equipeCGTE: true
-    situacao: "coautora do artigo do ecossistema de IA"
-    eixo: null
-    ativo_v0: false
-  - kanboard_user_id: 93
-    nome_completo: "Raquel Alves Fortunato"
-    papel: "bolsista"
-    equipeCGTE: true
-    eixo: null
-    ativo_v0: false
-  - kanboard_user_id: 100
-    nome_completo: "Eliana Burgarelli"
-    papel: "servidor"
-    equipeCGTE: true
-    eixo: null
     ativo_v0: false
   - kanboard_user_id: 102
     nome_completo: "Carolina Broedel"
     papel: "bolsista"
     equipeCGTE: true
-    eixo: null
+    eixo: acessibilidade-libras
+    situacao: "traduz conteudo para Libras e interpreta eventos"
+    ativo_v0: false
+  - kanboard_user_id: null        # ainda nao no Kanboard
+    nome_completo: "Bárbara"
+    papel: "bolsista"
+    equipeCGTE: true
+    eixo: acessibilidade-libras
+    situacao: "bolsista (programa ONAC); atua majoritariamente remoto"
+    ativo_v0: false
+
+  # ============================================================
+  # PEDAGOGICO / ADMINISTRATIVO (sem workspace dedicado)
+  # ============================================================
+  - kanboard_user_id: 93
+    nome_completo: "Raquel Alves Fortunato"
+    papel: "bolsista"
+    equipeCGTE: true
+    eixo: pedagogico-adm
+    situacao: "suporte administrativo e pedagogico; entende um pouco de Libras (nao grava). SUBUTILIZADA -- definir plano de trabalho."
+    ativo_v0: false
+
+  # ============================================================
+  # A CONFIRMAR
+  # ============================================================
+  - kanboard_user_id: 88
+    nome_completo: "Rutinelli da Penha Fávero"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: null                    # TODO confirmar eixo (coautora do artigo do ecossistema de IA)
     ativo_v0: false
 
   # ============================================================
   # EXTERNOS / COLABORADORES (aparecem no board 47, NAO integram a CGTE)
-  # Mantidos com ativo: false para leitura de cards historicos.
+  # Mantidos com equipeCGTE: false para leitura de cards historicos.
   # ============================================================
   - kanboard_user_id: 5
     nome_completo: "Giovana Munari"
