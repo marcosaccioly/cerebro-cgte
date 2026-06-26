@@ -6,10 +6,14 @@
 
 ## Frente 1 — Curadora do fluxo do Kanboard
 
-Ela já faz isso de forma informal; o objetivo é **fazer melhor e com método**. O diagnóstico
-mostrou que o board acumulou entulho, e isso vira a primeira lista concreta de trabalho dela:
+Ela já faz isso de forma informal; o objetivo é **fazer melhor e com método**.
 
-**Faxina inicial (uma vez, com HITL do gestor para fechar/mover):**
+> ⚠️ **Contingente:** antes de investir esforço na faxina abaixo, há uma decisão maior
+> em aberto — *como a CGTE deveria usar o Kanboard?* (ver memória `cgte-frentes-de-melhoria`).
+> Limpar cards sob um modelo de uso que talvez vá mudar é desperdício. A faxina só faz
+> sentido depois (ou junto) dessa definição. Não tratar como prioridade até lá.
+
+**Faxina (quando o modelo de uso estiver definido — com HITL do gestor para fechar/mover):**
 1. **Categorizar os ~68 cards sem categoria** — propor o eixo de cada um (gestor valida em lote).
 2. **Triar os 37 cards parados há +1 ano** — para cada: fechar, congelar ou reativar.
 3. **Fechar/migrar os 22 cards legado (`x_`)** — começar pelos 15 de "x_Salas Virtuais".
