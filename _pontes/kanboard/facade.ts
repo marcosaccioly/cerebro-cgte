@@ -73,7 +73,7 @@ export async function requireHitl(carga: unknown, descricao: string): Promise<bo
   console.log("\n=== HITL ===");
   console.log(`Operacao: ${descricao}`);
   console.log("Payload:");
-  console.log(JSON.stringify(payload, null, 2));
+  console.log(JSON.stringify(carga, null, 2));
   console.log("\nAprovar? Digite `y` para confirmar, qualquer outra coisa cancela.");
   process.stdout.write("> ");
 

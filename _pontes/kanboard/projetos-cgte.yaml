@@ -1,85 +1,114 @@
 # projetos-cgte.yaml
 #
 # Mapeamento autoritativo de IDs do Kanboard institucional para nomes legíveis.
-# Atualizar após primeira chamada de listar-tarefas-projeto retornar metadata real.
-#
-# Em V0:
-#   - Os IDs aqui são placeholders. A primeira execução do bridge deve preencher.
-#   - Editar a mao quando categoria / coluna / usuario mudar no board.
-#   - Se virar pesado, V1.X pode trazer um script sync-metadata.ts.
+# IDs REAIS capturados via varredura (getColumns / getAllCategories) em 2026-06-26.
+# Atualizar a mao quando coluna / categoria mudar no board.
 
 projetos:
   - id: 47
     nome: "CGTE - Atividades"
     papel: principal
     colunas:
-      # Os IDs abaixo são placeholders. Substituir após primeira leitura real do board.
-      - id: 1
-        nome: "Backlog"
-      - id: 3
+      # IDs reais do board (ordem por position).
+      - id: 235
+        nome: "Baú de tarefas"        # backlog
+      - id: 236
         nome: "Início autorizado"
-        gate: true                 # gate institucional
-      - id: 5
-        nome: "Em execução"
-      - id: 7
+        gate: true                     # gate institucional
+      - id: 237
+        nome: "Em andamento"
+      - id: 240
         nome: "Em aprovação"
-        gate: true                 # gate institucional
-      - id: 9
-        nome: "Concluído"
+        gate: true                     # gate institucional
+      - id: 238
+        nome: "Congelado"
+      - id: 239
+        nome: "Finalizado"
     categorias:
-      # IDs placeholder; substituir após primeira leitura real.
-      - id: 12
+      # --- Eixos de produção ---
+      - id: 156
         nome: "MOOC"
         eixo: educação
-      - id: 13
+      - id: 157
         nome: "Conteúdo Educacional"
         eixo: educação
-      - id: 14
+      - id: 155
         nome: "Formação e Capacitação"
         eixo: educação
-      - id: 15
+      - id: 152
         nome: "Programação Visual Educacional"
         eixo: educação
-      - id: 16
+      - id: 160
         nome: "Produção Audiovisual"
         eixo: audiovisual
-      - id: 17
+      - id: 161
         nome: "Evento / Transmissão"
         eixo: audiovisual
-      - id: 18
+      - id: 151
         nome: "Comunicação Visual"
         eixo: comunicação
-      - id: 21
+      - id: 153
         nome: "Conteúdo Digital"
         eixo: comunicação
-      - id: 22
+      - id: 164
         nome: "Acessibilidade"
         eixo: acessibilidade
-      - id: 23
-        nome: "Libras Interpretacao"
+      - id: 163
+        nome: "Libras Interpretação"   # nome no board tem espaco final
         eixo: acessibilidade
-      - id: 25
-        nome: "Libras Traducao"
+      - id: 162
+        nome: "Libras Tradução"        # nome no board tem espaco final
         eixo: acessibilidade
-      - id: 26
+      - id: 154
         nome: "Interface Digital"
         eixo: tech_sistemas
-      - id: 24
+      - id: 158
         nome: "Inteligência Artificial"
         eixo: tech_sistemas
-      - id: 27
-        nome: "Gestao / PGD"
+      - id: 166
+        nome: "Gestão / PGD"
         eixo: institucional
-      - id: 28
+      - id: 165
         nome: "Comissão"
         eixo: institucional
-      - id: 29
-        nome: "Colaboracao Institucional"
+      - id: 59
+        nome: "Colaboração Institucional"
         eixo: institucional
-      - id: 30
+      - id: 159
         nome: "Produção Científica"
         eixo: ciência
+      # --- Transversal ---
+      - id: 167
+        nome: "Demanda Extraordinária"
+        eixo: transversal
+      # --- LEGADO: categorias antigas (prefixo x_), em substituicao. ---
+      # Nao rotear trabalho novo para ca. Mantidas so para ler cards historicos.
+      - id: 54
+        nome: "x_CSO do Cefor"
+        legado: true
+      - id: 55
+        nome: "x_Demandas da diretoria"
+        legado: true
+      - id: 53
+        nome: "x_Estudos e aprendizado"
+        legado: true
+      - id: 61
+        nome: "x_Ferramenta / Sistema / Serviço"
+        legado: true
+      - id: 60
+        nome: "x_Guias, modelos e tutoriais"
+        legado: true
+      - id: 58
+        nome: "x_Recurso educacional"
+        legado: true
+      - id: 57
+        nome: "x_Salas Virtuais"
+        legado: true
+      - id: 62
+        nome: "x_Projetos-piloto"
+        legado: true
 
+  # Projetos secundarios (IDs do .env: 58,60,73). Nomes a confirmar em varredura futura.
   - id: 58
     nome: "CGTE - Projetos"
     papel: secundario

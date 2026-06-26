@@ -26,8 +26,9 @@ Se você vai usar este workspace para outra coordenadoria / outro setor, primeir
 ### Q2: Usuario da API do Kanboard
 
 - Placeholder: `KANBOARD_API_USER` em `.env`
-- Default: `api.cgte`
+- Default: `jsonrpc`
 - Tipo: texto livre
+- Nota: quando o token (Q3) e o **token global da aplicacao** (Configuracoes -> API do Kanboard), o usuario DEVE ser `jsonrpc` -- esse e o caso da CGTE. Usar um nome de usuario qualquer (ex: `api.cgte`) com o token global retorna HTTP 401. So use um username real aqui se o token for o token PESSOAL daquele usuario.
 
 ### Q3: Token da API do Kanboard
 

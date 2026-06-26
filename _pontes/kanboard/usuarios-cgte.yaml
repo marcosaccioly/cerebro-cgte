@@ -1,28 +1,164 @@
 # usuarios-cgte.yaml
 #
-# Mapeamento de servidores CGTE para user_id do Kanboard.
-# Atualizar a mao quando alguem entra / sai. Em V1.X pode entrar script de sync.
+# Mapeamento de usuarios do Kanboard (projeto 47) para user_id real.
+# IDs REAIS via varredura (getProjectUsers) em 2026-06-26.
+# Roster CGTE validado por Marquito em 2026-06-26.
+#
+# Campos:
+#   equipeCGTE: true = integra a equipe da CGTE; false = aparece no board mas e externo.
+#   situacao:  observacao de vinculo (afastamento, bolsa, etc.).
+#   eixo:      area de atuacao -- a mapear no onboarding de cada area (TODO).
+#   ativo_v0:  true so para quem ja opera como especialista ativo na V0.
+#   papel:     gestor | servidor | bolsista | grupo | sistema | externo
+#
+# Use o kanboard_user_id como owner_id ao distribuir tarefa.
 
 usuarios:
-  - kanboard_user_id: 5            # placeholder; substituir após primeira chamada de getAllUsers
+  # ============================================================
+  # CGTE (13)
+  # ============================================================
+  - kanboard_user_id: 3
     username: "marquito"
     nome_completo: "Marcos Vinicius Forecchi Accioly"
     papel: "gestor"
+    equipeCGTE: true
+    eixo: null
     voice_file: "_configuracao/voz/marquito.md"
     ativo_v0: true
+  - kanboard_user_id: 14
+    nome_completo: "Monia Lavra Vignati"
+    papel: "servidor"
+    equipeCGTE: true
+    situacao: "afastada para doutorado (mantem vinculo com o setor)"
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 16
+    username: "tiago"
+    nome_completo: "Tiago Corrente"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 34
+    nome_completo: "Leonardo da Silva Coutinho"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 39
+    nome_completo: "Andréia Cristina Carvalho Cáo"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 41
+    nome_completo: "Juliana Cristina da Silva Cassaro"
+    papel: "servidor"
+    equipeCGTE: true
+    situacao: "coordenou a pesquisa de geracao de enunciados com IA"
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 44
+    nome_completo: "Elton Vinícius Silva"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 64
+    nome_completo: "Darlan Machado Pinto"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 68
+    nome_completo: "Clara Marques Bodart"
+    papel: "servidor"
+    equipeCGTE: true
+    situacao: "afastada para doutorado (mantem vinculo com o setor)"
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 88
+    nome_completo: "Rutinelli da Penha Fávero"
+    papel: "servidor"
+    equipeCGTE: true
+    situacao: "coautora do artigo do ecossistema de IA"
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 93
+    nome_completo: "Raquel Alves Fortunato"
+    papel: "bolsista"
+    equipeCGTE: true
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 100
+    nome_completo: "Eliana Burgarelli"
+    papel: "servidor"
+    equipeCGTE: true
+    eixo: null
+    ativo_v0: false
+  - kanboard_user_id: 102
+    nome_completo: "Carolina Broedel"
+    papel: "bolsista"
+    equipeCGTE: true
+    eixo: null
+    ativo_v0: false
 
   # ============================================================
-  # SERVIDORES (V1.X -- conforme entrarem como especialistas ativos)
+  # EXTERNOS / COLABORADORES (aparecem no board 47, NAO integram a CGTE)
+  # Mantidos com ativo: false para leitura de cards historicos.
   # ============================================================
-  # Adicionar conforme servidor for ativado. Padrão do registro:
-  #
-  # - kanboard_user_id: <real do board>
-  #   username: "<username_kanboard>"
-  #   nome_completo: "<nome>"
-  #   papel: "servidor"
-  #   eixo: "<educação | audiovisual | comunicação | acessibilidade | tech_sistemas | institucional | ciência>"
-  #   especialista_pasta: "02-design-educacional"     # exemplo
-  #   ativo_v0: false
-  #
-  # Quando a pasta-especialista virar ativa, mover ativo_v0 para true e o usuario
-  # passa a ser owner_id válido em tarefa_distribuir.
+  - kanboard_user_id: 5
+    nome_completo: "Giovana Munari"
+    papel: "externo"
+    equipeCGTE: false
+    ativo_v0: false
+  - kanboard_user_id: 33
+    nome_completo: "Adailton Saraiva"
+    papel: "externo"
+    equipeCGTE: false
+    ativo_v0: false
+  - kanboard_user_id: 36
+    nome_completo: "Aline Freitas da Silva de Carvalho"
+    papel: "externo"
+    equipeCGTE: false
+    ativo_v0: false
+  - kanboard_user_id: 73
+    nome_completo: "Lorena Dias DAvila Sperandio"
+    papel: "externo"
+    equipeCGTE: false
+    situacao: "estagiaria"
+    ativo_v0: false
+  - kanboard_user_id: 75
+    nome_completo: "Yasmin Ribeiro Gatto Cardoso"
+    papel: "externo"
+    equipeCGTE: false
+    ativo_v0: false
+  - kanboard_user_id: 96
+    nome_completo: "Laura Figueiredo Maciel"
+    papel: "externo"
+    equipeCGTE: false
+    ativo_v0: false
+
+  # ============================================================
+  # CONTAS DE SISTEMA / GRUPO (nao sao pessoas -- nao distribuir como dono)
+  # ============================================================
+  - kanboard_user_id: 8
+    nome_completo: "Coordenação CGTE"
+    papel: "grupo"
+    equipeCGTE: false
+    ativo_v0: false
+  - kanboard_user_id: 74
+    nome_completo: "CGTE/Cefor - Coordenadoria Geral de Tecnologias Educacionais"
+    papel: "grupo"
+    equipeCGTE: false
+    ativo_v0: false
+  - kanboard_user_id: 76
+    nome_completo: "Notícias Cefor"
+    papel: "sistema"
+    equipeCGTE: false
+    ativo_v0: false
+  - kanboard_user_id: 106
+    nome_completo: "API CGTE"
+    papel: "sistema"
+    equipeCGTE: false
+    ativo_v0: false
