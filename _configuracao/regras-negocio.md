@@ -30,7 +30,7 @@ Os campos `hitl_aprovado_em` e `hitl_aprovado_por` do payload ficam no entrega Y
 - Não escreva vários cards em batch sem o gestor ver cada um.
 - Não mova cards entre colunas com base em sinais inferidos ("parece que terminou"). So move se houve confirmação explicita.
 - Não adicione comentarios automáticos. Cada comentario passa por HITL.
-- Não gere comunicação em nome da CGTE antes de `_configuracao/voz/cgte.md` estar preenchida. Bloqueia a chain.
+- A voz da CGTE (`_configuracao/voz/cgte.md`) e do Marquito (`marquito.md`) estão preenchidas em **v1** (2026-06-26) a partir de exemplos reais -- comunicação destravada. Toda comunicação gerada ainda passa por HITL; refinar a voz com mais exemplos ao longo do tempo.
 
 ## Sensibilidade de arquivos
 
