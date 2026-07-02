@@ -5,6 +5,7 @@
 **Especialista:** 08-ciencia (Produção Científica)
 **Data da análise original:** 2026-06-26 (sessões Claude Code em `cerebro-cgte` e no workspace `solution-design`)
 **Consolidado em:** 2026-07-02 — recuperado do histórico das conversas; nada disto havia sido salvo em arquivo.
+**Ancorado em:** 2026-07-02 — itens de elegibilidade (3.2/3.3) e critérios de julgamento (7.1.1) conferidos contra a transcrição oficial em [ChamadaUniversal062026.md](ChamadaUniversal062026.md).
 
 > **Prazo de submissão: 03/08/2026, 23h59.** Na data da consolidação restam ~4 semanas.
 
@@ -32,14 +33,44 @@ Faixas (uma proposta por pessoa):
 
 A Faixa A não serve para servidor concursado do Ifes. Para a CGTE, o caminho é **B ou C**.
 
+> Texto oficial das faixas em [ChamadaUniversal062026.md](ChamadaUniversal062026.md#1-objeto) (itens 1.2.1 a 1.2.3 + resumo comparativo).
+
+### 2.1 O que recai sobre a EQUIPE vs. sobre o COORDENADOR (item 3.3)
+
+Distinção que alarga o funil e costuma ser lida errado. A exigência de **"doutorado recente" (≥ jan/2016) recai só sobre o proponente/coordenador**, não sobre os demais doutores da equipe:
+
+- **1.2.2.1** (a equipe da Faixa B): pede apenas *"no mínimo 3 (três) doutores"* — nenhuma palavra sobre data de titulação.
+- **1.2.2.2.a** (o coordenador): a janela "≥ jan/2016" está amarrada explicitamente a *"o proponente/coordenador do projeto deverá... ter concluído o doutorado entre janeiro de 2016 e a data de submissão."*
+
+Ou seja: os outros 2 doutores podem ter se titulado **em qualquer época** — inclusive antes de 2016. Um doutor "antigo" na equipe **não** empurra a proposta para a Faixa C; ele só empurraria se *ele* fosse o coordenador.
+
+As únicas regras que caem sobre os demais membros:
+- **3.3.3** — só conta doutor com **currículo cadastrado no Lattes**.
+- **3.3.2** — ninguém da equipe (nem o coordenador) pode estar em **outra proposta** da mesma chamada, sob pena de inelegibilidade de todas.
+- **3.3.4** — cada membro precisa dar **anuência formal por escrito** (declaração assinada ou e-mail com cabeçalhos), com data **≤ 03/08/2026**, guardada pelo coordenador. Membro pode declinar até 13/08/2026.
+
+**Tradução:** o gargalo real não é "achar 3 doutores recentes". É achar **1 doutor recente (jan/2016+), com vínculo no Ifes e Lattes ativo, disposto a coordenar** — e depois somar mais 2 doutores quaisquer com Lattes e anuência.
+
+> Texto oficial da elegibilidade em [ChamadaUniversal062026.md](ChamadaUniversal062026.md#3-critérios-de-elegibilidade) (itens 3.2 Proponente, 3.3 Equipe, 3.4 Instituição).
+
 ## 3. A boa notícia: a CGTE joga forte onde o edital pontua
 
-Critérios de julgamento (item 7.1.1):
+Critérios de julgamento e pesos (item 7.1.1 — nota final é a **média ponderada**):
 
-- **Critério E — Plano de popularização e divulgação científica (peso 1):** o edital exige ações de divulgação para público *não especializado* (7.1.1.4) e explicitamente **exclui** artigos, palestras técnicas e anais. É exatamente o que a CGTE faz melhor que qualquer grupo de pesquisa típico — audiovisual, podcast, redes, design. A maioria dos proponentes sofre nesse critério; a CGTE entrega de olhos fechados.
-- **Critério A — relevância e impacto social/educacional (peso 3, o maior):** IA aplicada à EaD pública e formação de professores é tema de alto impacto social, fácil de defender. Originalidade/impacto pesam 3.
-- **Critério F — parcerias institucionais (peso 1):** dá para somar Cefor + programas de pós do Ifes + parceiros.
-- **Ponto fraco potencial — Critério D (produção científica do *proponente*, peso 1):** por isso quem assina como coordenador importa; idealmente um doutor com Lattes ativo.
+| | Critério | Peso | Leitura para a CGTE |
+|---|---|---|---|
+| **A** | Originalidade e relevância (impacto científico, tecnológico, econômico, **social** e ambiental) | **3** | **Mais forte.** IA aplicada à EaD pública e formação de professores é impacto social fácil de defender. |
+| B | Adequação do orçamento e coerência do cronograma vs. metas | 2 | Neutro — depende de a proposta ser bem montada (cortes > 15% derrubam, item 7.2.1.5.2). |
+| C | Capacidade e experiência do coordenador **e da equipe** | 2 | Depende de quem entra no time de doutores. |
+| D | Produção científica/tecnológica e gerência de projetos **do proponente** | 1 | **Ponto fraco potencial** — por isso quem assina como coordenador importa; idealmente doutor com Lattes ativo e produção na área. |
+| **E** | Plano de popularização e divulgação científica | **1** | **Onde a CGTE ganha de lavada** (ver abaixo). |
+| F | Colaboração e parcerias institucionais (além do item 1.2) | 1 | Somar Cefor + programas de pós do Ifes + parceiros. |
+
+- **Critério E é o trunfo estrutural.** O edital exige ações para público *não especializado* (7.1.1.4) e **explicitamente exclui** anais, palestras técnicas, artigos científicos e sites de eventos acadêmicos (7.1.1.4.2) como popularização. É exatamente o que um grupo de pesquisa típico não sabe fazer — e o que a CGTE faz melhor que ninguém: audiovisual, podcast, redes, design. A maioria dos proponentes sofre nesse critério; a CGTE entrega de olhos fechados.
+- **Critério A (peso 3) é o de maior peso** e casa direto com o tema. Originalidade + impacto social carregam a nota final.
+- **Atenção ao Critério D (peso 1):** é do *proponente*, não da equipe. Reforça que o coordenador ideal é um doutor com Lattes ativo e alguma produção na linha do projeto.
+
+> Texto oficial dos critérios em [ChamadaUniversal062026.md](ChamadaUniversal062026.md#7-julgamento) (tabela 7.1.1 + regras 7.1.1.4 sobre popularização).
 
 ## 4. Temas candidatos (do mais forte ao mais exploratório)
 
