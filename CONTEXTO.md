@@ -12,7 +12,7 @@ Cada um dos 9 especialistas é um **workspace MWP próprio** com seu `CLAUDE.md`
 | `01-gestor/` | ATIVO | Marquito como gestor. Anota tarefa própria, distribui, aprova HITL no Kanboard | Entrega de `00-orquestrador/` | Chamada a `_pontes/kanboard/` (criar/mover/comentar card); ou (V1+) entrega para especialista executar |
 | `02-design-educacional/` | rascunho V1 | Design educacional + atendimento a profissionais da educação + co-criação. Cobre MOOC, Conteúdo Educacional, Formação e Capacitação, Programação Visual Educacional (estrutura) | Reunião (anotações/transcrição) ou entrega de `00-orquestrador/` | Recomendação, projeto pedagógico, produto entregável, indicação de ferramenta, ou relatório |
 | `03-audiovisual/` | esqueleto | Cobre Produção Audiovisual, Evento / Transmissão | (V1.X) | (V1.X) |
-| `04-comunicacao/` | esqueleto | Cobre Comunicação Visual, Conteúdo Digital | (V1.X) | (V1.X) |
+| `04-design/` | esqueleto | Cobre Comunicação Visual, Conteúdo Digital | (V1.X) | (V1.X) |
 | `05-acessibilidade/` | esqueleto | Cobre Acessibilidade, Libras Interpretação, Libras Tradução | (V1.X) | (V1.X) |
 | `06-tecnologia/` | esqueleto | Cobre Interface Digital, Inteligência Artificial | (V1.X) | (V1.X) |
 | `07-institucional/` | esqueleto | Cobre Gestão / PGD, Comissão, Colaboração Institucional | (V1.X) | (V1.X) |

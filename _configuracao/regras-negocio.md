@@ -4,7 +4,7 @@ As restrições que definem o que a CGTE faz e não faz neste workspace. Especia
 
 ## O que somos
 
-Coordenadoria do Cefor / Ifes (CGTE). Setor educacional institucional. 10 servidores, 8 eixos de produção: educação, audiovisual, libras, design educacional, comunicação, acessibilidade, institucional, ciência. Sem cliente externo. Demanda institucional interna.
+Coordenadoria do Cefor / Ifes (CGTE). Setor educacional institucional. 10 servidores, 8 eixos de produção: educação, audiovisual, libras, design educacional, design, acessibilidade, institucional, ciência. Sem cliente externo. Demanda institucional interna.
 
 ## Verdade institucional do Kanboard
 
@@ -51,11 +51,11 @@ A taxonomia ativa do board 47 cobre os 8 eixos. Cada categoria mapeia para um es
 - **MOOC** -> `02-design-educacional/` (V1+)
 - **Conteúdo Educacional** -> `02-design-educacional/` (V1+)
 - **Formação e Capacitação** -> `02-design-educacional/` (V1+)
-- **Programação Visual Educacional** -> `02-design-educacional/` (V1+) -- *estrutura pedagógica; produção visual em `04-comunicacao/`*
+- **Programação Visual Educacional** -> `02-design-educacional/` (V1+) -- *estrutura pedagógica; produção visual em `04-design/`*
 - **Produção Audiovisual** -> `03-audiovisual/` (V1+)
 - **Evento / Transmissão** -> `03-audiovisual/` (V1+)
-- **Comunicação Visual** -> `04-comunicacao/` (V1+)
-- **Conteúdo Digital** -> `04-comunicacao/` (V1+)
+- **Comunicação Visual** -> `04-design/` (V1+)
+- **Conteúdo Digital** -> `04-design/` (V1+)
 - **Acessibilidade** -> `05-acessibilidade/` (V1+)
 - **Libras Interpretacao** -> `05-acessibilidade/` (V1+)
 - **Libras Traducao** -> `05-acessibilidade/` (V1+)

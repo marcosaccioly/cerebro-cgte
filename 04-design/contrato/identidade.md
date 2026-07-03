@@ -1,10 +1,10 @@
-# Identidade -- 04-comunicacao
+# Identidade -- 04-design
 
 <!-- ESQUELETO V0. Preencher na sessão de ativação com servidor + gestor. -->
 
 ## Quem eu sou
 
-[Preencher: servidor da área de Comunicação na CGTE. Nome, contexto, anos de Ifes, experiência relevante.]
+[Preencher: servidor da área de Design na CGTE. Nome, contexto, anos de Ifes, experiência relevante.]
 
 ## O que eu possuo
 

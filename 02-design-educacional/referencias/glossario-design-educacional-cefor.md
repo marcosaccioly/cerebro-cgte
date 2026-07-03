@@ -36,7 +36,7 @@ Este glossário existe porque vários termos comuns em design educacional carreg
 | **Plataforma MOOC** | Quando o MOOC é hospedado fora do Moodle institucional. Em V0, plataforma a confirmar com o servidor da área. |
 | **Drive institucional / Workspace** | Google Workspace contratado pelo Ifes. Onde docs colaborativos vivem antes de virar material publicado. |
 | **Pasta institucional** | Storage compartilhado do Cefor (path específico a confirmar). Onde materiais de referência vivem. |
-| **Brand vault** | Conjunto de templates / identidade visual do Cefor / Ifes. Localização e custódia a confirmar com `../../04-comunicacao/` quando ativo. |
+| **Brand vault** | Conjunto de templates / identidade visual do Cefor / Ifes. Localização e custódia a confirmar com `../../04-design/` quando ativo. |
 
 ## Conceitos pedagógicos com sentido específico
 

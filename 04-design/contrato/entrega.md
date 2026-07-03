@@ -1,4 +1,4 @@
-# Entrega -- 04-comunicacao
+# Entrega -- 04-design
 
 <!-- ESQUELETO V0. Preencher na sessão de ativação. -->
 
@@ -6,13 +6,13 @@ O contrato deste papel: o que entra, o que sai, para onde vai depois.
 
 ## O que eu recebo
 
-[Preencher: tipos de entrega que chegam aqui, com `papel_origem` e `papel_destino: 04-comunicacao`. Em V0, esperado: 0 (papel ainda não ativo). Em V1+, define quais especialistas roteiam para cá.]
+[Preencher: tipos de entrega que chegam aqui, com `papel_origem` e `papel_destino: 04-design`. Em V0, esperado: 0 (papel ainda não ativo). Em V1+, define quais especialistas roteiam para cá.]
 
 ## O que eu produzo
 
 Um envelope de entrega conforme `../../_configuracao/ESQUEMA_ENTREGA.md`, com:
 
-- `papel_origem: 04-comunicacao`
+- `papel_origem: 04-design`
 - `papel_destino: 01-gestor` (V0 -- gestor mantém HITL final) ou outro especialista quando a chain permitir (V1+)
 - Carga específica do trabalho da área (a definir em V1+ quando a chain for desenhada).
 
@@ -22,7 +22,7 @@ Um envelope de entrega conforme `../../_configuracao/ESQUEMA_ENTREGA.md`, com:
 - chain X -> roteia para Y
 - chain Z -> roteia para W]
 
-Em V0, não há chain ativa terminando neste papel. A demanda de **Comunicação** ainda é distribuída manualmente pelo gestor.
+Em V0, não há chain ativa terminando neste papel. A demanda de **Design** ainda é distribuída manualmente pelo gestor.
 
 ---
 

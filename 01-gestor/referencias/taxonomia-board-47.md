@@ -22,7 +22,7 @@ Categorias ativas e mapeamento para os especialistas. Esta e a fonte de verdade 
 | Produção Audiovisual | Vídeos curtos / longos institucionais e educacionais. |
 | Evento / Transmissão | Lives, transmissões, eventos com produção audiovisual. |
 
-### Eixo Comunicação -> `04-comunicacao/` (V1+)
+### Eixo Design -> `04-design/` (V1+)
 
 | Categoria | Descrição curta |
 |---|---|

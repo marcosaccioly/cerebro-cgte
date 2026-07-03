@@ -26,7 +26,7 @@ Passo a passo da validação: `configuracao/questionario.md`.
 
 ## O que ela NÃO faz
 
-- Produção visual / diagramação (vai para `../04-comunicacao/`).
+- Produção visual / diagramação (vai para `../04-design/`).
 - Decisão de prazo, orçamento, alocação (vai para `../01-gestor/`).
 - Conteúdo técnico da disciplina (devolve ao conteudista).
 - Operação direta no Moodle/AVA do professor (faz **com** ele, ao lado).
@@ -41,7 +41,7 @@ Passo a passo da validação: `configuracao/questionario.md`.
 | Demanda da área chega em V0 | `../01-gestor/` distribui manual; este workspace ainda é rascunho |
 | Demanda da área chega em V1+ (chain ativa) | Direto para `02-design-educacional` |
 | Projeto pedagógico exige vídeo | Entrega para `../03-audiovisual/` |
-| Projeto pedagógico exige produção visual | Entrega para `../04-comunicacao/` |
+| Projeto pedagógico exige produção visual | Entrega para `../04-design/` |
 | Demanda toca libras / acessibilidade | Envolve `../05-acessibilidade/` desde o desenho |
 | Gate institucional (orçamento, comunicação CGTE) | Entrega para `../01-gestor/` |
 

@@ -20,6 +20,8 @@ V0 entrega o mínimo viável:
 - **Bridge Kanboard** -- TypeScript que fala JSON-RPC com `board.cefor.ifes.edu.br`. 4 operações essenciais. HITL obrigatório.
 - **Bridge GitLab** -- envelopa `git push` / `git pull` com HITL em arquivos sensíveis.
 - **Case de validação** -- `casos/CASO-2026-0001-validacao-v0/` mostra a equipe como uma demanda real percorre os agentes.
+- **Voz destravada** -- `_configuracao/voz/cgte.md` e `marquito.md` estão em **v1** (2026-06-26), preenchidas a partir de exemplos reais. Comms em nome da CGTE não estão mais bloqueadas; toda comunicação gerada ainda passa por HITL.
+- **Histórico arquivado** -- `historico-cgte/` guarda o corpus de 1555 tarefas do board 47 (com exportador), base de terminologia e do que a CGTE faz.
 
 ## Os 3 fluxos da V0
 
@@ -52,7 +54,7 @@ Pre-requisitos: `bun`, `git`, `claude-code`, acesso a rede do Ifes (para `board.
 1. Clone o repo.
 2. Rode `setup` no Claude Code. O agente lê `configuracao/questionario.md` e pergunta as configurações faltantes (credenciais Kanboard, voz, etc.).
 3. Copie `.env.example` para `.env` e preencha credenciais. Não commitar.
-4. Sente com o agente para a sessão de voz CGTE + Marquito (~1h). Sem isso, qualquer chain que escreva em nome da CGTE fica bloqueada.
+4. A voz CGTE + Marquito já está em **v1** (preenchida em 2026-06-26 a partir de exemplos reais) -- comms em nome da CGTE destravadas. Refine com mais exemplos ao longo do tempo; toda comunicação gerada ainda passa por HITL.
 5. Rode `status` para confirmar o estado V0.
 
 ## O que NÃO é
@@ -78,15 +80,15 @@ cerebro-cgte/
 |   |-- regras-negocio.md           (HITL, gates, escopo)
 |   |-- padroes-qualidade.md        (bar de qualidade por especialista)
 |   `-- voz/
-|       |-- cgte.md                 (voz institucional; placeholder bloqueante em V0)
-|       `-- marquito.md             (voz pessoal do gestor; placeholder bloqueante em V0)
+|       |-- cgte.md                 (voz institucional; preenchida v1 -- 2026-06-26)
+|       `-- marquito.md             (voz pessoal do gestor; preenchida v1 -- 2026-06-26)
 |-- 00-orquestrador/                (ATIVO V0 -- roteia)
 |-- 01-gestor/                      (ATIVO V0 -- Marquito)
 |-- 02-design-educacional/          (rascunho V1 -- aguardando servidor da área)
 |-- 03-audiovisual/                 (esqueleto V0)
-|-- 04-comunicacao/                 (esqueleto V0)
+|-- 04-design/                      (esqueleto V0)
 |-- 05-acessibilidade/              (esqueleto V0)
-|-- 06-tecnologia/               (esqueleto V0)
+|-- 06-tecnologia/                  (esqueleto V0)
 |-- 07-institucional/               (esqueleto V0)
 |-- 08-ciencia/                     (esqueleto V0)
 |-- _pontes/                       (infra, não especialista)
@@ -94,6 +96,7 @@ cerebro-cgte/
 |   `-- gitlab/
 |-- casos/                          (cada demanda real é um case)
 |   `-- CASO-2026-0001-validacao-v0/
+|-- historico-cgte/                 (corpus de 1555 tarefas do board 47 arquivadas + exportador)
 `-- operacoes/
     `-- revisao-sexta.md
 ```

@@ -39,7 +39,7 @@ Depois desta sessão, este workspace deixa de ser **rascunho V1** e vira **ATIVO
 - Atenção especial:
   - **"Não mexer no Moodle pelo professor"** -- coluna vertebral do papel. Confirma?
   - **"Conteúdo técnico volta para o conteudista"** -- confirma?
-  - **"Programação Visual Educacional cobre estrutura, produção visual vai para 04-comunicacao"** -- confirma o split?
+  - **"Programação Visual Educacional cobre estrutura, produção visual vai para 04-design"** -- confirma o split?
 
 ### Q4: Modelo mental -- valida
 

@@ -46,10 +46,10 @@ projetos:
         eixo: audiovisual
       - id: 151
         nome: "Comunicação Visual"
-        eixo: comunicação
+        eixo: design
       - id: 153
         nome: "Conteúdo Digital"
-        eixo: comunicação
+        eixo: design
       - id: 164
         nome: "Acessibilidade"
         eixo: acessibilidade

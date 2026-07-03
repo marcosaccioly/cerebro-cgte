@@ -50,11 +50,11 @@ Passo a passo da validação em `configuracao/questionario.md`.
 - **MOOC**
 - **Conteúdo Educacional**
 - **Formação e Capacitação**
-- **Programação Visual Educacional** (estrutura pedagógica -- produção visual em `../04-comunicacao/`)
+- **Programação Visual Educacional** (estrutura pedagógica -- produção visual em `../04-design/`)
 
 ## O que NÃO passa por aqui
 
-- Produção visual / diagramação / identidade visual → `../04-comunicacao/`.
+- Produção visual / diagramação / identidade visual → `../04-design/`.
 - Vídeo / áudio / transmissão ao vivo → `../03-audiovisual/`.
 - Libras, audiodescrição, legendagem, navegabilidade → `../05-acessibilidade/` (envolver desde o desenho).
 - Decisão de prazo / orçamento / alocação → `../01-gestor/`.

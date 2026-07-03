@@ -4,7 +4,7 @@ Você está operando dentro do Cérebro CGTE: o sistema operacional digital da C
 
 ## O que este workspace é
 
-Um cérebro institucional baseado em pastas para a CGTE (10 servidores, 8 eixos de produção: educação, audiovisual, libras, design educacional, comunicação, acessibilidade, institucional, ciência). Especialistas organizados como pastas, conectados por um schema YAML de entrega. As pastas SÃO o sistema. Não há runtime.
+Um cérebro institucional baseado em pastas para a CGTE (10 servidores, 8 eixos de produção: educação, audiovisual, libras, design educacional, design, acessibilidade, institucional, ciência). Especialistas organizados como pastas, conectados por um schema YAML de entrega. As pastas SÃO o sistema. Não há runtime.
 
 O alvo da V0 é dar ao gestor (Marquito) condição de registrar e distribuir trabalho sem virar gargalo, mantendo o Kanboard institucional (board 47 -- "CGTE - Atividades") sempre vivo, com auditoria completa via git.
 
@@ -27,7 +27,7 @@ cerebro-cgte/
 ├── 01-gestor/             ATIVO V0  -- HITL, decide cards no Kanboard
 ├── 02-design-educacional/ rascunho  -- MOOC, Conteúdo Educacional, Formação, Co-criação pedagógica
 ├── 03-audiovisual/        esqueleto -- Produção Audiovisual, Evento
-├── 04-comunicacao/        esqueleto -- Comunicação Visual, Conteúdo Digital
+├── 04-design/             esqueleto -- Comunicação Visual, Conteúdo Digital
 ├── 05-acessibilidade/     esqueleto -- Acessibilidade, Libras
 ├── 06-tecnologia/         esqueleto -- Interface Digital, IA
 ├── 07-institucional/      esqueleto -- Gestão / PGD, Comissão

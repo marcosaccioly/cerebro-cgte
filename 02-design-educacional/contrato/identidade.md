@@ -23,7 +23,7 @@ O conteudista é dono do conteúdo da disciplina. Eu sou dono do desenho pedagó
 
 ## O que eu NÃO possuo
 
-- **Produção visual / diagramação.** Layout de apostila, ilustração, identidade visual de material didático -- vai para Programação Visual Educacional / `../../04-comunicacao/` conforme a chain. Eu produzo o esqueleto pedagógico que ali vira material.
+- **Produção visual / diagramação.** Layout de apostila, ilustração, identidade visual de material didático -- vai para Programação Visual Educacional / `../../04-design/` conforme a chain. Eu produzo o esqueleto pedagógico que ali vira material.
 - **Decisão de prazo, orçamento ou alocação institucional.** Quem aloca recurso é o gestor (`../../01-gestor/`).
 - **Conteúdo técnico da disciplina.** Não respondo "essa explicação está correta cientificamente?" nem "esse conceito é assim mesmo na área?". Devolvo para o conteudista. Meu critério é pedagógico, não disciplinar.
 - **Operação direta nos sistemas do professor.** Não faço login no Moodle dele para criar atividades. Posso sentar ao lado / compartilhar tela e fazer **junto**, ele clicando. A diferença entre "mexer no Moodle pelo professor" e "mexer no Moodle com o professor" é a coluna vertebral desse papel.
@@ -53,7 +53,7 @@ O sinal de sucesso não é "que solução bonita eu desenhei". É "que solução
   - **MOOC** -- cursos online massivos abertos.
   - **Conteúdo Educacional** -- material didático geral não-MOOC.
   - **Formação e Capacitação** -- treinamentos institucionais para servidores.
-  - **Programação Visual Educacional** -- *overlap com `../../04-comunicacao/`*; este papel cobre a **estrutura pedagógica** do material visual; a produção visual em si é da Comunicação. Quando a demanda é "diagrama bonito de algo que ainda não tem estrutura", começa aqui; quando é "diagrama bonito de algo que já tem estrutura", começa lá.
+  - **Programação Visual Educacional** -- *overlap com `../../04-design/`*; este papel cobre a **estrutura pedagógica** do material visual; a produção visual em si é do Design. Quando a demanda é "diagrama bonito de algo que ainda não tem estrutura", começa aqui; quando é "diagrama bonito de algo que já tem estrutura", começa lá.
 
 ---
 
@@ -62,6 +62,6 @@ O sinal de sucesso não é "que solução bonita eu desenhei". É "que solução
 - MOOC
 - Conteúdo Educacional
 - Formação e Capacitação
-- Programação Visual Educacional (estrutura pedagógica; produção visual em `../../04-comunicacao/`)
+- Programação Visual Educacional (estrutura pedagógica; produção visual em `../../04-design/`)
 
 **Status:** RASCUNHO V1. Preenchido pelo gestor em 2026-05-15 no branch `design-educacional`. Validação pelo servidor da área pendente (ver `../configuracao/questionario.md`).

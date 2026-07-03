@@ -82,7 +82,7 @@ papel_destino: 01-gestor
 dono_agente: marquito
 criado_em: 2026-05-14
 status: open
-pedido: "Distribuir notícia sobre Programa Y; precisa de responsável da área de Comunicação."
+pedido: "Distribuir notícia sobre Programa Y; precisa de responsável da área de Design."
 carga:
   tarefa_distribuir:
     titulo: "Notícia institucional sobre lançamento do Programa Y"
@@ -96,7 +96,7 @@ carga:
 **Ação do gestor:**
 
 1. EN-001 -> `in_progress`.
-2. Olhar capacidade da semana de quem cobre Comunicação na CGTE (consultar `../../_pontes/kanboard/listar-tarefas-projeto` para a coluna "Em execução" do projeto 47, filtrar por owner).
+2. Olhar capacidade da semana de quem cobre Design na CGTE (consultar `../../_pontes/kanboard/listar-tarefas-projeto` para a coluna "Em execução" do projeto 47, filtrar por owner).
 3. Decidir: é a Servidora A. Documentar critério: "Servidora A cobre Conteúdo Digital, está com 2 cards em execução, capacidade ok."
 4. Preencher `kanboard_card_request` com `owner_id` da Servidora A.
 5. HITL na CLI, gestor aprova.
@@ -132,7 +132,7 @@ carga:
     link: "https://board.cefor.ifes.edu.br/?controller=TaskViewController&action=show&task_id=1488"
 ```
 
-Em V1+, quando 04-comunicacao estiver ativo, o orchestrator poderia rotear direto para ele e o gestor entraria só para aprovar o gate "Início autorizado" -> "Em execução".
+Em V1+, quando 04-design estiver ativo, o orchestrator poderia rotear direto para ele e o gestor entraria só para aprovar o gate "Início autorizado" -> "Em execução".
 
 ---
 

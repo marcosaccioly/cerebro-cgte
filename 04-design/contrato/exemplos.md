@@ -1,4 +1,4 @@
-# Exemplos -- 04-comunicacao
+# Exemplos -- 04-design
 
 <!-- ESQUELETO V0. Preencher na sessão de ativação com 3 exemplos reais. -->
 

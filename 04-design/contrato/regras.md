@@ -1,4 +1,4 @@
-# Regras -- 04-comunicacao
+# Regras -- 04-design
 
 <!-- ESQUELETO V0. Preencher na sessão de ativação. -->
 

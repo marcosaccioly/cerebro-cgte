@@ -63,7 +63,7 @@ carga:
       atividade_ancora_por_modulo: true | false
       avaliacao_somativa: "<descrição curta>"
     downstream_previsto:
-      - especialista: "<03-audiovisual | 04-comunicacao | 05-acessibilidade | ...>"
+      - especialista: "<03-audiovisual | 04-design | 05-acessibilidade | ...>"
         item: "<o que precisa do outro especialista, com prazo se aplicável>"
     bloqueios:
       - "<o que impede a próxima fase de começar (conteudista a definir, voz CGTE pendente, etc.)>"

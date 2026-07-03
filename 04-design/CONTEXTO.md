@@ -1,20 +1,20 @@
-# CONTEXTO -- 04-comunicacao
+# CONTEXTO -- 04-design
 
 Como o trabalho vai fluir por este workspace **quando ele for ativado** (V1+).
 
 ## Status atual: ESQUELETO
 
-Em V0, este workspace é placeholder. Toda demanda da área de **Comunicação** ainda passa por `../01-gestor/` para distribuição manual.
+Em V0, este workspace é placeholder. Toda demanda da área de **Design** ainda passa por `../01-gestor/` para distribuição manual.
 
 A ativação acontece quando:
 
 1. O servidor responsável pela área entra (existe e é o owner do conteúdo).
-2. Existe pelo menos 1 chain V1+ em `../_configuracao/cadeias-fluxo.yaml` que termina em `04-comunicacao`.
+2. Existe pelo menos 1 chain V1+ em `../_configuracao/cadeias-fluxo.yaml` que termina em `04-design`.
 3. Servidor + gestor sentam ~3h para preencher `contrato/identidade.md`, `contrato/regras.md`, `contrato/exemplos.md`, `contrato/entrega.md`.
 
 ## Fluxo previsto (V1+, esboço)
 
-1. **Entrada.** Uma entrega chega de `../00-orquestrador/` (ou de outro especialista) com `papel_destino: 04-comunicacao`. Vive em `../casos/CASO-YYYY-NNNN-shortslug/entregas/EN-NNN.yaml`.
+1. **Entrada.** Uma entrega chega de `../00-orquestrador/` (ou de outro especialista) com `papel_destino: 04-design`. Vive em `../casos/CASO-YYYY-NNNN-shortslug/entregas/EN-NNN.yaml`.
 2. **Leitura.** Lê o `routing_rationale` e a carga específica. Confere se a área cobre a demanda (vs `demanda_extraordinaria`).
 3. **Execução.** Faz o trabalho da área (a desenhar em V1+).
 4. **Saída.** Produz a próxima entrega: para `../01-gestor/` (HITL + Kanboard) ou direto para um bridge se a chain permitir.

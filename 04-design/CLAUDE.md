@@ -1,13 +1,13 @@
-# 04-comunicacao
+# 04-design
 
-Workspace MWP do especialista de **Comunicação** do cerebro-cgte. **ESQUELETO V0** -- ativação prevista em V1+ via sessão de ~3h com o servidor da área + gestor.
+Workspace MWP do especialista de **Design** do cerebro-cgte. **ESQUELETO V0** -- ativação prevista em V1+ via sessão de ~3h com o servidor da área + gestor.
 
 Cobertura: Comunicação Visual, Conteúdo Digital.
 
 ## Folder Map
 
 ```
-04-comunicacao/
+04-design/
 ├── CLAUDE.md          (você está aqui)
 ├── CONTEXTO.md        (fluxo de trabalho dentro deste workspace)
 ├── README.md

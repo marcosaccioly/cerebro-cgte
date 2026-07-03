@@ -18,7 +18,7 @@ A taxonomia está em `01-gestor/referencias/taxonomia-board-47.md`. Os 8 eixos:
 
 - Educação (MOOC, Conteúdo Educacional, Formação e Capacitação, Programação Visual Educacional)
 - Audiovisual (Produção Audiovisual, Evento / Transmissão)
-- Comunicação (Comunicação Visual, Conteúdo Digital)
+- Design (Comunicação Visual, Conteúdo Digital)
 - Acessibilidade (Acessibilidade, Libras Interpretação, Libras Tradução)
 - Tech / Sistemas (Interface Digital, Inteligência Artificial)
 - Institucional (Gestão / PGD, Comissão, Colaboração Institucional)

@@ -74,7 +74,7 @@ YYYY-MM-DD (próxima sexta)
 
 ### Padrões / notas
 
-- Categoria "Conteúdo Digital" puxou 3 demandas em 1 semana. Marcar para conversar com servidora responsavel quando ativar 04-comunicacao.
+- Categoria "Conteúdo Digital" puxou 3 demandas em 1 semana. Marcar para conversar com servidora responsavel quando ativar 04-design.
 - HITL ja salvou 1 erro de categoria. Disciplina valeu a pena.
 - 3 cases novos numa semana -- pesado mas factivel em V0.
 

@@ -1,14 +1,14 @@
-# Questionário de Onboarding -- 04-comunicacao
+# Questionário de Onboarding -- 04-design
 
 <!-- Lido quando o usuário digita "setup" dentro deste workspace.
-     Este é o onboarding do servidor da área de Comunicação. Preenche os 4 arquivos
+     Este é o onboarding do servidor da área de Design. Preenche os 4 arquivos
      de contrato com o conteúdo real, validado pelo gestor. -->
 
 ## Antes de começar
 
-Você está ativando o especialista **04-comunicacao** (Comunicação). Esta sessão dura ~3h e produz:
+Você está ativando o especialista **04-design** (Design). Esta sessão dura ~3h e produz:
 
-0. **Decisão de nome** -- Marquito sinalizou em 2026-05-17 que o nome "comunicacao" pode estar errado para o escopo real (banners + identidade visual + layout + conteúdo de canais). Avaliar renomear para `04-design/` -- ver Q0.
+0. **Nome já decidido** -- a pasta foi renomeada de `04-comunicacao/` → `04-design/` em 2026-07-03 (decisão de Marquito). Não é mais questão em aberto; ver Q0 (registro) abaixo.
 1. `contrato/identidade.md` preenchido (quem você é no papel).
 2. `contrato/regras.md` preenchido (sempre / nunca / casos de borda).
 3. `contrato/exemplos.md` preenchido (3 exemplos reais).
@@ -19,13 +19,11 @@ Depois desta sessão, este workspace **deixa de ser esqueleto**. Você passa a r
 
 ## Perguntas
 
-### Q0: O nome "comunicacao" ainda é o melhor para este workspace?
+### Q0 (RESOLVIDA em 2026-07-03): pasta renomeada para `04-design/`
 
-- **Contexto da dúvida (registrada por Marquito em 2026-05-17):** o escopo concreto deste workspace -- banners, identidade visual, layout de peças, capas, thumbnails (Comunicação Visual) + notícias, posts, materiais de canais (Conteúdo Digital) -- é o que o MEC chama de **Design** no ensino superior brasileiro. O nome "comunicacao" pega bem a parte de "Conteúdo Digital" mas perde a parte visual / de design. Hipótese a avaliar: renomear `04-comunicacao/` → `04-design/`.
-- **Decisão a tomar nesta sessão:** servidor + gestor decidem se renomeiam ou mantêm. Se renomear, fazer com `git mv` (preserva histórico) e atualizar refs cruzadas listadas abaixo.
-- **Refs cruzadas que precisariam ser atualizadas se renomear:** `CLAUDE.md` raiz (mapa + L0), `CONTEXTO.md` raiz (tabela 9 workspaces), `README.md` raiz, `_configuracao/cadeias-fluxo.yaml`, `00-orquestrador/contrato/entrega.md` + `exemplos.md`, `00-orquestrador/referencias/arvore-decisao-roteamento.md`, `01-gestor/contrato/exemplos.md`, `01-gestor/referencias/taxonomia-board-47.md`, `02-design-educacional/` (CLAUDE.md, CONTEXTO.md, README.md, identidade.md, entrega.md, exemplos.md, questionario.md, glossario, tipologia).
-- **Categorias do board 47 não mudam:** "Comunicação Visual" e "Conteúdo Digital" são a verdade institucional. A decisão é só sobre o nome interno da pasta.
-- **Onde grava a decisão:** atualizar este arquivo (remover Q0 ou registrar que foi mantido), atualizar nome em `CLAUDE.md` deste workspace, e -- se renomeado -- atualizar todas as refs acima.
+- **Decisão:** a pasta passou de `04-comunicacao/` → `04-design/`. Motivos: (1) o escopo real -- banners, identidade visual, layout de peças, capas, thumbnails (Comunicação Visual) + notícias, posts, materiais de canais (Conteúdo Digital) -- é o que o MEC chama de **Design** no ensino superior brasileiro; (2) diferencia de `02-design-educacional/`; (3) politicamente, evita confundir com a Assessoria de Comunicação do Cefor -- a CGTE luta para não parecer o setor de comunicação, e uma pasta "comunicação" dentro do cérebro não ajudava.
+- **Como foi feito:** `git mv 04-comunicacao 04-design` (preserva histórico) + atualização de todas as refs cruzadas: `CLAUDE.md` raiz, `CONTEXTO.md` raiz, `README.md` raiz, `_configuracao/cadeias-fluxo.yaml`, `_configuracao/regras-negocio.md`, `00-orquestrador/` (exemplos, entrega, árvore de decisão), `01-gestor/` (exemplos, taxonomia-board-47), `02-design-educacional/`, e os YAMLs do Kanboard (`projetos-cgte.yaml`, `usuarios-cgte.yaml`).
+- **O que NÃO mudou:** as categorias do board 47 -- "Comunicação Visual" e "Conteúdo Digital" -- continuam sendo a verdade institucional. O rename atingiu só o nome interno da pasta e o rótulo do eixo/papel ("Comunicação" → "Design").
 
 ### Q1: Quem é o servidor responsável?
 

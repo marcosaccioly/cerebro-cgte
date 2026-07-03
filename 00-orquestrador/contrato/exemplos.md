@@ -58,7 +58,7 @@ para o site do Ifes. Prazo: até quinta, 22/05. Quem da CGTE pode fazer?"
 ```
 Situação: Reitoria pediu notícia institucional sobre Programa Y, prazo 2026-05-22.
 Especialista: 01-gestor
-Por que: Demanda externa precisa ser distribuída (eixo Comunicação -> Conteúdo Digital). Em V0, gestor decide responsável. Em V1+, iria direto para 04-comunicacao.
+Por que: Demanda externa precisa ser distribuída (eixo Design -> Conteúdo Digital). Em V0, gestor decide responsável. Em V1+, iria direto para 04-design.
 ```
 
 **Entrega produzido:**
@@ -70,12 +70,12 @@ papel_destino: 01-gestor
 dono_agente: marquito
 criado_em: 2026-05-14
 status: open
-pedido: "Distribuir notícia sobre Programa Y; precisa de responsável da área de Comunicação."
+pedido: "Distribuir notícia sobre Programa Y; precisa de responsável da área de Design."
 carga:
   routing_rationale:
     situacao: "Reitoria pediu notícia institucional sobre Programa Y, prazo 22/05."
     especialista: 01-gestor
-    por_que: "Distribuição para a equipe; categoria Conteúdo Digital; servidora de comunicação ainda não ativada em V0."
+    por_que: "Distribuição para a equipe; categoria Conteúdo Digital; servidora de design ainda não ativada em V0."
   tarefa_distribuir:
     titulo: "Notícia institucional sobre lançamento do Programa Y"
     categoria_board_47: "Conteúdo Digital"

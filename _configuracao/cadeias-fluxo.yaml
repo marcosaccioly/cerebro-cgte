@@ -12,7 +12,7 @@
 #   00-orquestrador | 01-gestor | _pontes/kanboard | _pontes/gitlab
 #
 # Papéis esqueleto V0 (ativam em V1.X):
-#   02-design-educacional | 03-audiovisual | 04-comunicacao | 05-acessibilidade |
+#   02-design-educacional | 03-audiovisual | 04-design | 05-acessibilidade |
 #   06-tecnologia | 07-institucional | 08-ciencia
 
 workflow_chains:
@@ -56,7 +56,7 @@ workflow_chains:
 # de _configuracao/voz/cgte.md ja preenchida.
 #
 #  - name: transcricao_reuniao_multi_especialista
-#    description: Reunião transcrita gera múltiplas saídas em paralelo (PGD, email, vídeo, notícia, artigo). Previsto para V2 quando 05-acessibilidade, 07-institucional, 04-comunicacao, 03-audiovisual, 08-ciencia estiverem ativos.
+#    description: Reunião transcrita gera múltiplas saídas em paralelo (PGD, email, vídeo, notícia, artigo). Previsto para V2 quando 05-acessibilidade, 07-institucional, 04-design, 03-audiovisual, 08-ciencia estiverem ativos.
 #    steps:
 #      - from: 00-orquestrador
 #        to: 05-acessibilidade
@@ -68,7 +68,7 @@ workflow_chains:
 #        to: 07-institucional
 #        when: "Saída PGD necessaria."
 #      - from: 01-gestor
-#        to: 04-comunicacao
+#        to: 04-design
 #        when: "Saídas de comunicação necessarias (email + notícia)."
 #      - from: 01-gestor
 #        to: 03-audiovisual

@@ -134,7 +134,7 @@ carga:
     downstream_previsto:
       - especialista: "03-audiovisual"
         item: "5 videoaulas de abertura (10 min cada), roteiro a entregar quando conteudista for definido."
-      - especialista: "04-comunicacao"
+      - especialista: "04-design"
         item: "Identidade visual do MOOC + capa por módulo + thumbnails Moodle."
       - especialista: "05-acessibilidade"
         item: "Libras nas videoaulas + legendas + audiodescrição quando houver imagem informativa."

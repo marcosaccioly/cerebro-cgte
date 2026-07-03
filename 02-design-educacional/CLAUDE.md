@@ -4,7 +4,7 @@ Workspace MWP do especialista de **Design Educacional + Atendimento Pedagógico 
 
 **Estado:** RASCUNHO V1 -- contratos preenchidos pelo gestor (Marquito) em 2026-05-15 no branch `design-educacional`. Aguardando validação do servidor da área para virar ATIVO. Em quanto isso, demandas da área continuam passando por `../01-gestor/` para distribuição manual.
 
-Cobertura no board 47: MOOC, Conteúdo Educacional, Formação e Capacitação, Programação Visual Educacional (estrutura pedagógica -- produção visual em `../04-comunicacao/`).
+Cobertura no board 47: MOOC, Conteúdo Educacional, Formação e Capacitação, Programação Visual Educacional (estrutura pedagógica -- produção visual em `../04-design/`).
 
 ## Folder Map
 
@@ -82,5 +82,5 @@ Mapa geral em `../CLAUDE.md`.
 
 - `../01-gestor/` -- entrega que abre gate institucional (orçamento, prazo, voz CGTE) volta pra cá.
 - `../03-audiovisual/` -- entrega downstream quando projeto pedagógico exige videoaula / evento.
-- `../04-comunicacao/` -- entrega downstream para produção visual / identidade / comunicação digital. Atenção ao overlap em "Programação Visual Educacional".
+- `../04-design/` -- entrega downstream para produção visual / identidade / comunicação digital. Atenção ao overlap em "Programação Visual Educacional".
 - `../05-acessibilidade/` -- envolver desde o desenho, não no final.
