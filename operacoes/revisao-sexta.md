@@ -111,4 +111,6 @@ Entradas acumulam, novas no topo. Após uns 6 meses (~25 entradas), o gestor pod
 
 > Adicione novas entradas abaixo desta linha. Mais recente no topo.
 
-(Sem entradas ainda -- este e o template inicial. A primeira entrada real acontece após a primeira sexta com cases ativos em produção.)
+**Próxima review agendada: 2026-07-10 (sexta).** Convidado: Elton Vinícius Silva (eixo design-educacional). A entrada retrospectiva completa (formato acima) entra aqui depois que a review acontecer.
+
+(Sem entradas retrospectivas ainda -- este e o template inicial. A primeira entrada real acontece após a primeira sexta com cases ativos em produção.)
