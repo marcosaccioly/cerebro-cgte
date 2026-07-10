@@ -6,7 +6,10 @@ O contrato deste papel: o que entra, o que sai, para onde vai depois.
 
 ## O que eu recebo
 
-[Preencher: tipos de entrega que chegam aqui, com `papel_origem` e `papel_destino: 04-design`. Em V0, esperado: 0 (papel ainda não ativo). Em V1+, define quais especialistas roteiam para cá.]
+Demandas de peça visual/gráfica (identidade visual, capa, diagramação, comunicação institucional) roteadas por `01-gestor` via chain `producao_peca_visual`, quando o gestor identifica que a demanda é da área de Design e aprova o encaminhamento (HITL).
+
+- `papel_origem: 01-gestor`
+- `papel_destino: 04-design`
 
 ## O que eu produzo
 
@@ -18,12 +21,8 @@ Um envelope de entrega conforme `../../_configuracao/ESQUEMA_ENTREGA.md`, com:
 
 ## Mapa de chain
 
-[Preencher quando este papel ganhar pelo menos uma chain ativa em `../../_configuracao/cadeias-fluxo.yaml`. Listar:
-- chain X -> roteia para Y
-- chain Z -> roteia para W]
-
-Em V0, não há chain ativa terminando neste papel. A demanda de **Design** ainda é distribuída manualmente pelo gestor.
+- `producao_peca_visual` -> `01-gestor` roteia para `04-design`.
 
 ---
 
-**Status:** ESQUELETO V0. Ativação prevista em V1+.
+**Status:** Contrato preenchido na sessão de onboarding (2026-07-05). Aguardando validação com demanda real (Q10 do questionário) para ser marcado como ATIVO.

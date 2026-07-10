@@ -47,6 +47,16 @@ workflow_chains:
         to: _pontes/kanboard
         when: "Gestor decidiu criar uma nova categoria ou aceitar como exceção; preencheu kanboard_card_request com a categoria escolhida e aprovou HITL."
 
+  - name: producao_peca_visual
+    description: Demanda de peça visual/gráfica (identidade visual, capa, diagramação, comunicação institucional) roteada ao Design após o gestor confirmar o responsável.
+    steps:
+      - from: 00-orquestrador
+        to: 01-gestor
+        when: "Demanda de peça visual/gráfica precisa de responsável definido."
+      - from: 01-gestor
+        to: 04-design
+        when: "Gestor identificou que a demanda é da área de Design e aprovou HITL o encaminhamento."
+
 # ============================================================
 # V1+ (esqueletos -- ativar conforme servidores entram)
 # ============================================================
