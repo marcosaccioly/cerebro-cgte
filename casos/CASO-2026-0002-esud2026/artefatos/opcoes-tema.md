@@ -1,3 +1,10 @@
+> **SUBSTITUÍDA em 2026-09-15.** A recomendação abaixo (Opção B) deixou de ser o tema em curso. O tema
+> atual -- "IA além do chat: pastas e contexto na produção de materiais interativos e acessíveis para
+> Moodle" -- não estava entre as opções avaliadas aqui; foi trazido pronto de outra sessão de trabalho
+> (ver `dossie-ia-alem-do-chat.md` e `tema-decidido-ia-alem-do-chat.md`).
+> Este arquivo permanece como registro histórico da análise e como plano B caso o levantamento de
+> evidências do novo tema (`levantamento-casos-reais-pipeline.md`) não se confirme até 2026-09-16.
+
 # Opções de recorte -- relato de experiência, ESUD 2026 Trilha IV
 
 Avaliadas em 2026-09-14 contra quatro filtros: **cabe em 5-7 páginas**, **tem evidência para análise**, **é inédito perante o ESUD 2025**, **dá para escrever em 6 dias**.

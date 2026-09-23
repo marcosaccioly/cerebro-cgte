@@ -56,7 +56,7 @@ Inteligência Artificial na Educação; Inteligência Artificial Generativa (Cha
 | Arquivo | `.docx` |
 | Idioma | Português, espanhol ou inglês |
 | Papel | A4 |
-| Margens | superior 3cm, inferior 2cm, esquerda 3cm, **direita: ver nota de conflito abaixo**, cabeçalho 2cm, rodapé 1,25cm |
+| Margens | superior 3cm, inferior 2cm, esquerda 3cm, **direita 3cm**, cabeçalho 2cm, rodapé 1,25cm -- **medido no template oficial, conflito resolvido** (ver nota abaixo) |
 | Fonte | Roboto, corpo 12 |
 | Parágrafos | justificados, espaçamento 1,5, recuo de 1,25cm na primeira linha |
 | Ênfase | negrito (não sublinhado, não itálico -- itálico só em endereços eletrônicos e palavras estrangeiras) |
@@ -65,18 +65,43 @@ Inteligência Artificial na Educação; Inteligência Artificial Generativa (Cha
 | Palavras-chave | 3 a 5, separadas por ponto |
 | Figuras/quadros/tabelas | inseridas no corpo do texto, nunca como anexo no final |
 | Imagens | JPG, 300+ dpi, enviadas também como `.zip` em documentos suplementares |
-| Referências | ABNT NBR 6023 (2018) |
+| Referências | **ABNT NBR 6023 (2025)** -- o template manda; o formulário diz 2018. Ver nota de conflito abaixo |
 | Citações | ABNT NBR 10520 (2023) |
 | Citação direta até 3 linhas | no parágrafo, entre aspas |
 | Citação direta acima de 3 linhas | parágrafo isolado, recuo 4cm à esquerda, espaçamento simples, corpo 10 |
 
-> **CONFLITO A RESOLVER.** O formulário de submissão diz margem direita **3cm**; as diretrizes públicas do site dizem **2cm**.
-> Resolver baixando o template oficial e medindo. O template é a fonte de verdade.
+> **CONFLITO DE MARGEM -- RESOLVIDO em 2026-09-15.** O formulário dizia margem direita 3cm; as diretrizes públicas do site diziam 2cm.
+> Medido no XML do template oficial (`artefatos/template-relato-esud2026.docx`): `w:right="1700.79"` twips = **3,0 cm**.
+> O corpo do próprio template também instrui "direita 3 cm". **Vale 3 cm.** Página A4 confirmada (11907 x 16840 twips).
+> Demais medidas conferidas e batendo: superior 3cm, inferior 2cm, esquerda 3cm, cabeçalho 2cm, rodapé 1,25cm.
+>
+> **CONFLITO NOVO -- norma de referências.** O formulário de submissão exige **ABNT NBR 6023 (2018)**; o template oficial diz,
+> em dois lugares, que a norma foi reeditada e que "A norma adotada é a **NBR 6023/2025**". Pela regra deste arquivo (o template manda),
+> seguir **6023/2025**. Citações seguem NBR 10520 (2023) nas duas fontes -- sem conflito.
 
 ## Templates oficiais (Google Docs, link "copiar")
 
 - Artigo científico: `https://docs.google.com/document/d/1GLTAFQ6D2NtA_JdTTCatO0Mm8D2rQXO5RToq4HUZL9M/copy`
 - **Relato de experiência: `https://docs.google.com/document/d/1vEn4iEvdj6GIHZQg-azAuGXutaY8EwIRFyC9tdXVfTY/copy`**
+  -- **baixado em 2026-09-15**, disponível localmente em `artefatos/template-relato-esud2026.docx`.
+
+## Estrutura imposta pelo template oficial (registro literal)
+
+O template admite **apenas três seções numeradas**, mais as referências sem número. Subseções livres dentro de cada uma.
+
+| Seção | O que o template manda conter |
+|---|---|
+| *(topo)* | Título centralizado, **em MAIÚSCULAS**, menos de 16 palavras, repetido em **três idiomas** (pt / en / es) |
+| *(topo)* | Autores + "Filiação Institucional por Extenso sem SIGLA" -- na versão cega, "(omitted by blind review)" |
+| RESUMO | 200-300 palavras, **parágrafo único**, voz ativa, 3ª pessoa do singular; tema/problema, objetivos, metodologia, principais resultados e conclusões; sem citações, sem enumeração de tópicos |
+| Palavras-chave | 3 a 5, separadas por ponto final |
+| **1 INTRODUÇÃO** | tema que fomentou a experiência, objetivos, contexto, e **de que forma a experiência se relaciona com a trilha escolhida** |
+| **2 DESENVOLVIMENTO** | título a ser trocado por um vinculado ao conteúdo; desenvolvimento detalhado da experiência, **metodologia das ações, quantas pessoas envolvidas, contexto de realização**, e o referencial teórico que permite refletir sobre a experiência |
+| **3 CONSIDERAÇÕES FINAIS** | resultados obtidos ou análise de resultados, conclusões, **limitações**, trabalhos futuros |
+| **REFERÊNCIAS** | sem número, sem a palavra "BIBLIOGRÁFICAS", ordem alfabética, só o que foi citado; alinhadas à esquerda, espaço simples, separadas por 6pt |
+| Sobre os autores | minibiografia + e-mail -- omitir na versão cega |
+
+Ilustrações: tabelas (numéricas, laterais abertas) x quadros (textuais, laterais fechadas, fonte 10 interna). Título encabeça a ilustração; legenda e **fonte** logo abaixo. Nada como imagem não editável, exceto fotos/desenhos/mapas.
 
 ## Avaliação
 

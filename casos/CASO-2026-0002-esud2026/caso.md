@@ -1,11 +1,12 @@
 # CASO-2026-0002-esud2026
 
-> Submissão de um relato de experiência ao ESUD|CIESUD 2026, Trilha Temática IV (Transformação Digital, IA e Inovação na Educação). Tema ainda não decidido -- definido que será sobre IA.
+> Submissão de um relato de experiência ao ESUD|CIESUD 2026, Trilha Temática IV (Transformação Digital, IA e Inovação na Educação).
+> **Tema decidido em 2026-09-15: "IA além do chat: pastas e contexto na produção de materiais interativos e acessíveis para Moodle"** -- substitui a recomendação anterior (Opção B, `artefatos/opcoes-tema.md`). Ver `artefatos/tema-decidido-ia-alem-do-chat.md`.
 
 **Parties:** Elton Vinicius Silva (autor responsável / submissor), CGTE (coordenadoria), 08-ciencia (especialista de Produção Científica -- esqueleto V0)
 **Demanda:** Escrever e submeter relato de experiência (5-7 páginas) ao ESUD 2026
 **Categoria board 47:** Produção Científica
-**Status:** open -- aguardando decisão de tema
+**Status:** open -- tema decidido; **bloqueado em levantamento de evidências reais do pipeline** (ver `artefatos/levantamento-casos-reais-pipeline.md`) antes de redigir o manuscrito
 
 ## Datas chave
 
@@ -18,13 +19,13 @@
 
 ## Open items
 
-- [ ] **Decidir o tema/recorte** (owed by: Elton, due: 2026-09-14) -- BLOQUEIA TUDO
+- [x] **Decidir o tema/recorte** -- decidido em 2026-09-15: "IA além do chat: pastas e contexto na produção de materiais interativos e acessíveis para Moodle" (ICM + produção de HTML interativo para Moodle). Substitui a recomendação anterior (Opção B). Ver `artefatos/tema-decidido-ia-alem-do-chat.md`
 - [x] Confirmar status do artigo "Ecossistema de IA" -- **JÁ FOI PUBLICADO** (confirmado por Elton em 2026-09-14). Consequência: Opção A eliminada; o rascunho LNCS só pode ser citado como trabalho anterior, nunca reaproveitado como texto
+- [ ] **Levantar com a equipe casos reais do pipeline** material fonte → análise pedagógica → design de interação → HTML → validação → Moodle (owed by: Elton + equipe CGTE, due: 2026-09-16) -- **BLOQUEIA A REDAÇÃO**. Confirmado como evidência **parcial**: candidatos a reenquadrar em `artefatos/dossie-ia-alem-do-chat.md` (arquivo 05) e em `artefatos/inventario-evidencias.md` (Sumarizador H5P, GPT Gerador de Questionários/Rubricas, DEIA). Template de registro em `artefatos/levantamento-casos-reais-pipeline.md`
 - [ ] Levantar a referência completa do artigo do ecossistema publicado (veículo, ano, DOI/URL) para citação ABNT (owed by: Elton, due: 2026-09-15)
 - [ ] Definir os autores, máximo 4, em ordem final (owed by: Elton, due: 2026-09-15) -- irreversível após submeter
-- [ ] Baixar o template oficial de Relato de Experiência e resolver o conflito de margem direita (2cm x 3cm) (owed by: Elton, due: 2026-09-15)
-- [ ] Levantar indicadores concretos da experiência (owed by: Elton + equipe CGTE, due: 2026-09-16)
-- [ ] Redigir o texto (due: 2026-09-17)
+- [x] Baixar o template oficial de Relato de Experiência e resolver o conflito de margem direita -- **feito em 2026-09-15**. Template em `artefatos/template-relato-esud2026.docx`; margem direita medida no XML = **3 cm**. Surgiu um conflito novo: template exige **ABNT NBR 6023/2025**, formulário dizia 2018 -- vale o template. Estrutura imposta (3 seções numeradas) registrada em `artefatos/requisitos-submissao.md`
+- [ ] Redigir o texto -- **não iniciar antes do levantamento de casos reais acima** (due: 2026-09-17)
 - [ ] Revisão ABNT NBR 6023/10520 + anonimização duplo-cega (due: 2026-09-18)
 - [ ] Revisão de linguagem (due: 2026-09-19)
 - [ ] Preparar metadados: resumo 200-300 palavras, 3-5 palavras-chave, área do conhecimento, traduções EN/ES (due: 2026-09-19)
@@ -32,9 +33,14 @@
 
 ## Documentos / Cards relacionados
 
+- `artefatos/tema-decidido-ia-alem-do-chat.md` -- **tema atual**: síntese da decisão, questão orientadora, objetivo, contribuição pretendida e regras de não invenção de dados
+- `artefatos/levantamento-casos-reais-pipeline.md` -- template de registro dos 3-5 casos reais do pipeline ICM→Moodle, pendente de preenchimento pela equipe
+- `artefatos/dossie-ia-alem-do-chat.md` -- dossiê completo de continuidade (estado da arte, roteiro de escrita, contexto Cefor, referências) para o tema atual. Movido do `_inbox` em 2026-09-15
+- `artefatos/prompt-continuidade-ia-alem-do-chat.md` -- prompt-síntese que originou a decisão de tema. Movido do `_inbox` em 2026-09-15; seu conteúdo é reprodução literal do arquivo 09 do dossiê
+- `artefatos/template-relato-esud2026.docx` -- **template oficial do evento**, fonte de verdade para formatação e estrutura
 - `artefatos/requisitos-submissao.md` -- registro literal de todos os requisitos do formulário e das diretrizes
-- `artefatos/opcoes-tema.md` -- cinco opções de recorte avaliadas por viabilidade (A eliminada)
-- `artefatos/inventario-evidencias.md` -- todas as ações de IA da CGTE 2023-2026 com as lacunas de indicador marcadas
+- `artefatos/opcoes-tema.md` -- **histórico**: cinco opções de recorte avaliadas em 2026-09-14 (A eliminada; B era a recomendação até ser substituída em 2026-09-15 pelo tema atual)
+- `artefatos/inventario-evidencias.md` -- todas as ações de IA da CGTE 2023-2026 com as lacunas de indicador marcadas; fonte de candidatos a evidência parcial para o pipeline ICM→Moodle
 - `08-ciencia/_inbox/splnproc1703_mac.docm.md` -- artigo "Ecossistema de IA da CGTE" em rascunho (formato Springer LNCS, ~12 pp.)
 - `08-ciencia/_inbox/analise-08-ciencia_ecossistema-ia.md` -- crítica do especialista a esse rascunho
 - `08-ciencia/referencias/` -- método do especialista (gêneros, anatomia das seções, veículos)
@@ -53,6 +59,7 @@
 | 5 | **Ausência de indicadores** | O parecerista lê "catálogo do que fizemos", não relato analítico -- causa nº 1 de nota baixa | Levantar números antes de redigir (open item) |
 | 6 | **Conversão de formato** | O rascunho está em LNCS/APA; o ESUD exige ABNT + Roboto 12 + A4 | Partir do template oficial, não do arquivo LNCS |
 | 7 | **Corte de 12 para 5-7 páginas** | Excesso reprova na triagem | Escolher recorte estreito, não resumir o ecossistema inteiro |
+| 8 | **Tema novo (2026-09-15) sem casos reais confirmados** | O pipeline ICM→Moodle descrito no dossiê é, hoje, evidência **parcial** (H5P, GPTs de questionário/rubrica, DEIA são candidatos a reenquadrar, não casos já documentados nesse formato). Redigir sem confirmar isso vira invenção de dados, violando a regra mais importante do dossiê | Levantamento com a equipe **antes** de redigir (`artefatos/levantamento-casos-reais-pipeline.md`). Se vazio até 2026-09-16, reavaliar tema (voltar à Opção B ou C/D de `opcoes-tema.md`) |
 
 ## Log de entregas
 
