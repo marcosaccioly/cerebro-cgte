@@ -1,8 +1,9 @@
 # Plano — camada de gestão em volta do Kanboard
 
 > **Status:** PENDENTE de avaliação (Elton + Marquito). Nada aqui foi executado.
-> **Origem:** conversa Marquito + Elton de 2026-09-28 ("cérebro da CGTE"), transcrita em
-> `_inbox/2026-09-29-1213 - 2026-09-28 cérebro da CGTE.md`. Plano registrado em 2026-09-29.
+> **Origem:** conversa Marquito + Elton de 2026-09-28 ("cérebro da CGTE"). Transcrição fora do
+> repositório, no transcritor do Elton (`clientes/ELTON/transcritor/_processados/2026-09-29-1213 -
+> 2026-09-28 cérebro da CGTE/`). Plano registrado em 2026-09-29.
 > **Resolve:** a decisão contingente "como a CGTE deveria usar o Kanboard?" citada em
 > `01-gestor/referencias/plano-trabalho-raquel.md`.
 
