@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" width="1200" height="960" role="img" aria-labelledby="t d">
+  <title id="t">Fluxo de uso do gestor</title>
+  <desc id="d">O dia do gestor em quatro passos: abrir o Painel CGTE, decidir o que só o gestor destrava, capturar ao longo do dia e fechar a sessão. As decisões são escritas no Kanboard com aprovação; o painel e os relatórios semanais, quinzenais, mensais, trimestrais e anuais são gerados a partir do Kanboard.</desc>
+
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5F6B76"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; fill: #1F2933; }
+      .titulo { font-size: 26px; font-weight: 700; }
+      .sub { font-size: 14px; fill: #5F6B76; }
+      .secao { font-size: 12px; font-weight: 700; letter-spacing: 1.6px; fill: #5F6B76; }
+      .chip { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; fill: #0F766E; }
+      .h { font-size: 18px; font-weight: 700; }
+      .h2 { font-size: 15px; font-weight: 700; }
+      .acao { font-size: 14px; font-weight: 700; }
+      .t { font-size: 13px; }
+      .p { font-size: 12px; fill: #3E4A55; }
+      .m { font-size: 12.5px; fill: #5F6B76; }
+      .cmd { font-family: Consolas, "Cascadia Mono", Menlo, monospace; font-size: 12px; fill: #334155; }
+      .caixa { fill: #FFFFFF; stroke: #D9D6CE; stroke-width: 1.2; }
+      .pill { fill: #EEF1F4; }
+      .linha { stroke: #E7E4DD; stroke-width: 1; }
+      .fio { stroke: #5F6B76; stroke-width: 1.6; fill: none; }
+      .kb { font-size: 13px; fill: #C9D5E3; }
+      .kbw { font-size: 13px; fill: #FFFFFF; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="960" fill="#FAF9F6"/>
+
+  <!-- Cabeçalho -->
+  <text x="40" y="52" class="titulo">Fluxo de uso do gestor</text>
+  <text x="40" y="78" class="sub">O dia começa no painel, as decisões vão para o Kanboard e os relatórios saem de lá.</text>
+
+  <text x="40" y="116" class="secao">O DIA</text>
+
+  <!-- Passo 1 -->
+  <rect x="40" y="130" width="260" height="410" rx="10" class="caixa"/>
+  <text x="64" y="158" class="chip">1 · MANHÃ</text>
+  <text x="64" y="190" class="h">Abrir o Painel CGTE</text>
+  <rect x="64" y="202" width="70" height="20" rx="4" class="pill"/>
+  <text x="72" y="216" class="cmd">bom-dia</text>
+
+  <rect x="64" y="240" width="212" height="74" rx="8" fill="#E3F2EF" stroke="#0F766E" stroke-width="1.2"/>
+  <text x="78" y="262" class="t" style="font-weight:700;fill:#0B5F58">Precisa de você</text>
+  <text x="78" y="282" class="p">aprovar · decidir · dar dono</text>
+  <text x="78" y="299" class="p">fechar o Informe</text>
+
+  <rect x="64" y="324" width="212" height="74" rx="8" fill="#FBFAF8" stroke="#D9D6CE"/>
+  <text x="78" y="346" class="t" font-weight="700">CGTE</text>
+  <text x="78" y="366" class="p">prazos · atrasados · parados</text>
+  <text x="78" y="383" class="p">quem está com o quê</text>
+
+  <rect x="64" y="408" width="212" height="74" rx="8" fill="#FBFAF8" stroke="#D9D6CE"/>
+  <text x="78" y="430" class="t" font-weight="700">Comunicação do Cefor</text>
+  <text x="78" y="450" class="p">caixa · publicações</text>
+  <text x="78" y="467" class="p">janela do Informe</text>
+
+  <text x="64" y="514" class="m">Cinco minutos, no lugar do e-mail.</text>
+
+  <!-- Passo 2 -->
+  <rect x="330" y="130" width="540" height="410" rx="10" class="caixa"/>
+  <text x="354" y="158" class="chip">2 · DECIDIR</text>
+  <text x="354" y="190" class="h">Resolver o que só o gestor destrava</text>
+
+  <line x1="354" y1="212" x2="846" y2="212" class="linha"/>
+  <text x="354" y="236" class="acao">Aprovar entregas</text>
+  <text x="354" y="255" class="m">direto no Kanboard</text>
+  <text x="556" y="246" class="m">→</text>
+  <text x="586" y="237" class="t">card sai de Em aprovação e vai para</text>
+  <text x="586" y="254" class="t">Finalizado: entra no relatório</text>
+
+  <line x1="354" y1="270" x2="846" y2="270" class="linha"/>
+  <text x="354" y="294" class="acao">Delegar</text>
+  <rect x="354" y="301" width="66" height="20" rx="4" class="pill"/>
+  <text x="362" y="315" class="cmd">delegar</text>
+  <text x="556" y="304" class="m">→</text>
+  <text x="586" y="295" class="t">card com dono, prazo e etapas,</text>
+  <text x="586" y="312" class="t">mais o recado pronto para enviar</text>
+
+  <line x1="354" y1="328" x2="846" y2="328" class="linha"/>
+  <text x="354" y="352" class="acao">Triar a entrada</text>
+  <rect x="354" y="359" width="138" height="20" rx="4" class="pill"/>
+  <text x="362" y="373" class="cmd">processar-entrada</text>
+  <text x="556" y="362" class="m">→</text>
+  <text x="586" y="353" class="t">capturas e reuniões viram</text>
+  <text x="586" y="370" class="t">propostas de card</text>
+
+  <line x1="354" y1="386" x2="846" y2="386" class="linha"/>
+  <text x="354" y="410" class="acao">Cuidar da comunicação</text>
+  <rect x="354" y="417" width="153" height="20" rx="4" class="pill"/>
+  <text x="362" y="431" class="cmd">/processar-noticias</text>
+  <text x="556" y="420" class="m">→</text>
+  <text x="586" y="411" class="t">card no board 30, pauta do Informe</text>
+  <text x="586" y="428" class="t">e rascunho de resposta</text>
+
+  <line x1="354" y1="444" x2="846" y2="444" class="linha"/>
+  <text x="354" y="468" class="acao">Cobrar o que parou</text>
+  <rect x="354" y="475" width="60" height="20" rx="4" class="pill"/>
+  <text x="362" y="489" class="cmd">cobrar</text>
+  <text x="556" y="478" class="m">→</text>
+  <text x="586" y="478" class="t">mensagem pronta, com o link do card</text>
+
+  <line x1="354" y1="502" x2="846" y2="502" class="linha"/>
+  <text x="354" y="524" class="m">O cérebro propõe; o gestor aprova item a item.</text>
+
+  <!-- Passo 3 -->
+  <rect x="900" y="130" width="260" height="195" rx="10" class="caixa"/>
+  <text x="924" y="158" class="chip">3 · AO LONGO DO DIA</text>
+  <text x="924" y="190" class="h">Capturar na hora</text>
+  <rect x="924" y="202" width="74" height="20" rx="4" class="pill"/>
+  <text x="932" y="216" class="cmd">capturar</text>
+  <text x="924" y="248" class="p">reunião · e-mail</text>
+  <text x="924" y="265" class="p">WhatsApp · ideia solta</text>
+  <text x="924" y="292" class="m">Fica no painel até virar card</text>
+  <text x="924" y="309" class="m">ou ser descartada.</text>
+
+  <!-- Passo 4 -->
+  <rect x="900" y="345" width="260" height="195" rx="10" class="caixa"/>
+  <text x="924" y="373" class="chip">4 · FIM DO DIA</text>
+  <text x="924" y="405" class="h">Fechar a sessão</text>
+  <rect x="924" y="417" width="60" height="20" rx="4" class="pill"/>
+  <text x="932" y="431" class="cmd">salvar</text>
+  <text x="924" y="463" class="p">decisões vão para o registro</text>
+  <text x="924" y="480" class="p">pendências viram propostas</text>
+  <text x="924" y="497" class="p">de card para amanhã</text>
+
+  <!-- Setas entre passos -->
+  <line x1="303" y1="335" x2="327" y2="335" class="fio" marker-end="url(#seta)"/>
+  <line x1="873" y1="228" x2="897" y2="228" class="fio" marker-end="url(#seta)"/>
+  <line x1="1030" y1="327" x2="1030" y2="343" class="fio" marker-end="url(#seta)"/>
+
+  <!-- Ligações com o Kanboard -->
+  <line x1="170" y1="582" x2="170" y2="544" class="fio" marker-end="url(#seta)"/>
+  <text x="182" y="568" class="m">lê os boards</text>
+  <line x1="600" y1="542" x2="600" y2="581" class="fio" marker-end="url(#seta)"/>
+  <text x="612" y="568" class="m">escreve, com aprovação</text>
+
+  <!-- Kanboard -->
+  <rect x="40" y="584" width="1120" height="86" rx="10" fill="#1F3A5F"/>
+  <text x="72" y="621" style="font-size:20px;font-weight:700;fill:#FFFFFF;letter-spacing:1px">KANBOARD</text>
+  <text x="72" y="645" class="kb">fonte da verdade · 47 CGTE · 30 Comunicação · 60 Audiovisual · 58 Projetos</text>
+  <line x1="728" y1="602" x2="728" y2="652" stroke="#4A6587" stroke-width="1"/>
+  <text x="752" y="614" class="kbw">A equipe atualiza os próprios cards</text>
+  <text x="752" y="634" class="kb">aceitar = mover para Em andamento</text>
+  <text x="752" y="652" class="kb">entregar = mover para Em aprovação</text>
+
+  <!-- Kanboard gera os ritmos -->
+  <line x1="600" y1="672" x2="600" y2="698" class="fio" marker-end="url(#seta)"/>
+  <text x="612" y="690" class="m">gera</text>
+
+  <text x="40" y="720" class="secao">OS OUTROS RITMOS</text>
+  <text x="196" y="720" class="sub">gerados do Kanboard: o gestor revisa, não redige</text>
+
+  <!-- Ritmo 1 -->
+  <rect x="40" y="736" width="211" height="156" rx="10" class="caixa"/>
+  <text x="56" y="762" class="chip">SEXTA</text>
+  <text x="56" y="786" class="h2">Revisão da semana</text>
+  <text x="56" y="808" class="p">20 minutos, retrato pronto:</text>
+  <text x="56" y="825" class="p">concluídos, riscos, higiene</text>
+  <rect x="56" y="856" width="110" height="20" rx="4" class="pill"/>
+  <text x="64" y="870" class="cmd">revisao-sexta</text>
+
+  <!-- Ritmo 2 -->
+  <rect x="267" y="736" width="211" height="156" rx="10" class="caixa"/>
+  <text x="283" y="762" class="chip">1ª E 3ª SEMANA</text>
+  <text x="283" y="786" class="h2">Informe Cefor</text>
+  <text x="283" y="808" class="p">pauta alimentada pela</text>
+  <text x="283" y="825" class="p">triagem da caixa</text>
+  <rect x="283" y="856" width="117" height="20" rx="4" class="pill"/>
+  <text x="291" y="870" class="cmd">fechar-informe</text>
+
+  <!-- Ritmo 3 -->
+  <rect x="494" y="736" width="211" height="156" rx="10" class="caixa"/>
+  <text x="510" y="762" class="chip">TODO MÊS</text>
+  <text x="510" y="786" class="h2">PGD de cada pessoa</text>
+  <text x="510" y="808" class="p">texto pronto para colar no</text>
+  <text x="510" y="825" class="p">Petrvs; balanço mensal da</text>
+  <text x="510" y="842" class="p">comunicação</text>
+  <rect x="510" y="856" width="110" height="20" rx="4" class="pill"/>
+  <text x="518" y="870" class="cmd">relatorio-pgd</text>
+
+  <!-- Ritmo 4 -->
+  <rect x="722" y="736" width="211" height="156" rx="10" class="caixa"/>
+  <text x="738" y="762" class="chip">FIM DO TRIMESTRE</text>
+  <text x="738" y="786" class="h2">PGD da unidade</text>
+  <text x="738" y="808" class="p">por entrega: quantidade,</text>
+  <text x="738" y="825" class="p">lista de cards e texto</text>
+  <rect x="738" y="856" width="110" height="20" rx="4" class="pill"/>
+  <text x="746" y="870" class="cmd">relatorio-pgd</text>
+
+  <!-- Ritmo 5 -->
+  <rect x="949" y="736" width="211" height="156" rx="10" class="caixa"/>
+  <text x="965" y="762" class="chip">JANEIRO</text>
+  <text x="965" y="786" class="h2">Relatório de Gestão</text>
+  <text x="965" y="808" class="p">O setor em números, por</text>
+  <text x="965" y="825" class="p">área, e destaques do ano</text>
+  <rect x="965" y="856" width="131" height="20" rx="4" class="pill"/>
+  <text x="973" y="870" class="cmd">relatorio-gestao</text>
+
+  <!-- Legenda -->
+  <rect x="40" y="916" width="66" height="20" rx="4" class="pill"/>
+  <text x="48" y="930" class="cmd">comando</text>
+  <text x="116" y="930" class="m">o que o gestor digita no cérebro. As propostas e os rascunhos dependem de IA; painel e relatórios, não.</text>
+</svg>
