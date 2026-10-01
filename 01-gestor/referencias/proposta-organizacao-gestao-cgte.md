@@ -3,8 +3,9 @@
 **Kanboard no centro, cérebro em volta, Painel CGTE como porta de entrada do dia.**
 
 > **Status:** PROPOSTA para avaliação (Elton + Marquito). Nada aqui foi executado.
-> **Data:** 2026-10-01 (revisão 2, no mesmo dia).
+> **Data:** 2026-10-01 (revisão 3, no mesmo dia).
 > **O que mudou na revisão 2:** o sistema `sistema-gestao-cgte` foi descartado (painel e relatórios são construídos do zero); a Comunicação do Cefor (`comunicacao-cefor/`, board 30, Informe Cefor) entrou no painel, na rotina e nos relatórios; o texto foi alinhado aos commits de 29/09 e 01/10 (`_entrada/`, ponte do Kanboard corrigida, ponte de e-mail).
+> **O que mudou na revisão 3:** entrou o fluxo de divulgação da comunicação (`/divulgar`, que publica no site e no Instagram) e a ponte que falta entre ele e o Kanboard.
 > **Relação com os planos anteriores:** absorve e estende `plano-camada-gestao-kanboard.md` (29/09). Destrava `plano-trabalho-raquel.md` e `historico-cgte/ANALISE-PENDENTE.md`, que esperavam a decisão sobre como usar o Kanboard.
 > **Fontes:** as 8 transcrições em `mmos/clientes/cerebro-empresa/` (Bruno Okamoto ×5, Leonardo Oliveira ×2, Jake Van Clief ×1); o estado atual deste repositório; e os documentos de gestão de 2025 (Relatório de Gestão, Plano de Entregas do PGD, registros do Petrvs e export do Kanboard).
 
@@ -18,7 +19,7 @@ A proposta em seis pontos:
 2. **O Painel CGTE é a porta de entrada do dia.** Uma página com o que depende do gestor, o que vence, o que está parado, quem está com o quê e como está a comunicação do Cefor.
 3. **O relatório de gestão deixa de ser escrito e passa a ser gerado.** PGD trimestral, registro individual no Petrvs e "O setor em números" do relatório anual saem do board por script. A pessoa revisa, não redige.
 4. **Delegar vira um gesto de dois minutos:** descrever a demanda, aprovar a proposta de card (dono, prazo, etapas) e enviar o recado já redigido.
-5. **A comunicação entra na mesma rotina.** Caixa `cso.cefor`, board 30 e Informe Cefor aparecem no painel e nos relatórios, sem misturar a área com a CGTE.
+5. **A comunicação entra na mesma rotina.** Caixa `cso.cefor`, fila de divulgação, board 30 e Informe Cefor aparecem no painel e nos relatórios, sem misturar a área com a CGTE.
 6. **Sem Hermes e sem VPS.** Três camadas, cada uma opcional: Kanboard (funciona sozinho), scripts de leitura (não usam IA) e IA sob demanda (captura, rascunhos, propostas). Tudo construído do zero dentro do cérebro.
 
 O que muda para cada pessoa:
@@ -83,12 +84,18 @@ O que os arquivos mostram sobre o uso:
 
 ### 2.4 A comunicação hoje
 
-A Comunicação Social do Cefor virou área separada em 29/09 (`comunicacao-cefor/`): caixa `cso.cefor@ifes.edu.br`, board próprio (projeto 30), Informe Cefor quinzenal e comando `/processar-noticias`. O desenho é bom e já resolve, para a caixa da comunicação, o que esta proposta chama de captura.
+A Comunicação Social do Cefor virou área separada em 29/09 (`comunicacao-cefor/`), com caixa `cso.cefor@ifes.edu.br`, board próprio (projeto 30) e Informe Cefor quinzenal. Ela tem dois fluxos:
+
+- **Caixa** (`/processar-noticias`): decide o que cada e-mail é e para onde vai. Já resolve, para a comunicação, o que esta proposta chama de captura.
+- **Divulgação** (`/divulgar` e `/publicar-banner`): publica de fato o pedido no banner do site e no feed do Instagram, pelo navegador, com aprovação do plano e confirmação antes de cada publicação. Cada pedido fica registrado em `divulgacao/pedidos/`.
 
 O estado em 01/10:
 
+- **A divulgação já funciona.** Em 28/09 os editais 89, 90 e 91 foram publicados no site e no Instagram por esse fluxo. As respostas aos solicitantes ficaram salvas como rascunho; falta conferir se foram enviadas.
 - **A caixa tem cerca de 1.000 mensagens** na entrada. A primeira varredura (29/09) triou 12 conversas: 5 pedidos de publicação e 7 sem ação. As propostas ainda aguardam aprovação.
 - **O board 30 não está ligado.** Falta o token da API no `.env`, o usuário `api.cgte` como membro do projeto e o mapeamento das colunas. Até lá, nenhum card da comunicação é criado.
+- **A divulgação não chega ao Kanboard.** O `/divulgar` registra o pedido em arquivos, mas não cria nem fecha card no board 30 e não alimenta a pauta do Informe. As três publicações de 28/09 existem só no repositório: quem olha o board não as vê, e um relatório tirado do board não as contaria.
+- **A divulgação roda em uma máquina só.** Depende do Chrome com as sessões do site e do Instagram, da unidade `Z:\` e da assinatura do webmail, todos no computador do Elton.
 - **O Informe Cefor está parado.** A última edição conhecida é a #56, enviada em 05/03/2026, e a cadência oficial é quinzenal. A #57 está prevista para a janela de 01 a 07/10 e a pauta está vazia.
 - **Redes sociais não têm responsável definido.**
 - **A senha da caixa precisa ser trocada** (foi compartilhada em conversa).
@@ -109,7 +116,7 @@ O estado em 01/10:
 
 | Princípio | De onde vem | Aplicação na CGTE |
 |---|---|---|
-| Todo cérebro precisa de três pilares: **contexto, skills e rotinas** | Okamoto | Temos contexto. A comunicação já tem a primeira skill (`/processar-noticias`). Faltam as skills da gestão e as rotinas: algo que roda toda manhã e toda sexta |
+| Todo cérebro precisa de três pilares: **contexto, skills e rotinas** | Okamoto | Temos contexto. A comunicação já tem as primeiras skills (`/processar-noticias`, `/divulgar`). Faltam as skills da gestão e as rotinas: algo que roda toda manhã e toda sexta |
 | **Três camadas de memória:** bruto → ledger → canônico. O ledger é um índice de uma linha por captura | Okamoto | Bruto = `_entrada/`. Canônico = Kanboard. O registro `comunicacao-cefor/triagem/` já é um ledger; a gestão adota o mesmo formato |
 | **Entrada por escopo** e consolidação periódica | Okamoto | A convenção `_entrada/` por workspace já foi adotada; falta a rotina que esvazia cada uma |
 | Ordem de entrada do agente: **ler → revisar → relatar → automatizar.** "Agente em estrutura bagunçada automatiza bagunça" | Okamoto | Primeiro arrumar o board e ligar a leitura (painel, relatório). Escrita assistida depois |
@@ -164,7 +171,7 @@ O estado em 01/10:
 ┌──────────────────────────────────────────────────────────────────────┐
 │ CAMADA 3 — IA sob demanda (gestor, operadores e quem quiser)          │
 │ transforma captura em propostas · redige recados, respostas, informes │
-│ toda escrita passa por aprovação humana; todo envio é humano          │
+│ publica no site e no Instagram · tudo com aprovação humana            │
 └─────────────────────────────┬────────────────────────────────────────┘
                               │ propostas aprovadas
 ┌─────────────────────────────▼────────────────────────────────────────┐
@@ -196,6 +203,7 @@ Regras que mantêm isso simples:
 
 - Um card vive em **um board só.** Demanda que chega pelo gestor nasce no 47 e é movida na triagem; trabalho registrado pela própria pessoa nasce direto no board dela.
 - **A comunicação nunca escreve no 47.** Quando uma publicação precisa de arte, vídeo ou Libras, nasce um card no 47 ligado ao card do 30 (link interno do Kanboard). O painel mostra as publicações que estão esperando peça da CGTE.
+- **Toda publicação termina em card no board 30.** O `/divulgar` fecha o pedido propondo o card já em "Publicado", com os links do site e do post (ou movendo o card que a triagem criou). O registro em `divulgacao/pedidos/` continua sendo o detalhe; o card é o que todo mundo vê e o que o relatório conta.
 - **Categorias com o mesmo nome nos boards da CGTE.** No Kanboard a categoria é por projeto; ao mover, ela é casada pelo nome. O relatório também lê por nome.
 - Coluna final com fechamento automático em todos os boards.
 - **Sem board novo por enquanto.** O board 30 é o piloto de "colunas = etapas"; o 60 só é redesenhado depois da conversa com audiovisual e Libras. Libras-interpretação (escala de eventos) só ganha board próprio se a raia no board de vídeo não bastar.
@@ -220,11 +228,11 @@ Alternativa considerada para a CGTE: **um board único com raias por área.** É
 
 | Coluna-alvo | Significado |
 |---|---|
-| Solicitado | Pedido triado e aprovado, com canal e prazo |
+| Solicitado | Pedido triado e aprovado, com canal e prazo. Corresponde ao pedido na fila de divulgação |
 | Aguardando peça ou informação | Falta arte da CGTE, correção do solicitante ou dado |
-| Em aprovação | Texto ou peça pronta, esperando o operador |
+| Em aprovação | Plano de divulgação, texto ou peça pronta, esperando o operador |
 | Agendado | Aprovado, com data de publicação |
-| Publicado | No ar. Fecha sozinho e entra no relatório |
+| Publicado | No ar e verificado, com os links no card. Fecha sozinho e entra no relatório |
 
 ### 6.3 Contrato do card
 
@@ -273,6 +281,12 @@ linhas:
     fonte: kanboard
     projeto: 30
     titulo_comeca_com: "[Informe]"
+  - id: divulgacoes
+    area: comunicacao
+    rotulo_relatorio: "Divulgações publicadas no site e no Instagram"
+    fonte: arquivos                       # provisório, até o board 30 estar ligado
+    pasta: "comunicacao-cefor/divulgacao/pedidos"
+    conta_quando: "verificação com resultado: publicado"
   - id: videos-publicados
     area: audiovisual
     rotulo_relatorio: "Vídeos postados no canal do Cefor e do Ifes"
@@ -337,9 +351,10 @@ Exemplo ilustrativo, com dados fictícios:
 ```
 PAINEL CGTE — quinta 01/10/2026 · leitura do Kanboard às 07:40
 
-PRECISA DE VOCÊ (5)
+PRECISA DE VOCÊ (6)
   aprovar    #0001 Banner da campanha X — em aprovação há 2 dias (Andréia)
   aprovar    4 propostas da caixa da comunicação (varredura de 29/09)
+  aprovar    1 plano de divulgação (edital X)
   decidir    2 itens novos na entrada (reunião de gestores)
   sem dono   #0002 Atualizar página de dados de avaliação
   fechar     Informe #57 — janela termina em 07/10 · 0 itens na pauta
@@ -354,7 +369,9 @@ CGTE
 
 COMUNICAÇÃO DO CEFOR
   Caixa       última varredura há 2 dias · 6 conversas aguardando aprovação
-  Publicações 3 solicitadas · 2 aguardando peça da CGTE · 1 agendada · 5 publicadas na semana
+  Divulgação  2 pedidos na fila · 1 aguardando confirmação · 3 publicados na semana
+              3 respostas em rascunho, ainda não enviadas
+  Board 30    3 solicitadas · 2 aguardando peça da CGTE · 1 agendada
   Informe     #57 em aberto · última edição enviada há 210 dias
 ```
 
@@ -362,9 +379,9 @@ Como ele é montado:
 
 | Bloco | De onde vem |
 |---|---|
-| Precisa de você | Cards em "Em aprovação" e sem dono (boards 47 e 30); propostas pendentes em `comunicacao-cefor/triagem/`; itens em `00-orquestrador/_entrada/`; janela do Informe em `caixa.yaml` |
+| Precisa de você | Cards em "Em aprovação" e sem dono (boards 47 e 30); propostas pendentes em `comunicacao-cefor/triagem/`; planos de divulgação com `aprovado: false`; itens em `00-orquestrador/_entrada/`; janela do Informe em `caixa.yaml` |
 | CGTE | Boards 47, 58 e 60: prazos, última movimentação, responsável, campos faltando |
-| Comunicação do Cefor | Board 30 por coluna; último registro de triagem; `informe/pauta.yaml` |
+| Comunicação do Cefor | Board 30 por coluna; último registro de triagem; `divulgacao/pedidos/` (a etapa de cada pedido sai dos arquivos que existem); `informe/pauta.yaml` |
 
 Cada linha leva o link do card e, quando houver, o do contato. A ordem é proposital: primeiro o que só o gestor pode destravar.
 
@@ -386,7 +403,7 @@ Formatos: um arquivo Markdown no repositório e a mesma página em HTML, para ab
 
 | Canal | Como entra | Observação |
 |---|---|---|
-| Caixa da comunicação (`cso.cefor`) | `/processar-noticias` | Já existe |
+| Caixa da comunicação (`cso.cefor`) | `/processar-noticias` para triar; pedido com artes vai para a fila do `/divulgar` | Já existe |
 | E-mail da CGTE (`cgte.cefor`) | Estender a ponte de e-mail a esta caixa, com as mesmas garantias: só leitura e rascunho | Decisão D9. O webmail do Ifes é Exchange; a ponte já fala com ele |
 | Reunião | Transcrição em `00-orquestrador/_entrada/` e comando `processar-entrada` | A transcrição é feita no transcritor do Elton |
 | WhatsApp | Colar o trecho ou ditar um resumo | Sem integração; é limite assumido |
@@ -405,11 +422,13 @@ Vinte minutos, com um retrato semanal já pronto: o que foi concluído por área
 A área já tem fluxo desenhado; o que falta é ritmo.
 
 - **Caixa:** `/processar-noticias` em dias fixos (sugestão: segunda, quarta e sexta), com um operador aprovando item a item.
+- **Divulgação:** logo depois da caixa, `/divulgar` sobre a fila. O operador aprova o plano e confirma cada publicação.
+- **Fechamento de cada pedido, em três gestos:** enviar a resposta que ficou em rascunho, registrar o card em "Publicado" no board 30 e, quando couber, pôr o tema na pauta do Informe. Hoje só o primeiro existe no fluxo; os outros dois são a ponte a construir.
 - **Informe:** `fechar-informe` na 1ª e na 3ª semana. O painel avisa quando a janela abre e quantos itens há na pauta.
 - **Publicação que depende de peça:** vira card no 47 ligado ao do 30, e aparece no painel até a peça chegar.
 - **Um operador por dia.** Marquito e Elton combinam quem aprova em cada dia fixo, para a caixa não depender dos dois ao mesmo tempo.
 
-Dois pontos a decidir (D8): quem responde pelas redes sociais, e se um terceiro operador pode fazer a primeira passada da triagem. A triagem é proposta com aprovação, então é uma boa candidata a delegação.
+Três pontos a decidir (D8): quem responde pelas redes sociais, agora que o post no feed sai pelo `/divulgar`; se um terceiro operador pode fazer a primeira passada da triagem, que é proposta com aprovação e por isso boa candidata a delegação; e se a divulgação deve poder rodar também na máquina do Marquito.
 
 ### 7.6 Orçamento de tempo do gestor
 
@@ -426,7 +445,7 @@ Uma sessão de uma hora (pode ser gravada e transcrita): listar as tarefas recor
 | Retrato semanal | Gestor | Sexta | Concluídos por área, entradas, riscos, higiene, comunicação |
 | PGD da unidade | Gestor | Fim do trimestre | Por entrega do PGD: quantidade, lista de cards e texto pronto para o Petrvs |
 | PGD individual | Cada pessoa | Mensal | "O que eu concluí", agrupado por entrega, pronto para colar |
-| Balanço da comunicação | Operadores e Diretoria | Mensal | Publicações por canal, edições do Informe, pedidos atendidos e recusados, tempo entre pedido e publicação |
+| Balanço da comunicação | Operadores e Diretoria | Mensal | Divulgações por canal (site, Instagram), edições do Informe, pedidos atendidos e recusados, tempo entre pedido e publicação |
 | Relatório de Gestão | Gestor e Diretoria | Janeiro | "O setor em números" por área, candidatos a destaque e rascunho da introdução na voz da CGTE |
 
 O **PGD individual é a peça que faz o resto funcionar.** É a contrapartida que falta hoje: quem mantém o card em dia deixa de redigir narrativa no Petrvs. A adoção vem do benefício, não da cobrança.
@@ -516,6 +535,7 @@ Cada comando é um processo repetido, congelado em arquivo, que qualquer ferrame
 | `revisao-sexta` | Retrato semanal e pauta da revisão | Não | Não |
 | `salvar` | Fecha a sessão: decisões para `decisoes.md`, pendências viram propostas de card | Sim | Kanboard, com aprovação |
 | `/processar-noticias` *(já existe)* | Varre a caixa da comunicação, tria e encaminha | Sim | Board 30 e rascunho na caixa, com aprovação |
+| `/divulgar`, `/publicar-banner` *(já existem)* | Publica o pedido no banner do site e no feed do Instagram | Sim | Site, Instagram e rascunho de resposta, com confirmação antes de cada publicação. Falta: card no board 30 |
 | `pauta-informe`, `fechar-informe` *(já existem)* | Pauta e montagem da edição do Informe | Sim | Board 30, com aprovação |
 
 Cada comando termina com uma linha de aprendizado: o que deu errado nesta execução e o que mudar no próprio comando. É assim que eles melhoram sem ninguém reescrever do zero.
@@ -542,6 +562,9 @@ A recomendação é começar nos níveis 0 e 1. Atualização uma vez por dia j�
 | `CLAUDE.md` e `CONTEXTO.md` | `04-design/` aparece como esqueleto, mas os contratos foram preenchidos em julho |
 | `08-ciencia/` | `identity.md`, `rules.md` e `examples.md` na raiz, diferentes dos arquivos em `contrato/` |
 | `CLAUDE.md`, `README.md`, `regras-negocio.md` | "10 servidores"; o roster tem cerca de 15 pessoas, entre servidores, bolsistas e estagiária |
+| `comunicacao-cefor/contrato/regras.md` e `identidade.md` | Dizem que o cérebro nunca envia e-mail, post ou informe; o `/divulgar` publica banner e post depois da confirmação. Falta separar: e-mail e informe são sempre enviados por humano; site e Instagram são publicados pelo cérebro com confirmação |
+| `comunicacao-cefor/referencias/canais-cefor.md` e `questionario.md` | Instagram aparece como "a definir", mas já é publicado pelo `/divulgar` |
+| Regra de deduplicação da triagem | Confere triagem, pauta e board 30, mas não `divulgacao/pedidos/` |
 | Dois documentos | Citam a memória `cgte-frentes-de-melhoria`, que não está no repositório |
 
 Regra daqui para a frente: cada informação tem um lugar. IDs vivem nos YAML da ponte; a taxonomia e o mapa de relatório vivem em `_configuracao/`; os demais arquivos apontam para lá.
@@ -562,7 +585,8 @@ Regra daqui para a frente: cada informação tem um lugar. IDs vivem nos YAML da
 | Pessoa registra ou atualiza o próprio trabalho, com o próprio token | A própria pessoa |
 | Gestor cria, move ou comenta card de outra pessoa no 47 | Gestor, item a item |
 | Correção em lote homogêneo no 47 (faxina) | Gestor, sobre a tabela, linha a linha |
-| Card no board 30, item de pauta, rascunho de resposta na caixa | Operador da comunicação, item a item. O envio é sempre humano |
+| Card no board 30, item de pauta, rascunho de resposta na caixa | Operador da comunicação, item a item. O envio do e-mail é sempre humano |
+| Banner no site e post no Instagram (`/divulgar`) | Operador da comunicação: aprova o plano e confirma de novo antes de cada publicação |
 | Comunicação em nome da CGTE ou do Marquito | Gestor |
 | Mudança em regras, voz ou mapa de relatório | Gestor, na revisão de sexta |
 
@@ -590,8 +614,8 @@ Estimativas de esforço são aproximadas e pressupõem Elton na construção, Ma
 
 | Fase | Até | O que entrega | Esforço |
 |---|---|---|---|
-| **0. Decidir e destravar** | 09/10 | Decisões D1 a D5; token da API no `.env`; `api.cgte` como membro do projeto 30 e varredura das colunas; senha da caixa trocada; versão do Kanboard e ciclo do PGD confirmados. **Informe #57:** rodar `/processar-noticias 14d` com um operador e fechar a edição na janela de 01 a 07/10 | 1 sessão de 1 h, mais a operação do Informe |
-| **1. Base confiável e painel** | 23/10 (painel até 16/10) | Ações automáticas e filtros salvos nos boards 47 e 30; `painel.ts` com os blocos CGTE e comunicação; `higiene.ts`; `ids.ts`; divergências da seção 9.5 corrigidas; faxina dos concluídos de 2026 | 12 a 16 h |
+| **0. Decidir e destravar** | 09/10 | Decisões D1 a D5; token da API no `.env`; `api.cgte` como membro do projeto 30 e varredura das colunas; senha da caixa trocada; versão do Kanboard e ciclo do PGD confirmados. **Informe #57:** rodar `/processar-noticias 14d` com um operador e fechar a edição na janela de 01 a 07/10. Conferir se as três respostas em rascunho de 28/09 foram enviadas | 1 sessão de 1 h, mais a operação do Informe |
+| **1. Base confiável e painel** | 23/10 (painel até 16/10) | Ações automáticas e filtros salvos nos boards 47 e 30; `painel.ts` com os blocos CGTE e comunicação; `higiene.ts`; `ids.ts`; divergências da seção 9.5 corrigidas; faxina dos concluídos de 2026; ponte do `/divulgar` com o board 30 e com a pauta do Informe, incluindo os três pedidos de 28/09 | 14 a 18 h |
 | **2. Delegar e capturar** | 06/11 | Comandos `capturar`, `processar-entrada`, `delegar`, `cobrar`, `salvar`; registro de entrada; via rápida nas regras; primeira revisão de sexta real; orçamento de tempo do gestor; dias fixos da caixa da comunicação | 8 a 12 h |
 | **3. Relatório** | fechamento do trimestre | `mapa-relatorio.yaml` montado e validado; `relatorio.ts`; PGD da unidade e individual do trimestre em curso gerados e conferidos contra o que foi lançado à mão; primeiro balanço mensal da comunicação | 10 a 14 h |
 | **4. Esteiras** | novembro | Colunas do board 30 ajustadas ao alvo da seção 6.2; conversas gravadas com audiovisual e com Libras; análise do histórico para extrair as etapas reais | 6 a 8 h, mais 2 conversas de 40 min |
@@ -620,6 +644,7 @@ Datas já conhecidas que o roteiro ajuda: a janela do Informe #57 (até 07/10), 
 |---|---|
 | Virar o quarto plano pendente | Fase 1 pequena, com o painel rodando na primeira quinzena e sem depender de decisão além de D1 |
 | Gestão, comunicação e manutenção do cérebro nas mesmas duas pessoas | Painel único para os dois chapéus; dias fixos e um operador por dia; orçamento de tempo para decidir o que delegar |
+| Divulgação presa a uma máquina e a sessões de navegador | `referencias/sistemas.md` já documenta o ambiente; decidir em D8 se a máquina do Marquito também roda; se o navegador falhar, os mesmos passos podem ser feitos à mão |
 | Audiovisual e Libras não adotarem | O relatório não depende disso (linhas `manual`); a esteira é desenhada com a área, não para a área; o PGD individual é o benefício |
 | Dependência de uma pessoa para manter os scripts | Scripts curtos, somente leitura, lendo um YAML; se pararem, o Kanboard e os filtros continuam |
 | Credenciais | Token por usuário para quem escreve; token de serviço só para leitura; senha da caixa trocada; nada versionado |
@@ -637,9 +662,10 @@ Datas já conhecidas que o roteiro ajuda: a janela do Informe #57 (até 07/10), 
 - [ ] **D5. Regras de aprovação.** Tabela da seção 9.7, via rápida sem caso para cards simples e para pedido avulso da comunicação à CGTE. *Recomendo aprovar; mexe em arquivo sensível.*
 - [ ] **D6. Privacidade.** Anotações de gestão sobre pessoas em pasta fora do git ou em repositório separado. *Recomendo pasta fora do git agora.*
 - [ ] **D7. Papéis na CGTE.** Raquel como curadora do board; uma referência por área para cuidar da esteira. *A confirmar com as pessoas.*
-- [ ] **D8. Papéis na comunicação.** Quem responde pelas redes sociais; dias fixos e operador de cada dia; um terceiro operador para a primeira passada da caixa. *Recomendo definir redes e dias agora, e o terceiro operador depois do orçamento de tempo.*
+- [ ] **D8. Papéis na comunicação.** Quem responde pelas redes sociais; dias fixos e operador de cada dia; um terceiro operador para a primeira passada da caixa; a divulgação rodar também na máquina do Marquito. *Recomendo definir redes e dias agora, e os outros dois depois do orçamento de tempo.*
 - [ ] **D9. E-mail da CGTE.** Estender a ponte de e-mail à caixa `cgte.cefor`, só leitura e rascunho. *Recomendo, depois que a rotina da caixa da comunicação estiver estável.*
 - [ ] **D10. Agendamento.** Ficar nos níveis 0 e 1 até janeiro. *Recomendo.*
+- [ ] **D11. Divulgação no Kanboard.** Todo pedido do `/divulgar` termina em card no board 30 e, quando couber, em item da pauta do Informe. *Recomendo: é o que mantém o Kanboard como verdade também na comunicação.*
 
 ### A confirmar antes de começar
 
