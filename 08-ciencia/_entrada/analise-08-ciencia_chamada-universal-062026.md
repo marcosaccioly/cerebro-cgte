@@ -88,7 +88,6 @@ As duas primeiras são as eliminatórias:
 1. **Quem na CGTE/Cefor tem título de doutor e toparia coordenar?** Quando concluiu o doutorado? (define Faixa B vs C — e se há candidato a coordenador).
 2. **Dá para juntar 3 doutores com Lattes** (Faixa B), ou pensar maior com 5 doutores de 2 ICTs (Faixa C)? A Juliana é doutora?
 3. **Qual frente vira projeto** — continuação dos enunciados (tema 1) ou ecossistema de IA (tema 2)?
-4. (Da sessão paralela no workspace `solution-design`:) qual o papel do trabalho de **Salesforce** mencionado como possível encaixe — o que é, quem faz, para quem? Não há registro em nenhuma memória.
 
 ## 6. Próximo passo combinado
 
