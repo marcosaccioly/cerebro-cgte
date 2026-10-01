@@ -1,7 +1,7 @@
 # Análise — 08-ciencia
 
 **Artigo:** "Ecossistema de Inteligência Artificial em uma Instituição de Educação a Distância: experiência da CGTE no Cefor/Ifes"
-**Fonte analisada:** `08-ciencia/_inbox/splnproc1703_mac.docm.md`
+**Fonte analisada:** `08-ciencia/_entrada/splnproc1703_mac.docm.md`
 **Especialista:** 08-ciencia (Produção Científica)
 **Método aplicado:** `08-ciencia/referencias/` (gêneros-e-formatos, anatomia-das-secoes, veiculos-brasileiros, perguntas-estruturadas-por-genero)
 **Data:** 2026-06-06

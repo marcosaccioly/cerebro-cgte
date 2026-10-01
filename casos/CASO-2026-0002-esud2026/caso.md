@@ -35,14 +35,14 @@
 
 - `artefatos/tema-decidido-ia-alem-do-chat.md` -- **tema atual**: síntese da decisão, questão orientadora, objetivo, contribuição pretendida e regras de não invenção de dados
 - `artefatos/levantamento-casos-reais-pipeline.md` -- template de registro dos 3-5 casos reais do pipeline ICM→Moodle, pendente de preenchimento pela equipe
-- `artefatos/dossie-ia-alem-do-chat.md` -- dossiê completo de continuidade (estado da arte, roteiro de escrita, contexto Cefor, referências) para o tema atual. Movido do `_inbox` em 2026-09-15
-- `artefatos/prompt-continuidade-ia-alem-do-chat.md` -- prompt-síntese que originou a decisão de tema. Movido do `_inbox` em 2026-09-15; seu conteúdo é reprodução literal do arquivo 09 do dossiê
+- `artefatos/dossie-ia-alem-do-chat.md` -- dossiê completo de continuidade (estado da arte, roteiro de escrita, contexto Cefor, referências) para o tema atual. Movido do `_entrada` em 2026-09-15
+- `artefatos/prompt-continuidade-ia-alem-do-chat.md` -- prompt-síntese que originou a decisão de tema. Movido do `_entrada` em 2026-09-15; seu conteúdo é reprodução literal do arquivo 09 do dossiê
 - `artefatos/template-relato-esud2026.docx` -- **template oficial do evento**, fonte de verdade para formatação e estrutura
 - `artefatos/requisitos-submissao.md` -- registro literal de todos os requisitos do formulário e das diretrizes
 - `artefatos/opcoes-tema.md` -- **histórico**: cinco opções de recorte avaliadas em 2026-09-14 (A eliminada; B era a recomendação até ser substituída em 2026-09-15 pelo tema atual)
 - `artefatos/inventario-evidencias.md` -- todas as ações de IA da CGTE 2023-2026 com as lacunas de indicador marcadas; fonte de candidatos a evidência parcial para o pipeline ICM→Moodle
-- `08-ciencia/_inbox/splnproc1703_mac.docm.md` -- artigo "Ecossistema de IA da CGTE" em rascunho (formato Springer LNCS, ~12 pp.)
-- `08-ciencia/_inbox/analise-08-ciencia_ecossistema-ia.md` -- crítica do especialista a esse rascunho
+- `08-ciencia/_entrada/splnproc1703_mac.docm.md` -- artigo "Ecossistema de IA da CGTE" em rascunho (formato Springer LNCS, ~12 pp.)
+- `08-ciencia/_entrada/analise-08-ciencia_ecossistema-ia.md` -- crítica do especialista a esse rascunho
 - `08-ciencia/referencias/` -- método do especialista (gêneros, anatomia das seções, veículos)
 - `historico-cgte/` -- corpus do board 47, fonte de evidência das ações de IA da CGTE (2023-2026)
 - Antecedente publicado: SILVA, E. V.; ACCIOLY, M. V. F.; FÁVERO, R. P. *Papo com IA.IÁ: comunidade virtual de aprendizagem em inteligência artificial para educação*. Anais do ESUD 2025. https://submissoes.netel.ufabc.edu.br/index.php/esud2025/article/view/193
@@ -54,7 +54,7 @@
 |---|---|---|---|
 | 1 | **Prazo de 6 dias** | Texto apressado reprova na triagem de formatação | Trabalhar sobre material que já existe; congelar escopo hoje |
 | 2 | **Dupla sobreposição** | Há **dois** trabalhos já publicados sobre o mesmo campo: "Papo com IA.IÁ" (ESUD 2025, comunidade de prática) e "Ecossistema de IA da CGTE" (as seis frentes). O novo texto tem de ser distinto dos dois | Recorte estreito numa frente, com evidência que os anteriores não trouxeram: uso real, formação, indicadores, ajustes. Citar ambos como antecedentes |
-| 3 | **Autoplágio** | O rascunho em `_inbox` corresponde a texto já publicado. Reaproveitar parágrafos configura autoplágio | Tratar o arquivo como **fonte de fatos, nunca de frases**. Redigir do zero |
+| 3 | **Autoplágio** | O rascunho em `_entrada` corresponde a texto já publicado. Reaproveitar parágrafos configura autoplágio | Tratar o arquivo como **fonte de fatos, nunca de frases**. Redigir do zero |
 | 4 | **Anonimização duplo-cega** | Desanonimização reprova na triagem | Título e corpo não podem nomear CGTE/Cefor/Ifes; a autocitação de 2025 precisa ser tratada |
 | 5 | **Ausência de indicadores** | O parecerista lê "catálogo do que fizemos", não relato analítico -- causa nº 1 de nota baixa | Levantar números antes de redigir (open item) |
 | 6 | **Conversão de formato** | O rascunho está em LNCS/APA; o ESUD exige ABNT + Roboto 12 + A4 | Partir do template oficial, não do arquivo LNCS |

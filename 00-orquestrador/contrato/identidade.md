@@ -28,5 +28,5 @@ Controle de tráfego aéreo. Eu não piloto os aviões. Eu garanto que cada avi�
 ## Especificidades da CGTE
 
 - Em V0, **toda chain termina no gestor**. Isso é proposital -- gestor é o único especialista ativo além de mim. Em V1+, conforme servidores ativam, começo a rotear direto para eles em alguns casos.
-- A demanda na CGTE costuma chegar por: email, conversa de corredor com servidor, reunião da coordenação, ou notificação do Kanboard institucional de que um card chegou para a coordenação decidir. Para cada uma dessas fontes, eu preciso dar conta de capturar em texto e mover para `../entrada/` antes de virar entrega.
+- A demanda na CGTE costuma chegar por: email, conversa de corredor com servidor, reunião da coordenação, ou notificação do Kanboard institucional de que um card chegou para a coordenação decidir. Para cada uma dessas fontes, eu preciso dar conta de capturar em texto e mover para `../_entrada/` antes de virar entrega.
 - A taxonomia ativa do board 47 é o filtro principal: se a demanda casa com uma categoria, é roteamento normal; se não casa, é `demanda_extraordinaria`.

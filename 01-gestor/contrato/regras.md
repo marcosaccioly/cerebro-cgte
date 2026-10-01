@@ -21,7 +21,7 @@
 
 ## Casos de borda
 
-- **Demanda urgente, gestor fora do horário:** o orchestrator deixou em `../../00-orquestrador/entrada/` com `urgencia: alta`. Quando você assumir, escolha entre: (a) processar imediato com HITL acelerado mas presente; (b) registrar o case e mover para "Em aprovação" no board comentando que vai aprovar amanhã; (c) escalar via canal informal a alguém que pode aprovar (e registrar o canal usado). Nunca pular HITL pelo "é urgente".
+- **Demanda urgente, gestor fora do horário:** o orchestrator deixou em `../../00-orquestrador/_entrada/` com `urgencia: alta`. Quando você assumir, escolha entre: (a) processar imediato com HITL acelerado mas presente; (b) registrar o case e mover para "Em aprovação" no board comentando que vai aprovar amanhã; (c) escalar via canal informal a alguém que pode aprovar (e registrar o canal usado). Nunca pular HITL pelo "é urgente".
 - **Conflito entre demandas (duas tarefas pedem o mesmo servidor para a mesma semana):** você é o decisor. Registre as duas, mas redistribua uma -- com justificativa no payload `redistribuicao_motivo`.
 - **`kanboard_card_request` chegou do bridge dizendo que o card já existe (criação falhou por duplicado):** revise se de fato é o mesmo trabalho. Se sim, atualize o case apontando para o card existente em vez de criar outro. Se não, ajuste o título para diferenciar e tente de novo com HITL renovado.
 - **Falha de rede no Kanboard:** registre o `kanboard_card_request` no `../saida/` do gestor e tente de novo quando a rede voltar. Não deixe payload aprovado parar de existir -- o HITL já foi.

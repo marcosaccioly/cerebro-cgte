@@ -10,7 +10,7 @@
 Avaliadas em 2026-09-14 contra quatro filtros: **cabe em 5-7 páginas**, **tem evidência para análise**, **é inédito perante o ESUD 2025**, **dá para escrever em 6 dias**.
 
 Método: `08-ciencia/referencias/generos-e-formatos.md` (§2 Relato de experiência analítico) e `anatomia-das-secoes.md`.
-Evidência: `historico-cgte/` (board 47) e `08-ciencia/_inbox/splnproc1703_mac.docm.md`.
+Evidência: `historico-cgte/` (board 47) e `08-ciencia/_entrada/splnproc1703_mac.docm.md`.
 
 ---
 
@@ -18,7 +18,7 @@ Evidência: `historico-cgte/` (board 47) e `08-ciencia/_inbox/splnproc1703_mac.d
 
 > **Eliminada em 2026-09-14.** Elton confirmou que o artigo do ecossistema **já foi publicado**.
 > O texto não é inédito e não pode ser submetido nem reaproveitado em parágrafos (autoplágio).
-> O arquivo `08-ciencia/_inbox/splnproc1703_mac.docm.md` passa a valer como **fonte de fatos e como
+> O arquivo `08-ciencia/_entrada/splnproc1703_mac.docm.md` passa a valer como **fonte de fatos e como
 > antecedente a citar**, nunca como fonte de frases. A análise abaixo fica registrada pelo que ela
 > ensina sobre as demais opções.
 
@@ -26,7 +26,7 @@ Evidência: `historico-cgte/` (board 47) e `08-ciencia/_inbox/splnproc1703_mac.d
 
 **Recorte.** A arquitetura completa: ferramentas customizadas, comunidade de prática, manual ético, produções audiovisuais, portal de referência e campanha de comunicação. Tese: nenhuma frente basta isolada; a força está na sinergia.
 
-**Material pronto.** Rascunho completo em `08-ciencia/_inbox/splnproc1703_mac.docm.md` (~12 pp., formato Springer LNCS, referências em APA), com pergunta de pesquisa e quatro objetivos já formulados -- o ponto mais forte do texto, segundo a análise do especialista.
+**Material pronto.** Rascunho completo em `08-ciencia/_entrada/splnproc1703_mac.docm.md` (~12 pp., formato Springer LNCS, referências em APA), com pergunta de pesquisa e quatro objetivos já formulados -- o ponto mais forte do texto, segundo a análise do especialista.
 
 **Evidência.** Ampla e documentada em todo o histórico 2023-2026.
 

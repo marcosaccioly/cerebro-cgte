@@ -22,10 +22,10 @@ Existe um servidor MCP para Kanboard, mas ele tem issue upstream (#11) que afeta
 
 | Operação | Arquivo | Para que serve |
 |---|---|---|
-| `criar-tarefa` | `operations/criar-tarefa.ts` | Cria card novo. Padrão destino: coluna "Início autorizado". |
-| `mover-tarefa` | `operations/mover-tarefa.ts` | Move card entre colunas. Útil quando gestor aprova gate. |
-| `adicionar-comentario` | `operations/adicionar-comentario.ts` | Comenta em card. Voz CGTE / Marquito conforme caso. |
-| `listar-tarefas-projeto` | `operations/listar-tarefas-projeto.ts` | Le tarefas do projeto. Única operação read; não precisa HITL. |
+| `criar-tarefa` | `operacoes/criar-tarefa.ts` | Cria card novo. Padrão destino: coluna "Início autorizado". |
+| `mover-tarefa` | `operacoes/mover-tarefa.ts` | Move card entre colunas. Útil quando gestor aprova gate. |
+| `adicionar-comentario` | `operacoes/adicionar-comentario.ts` | Comenta em card. Voz CGTE / Marquito conforme caso. |
+| `listar-tarefas-projeto` | `operacoes/listar-tarefas-projeto.ts` | Le tarefas do projeto. Única operação read; não precisa HITL. |
 
 Outras operações entram em V1.X conforme padrões emergirem (mover entre projetos, anexar arquivo, criar subtask, etc.).
 
@@ -66,9 +66,9 @@ O facade le o entrega aberto do case que aponta para `_pontes/kanboard` e execut
 - `facade.ts` -- ponto de entrada. CLI + dispatcher + HITL.
 - `jsonrpc-client.ts` -- cliente JSON-RPC direto (uso em V0).
 - `mcp-client.ts` -- cliente MCP (desabilitado em V0; ativar quando upstream issue #11 fixar).
-- `operations/criar-tarefa.ts`
-- `operations/mover-tarefa.ts`
-- `operations/adicionar-comentario.ts`
-- `operations/listar-tarefas-projeto.ts`
+- `operacoes/criar-tarefa.ts`
+- `operacoes/mover-tarefa.ts`
+- `operacoes/adicionar-comentario.ts`
+- `operacoes/listar-tarefas-projeto.ts`
 - `projetos-cgte.yaml` -- mapeamento de IDs de projeto + categoria + coluna.
 - `usuarios-cgte.yaml` -- mapeamento de usuarios CGTE para `owner_id` do Kanboard.

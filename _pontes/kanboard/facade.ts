@@ -18,10 +18,10 @@
  * V1+: troca para mcp-client.ts em uma linha quando issue upstream #11 fixar.
  */
 
-import { criarTarefa } from "./operations/criar-tarefa.ts";
-import { moverTarefa } from "./operations/mover-tarefa.ts";
-import { adicionarComentario } from "./operations/adicionar-comentario.ts";
-import { listarTarefasProjeto } from "./operations/listar-tarefas-projeto.ts";
+import { criarTarefa } from "./operacoes/criar-tarefa.ts";
+import { moverTarefa } from "./operacoes/mover-tarefa.ts";
+import { adicionarComentario } from "./operacoes/adicionar-comentario.ts";
+import { listarTarefasProjeto } from "./operacoes/listar-tarefas-projeto.ts";
 import { JsonRpcClient } from "./jsonrpc-client.ts";
 
 const WRITE_OPERATIONS = new Set([

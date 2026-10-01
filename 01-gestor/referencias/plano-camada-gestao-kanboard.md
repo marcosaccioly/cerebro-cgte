@@ -23,7 +23,7 @@
 | Pedido | Já existe | Falta |
 |---|---|---|
 | Kanboard como verdade | `_configuracao/regras-negocio.md` | Formalizar boards por subsetor (hoje "toda escrita começa no 47") |
-| Captura | transcritor → `_inbox/`; `00-orquestrador/entrada/` | Rotina que transforma entrada em propostas |
+| Captura | transcritor → `_entrada/`; `00-orquestrador/_entrada/` | Rotina que transforma entrada em propostas |
 | Painel da manhã | `_pontes/kanboard/diagnostico.ts` (read-only) | Versão diária com prazos, carga por pessoa, links |
 | Gestão atualiza pelos outros | 4 operações com HITL | Fila de propostas aprovadas item a item |
 | Etapas por subsetor | `etapas/` vazios; projeto 60 "CGTE - Audiovisual" existe | Colunas desenhadas por área |
@@ -55,13 +55,19 @@
   - parados há +N dias sem movimento;
   - carga aberta por pessoa ("quem está livre");
   - contagem por coluna dos boards de subsetor;
-  - pendências em `_inbox/` e `00-orquestrador/entrada/`;
+  - pendências em `_entrada/` e `00-orquestrador/_entrada/`;
   - casos abertos com próximo passo.
 - Cada linha com link do card e do contato.
 - Atualização sob demanda + opcional Agendador do Windows a cada 30–60 min.
 - Aproveitar para centralizar os mapas de IDs hoje duplicados em `diagnostico.ts` e `exportar-historico.ts`, lendo de `projetos-cgte.yaml` / `usuarios-cgte.yaml` (o painel seria a terceira cópia; os scripts ainda chamam o eixo de "comunicação" após o rename para design).
 
 ### Fase 3 — Piloto Comunicação
+
+> **Atualização 2026-09-29 (Elton):** a comunicação virou **área separada** `comunicacao-cefor/`, não `04-design/`.
+> Estrutura criada: captura da caixa `cso.cefor@ifes.edu.br` → triagem (informe / publicação /
+> demanda / sem ação) → encaminhamento com HITL (pauta do Informe Cefor, board da comunicação, pedido à
+> CGTE). Comando `/processar-noticias`. Isso adianta a Fase 4 para a caixa da comunicação.
+> Pendências (operador, acesso à caixa, ID do board, voz) em `comunicacao-cefor/configuracao/questionario.md`.
 
 - Colunas propostas (validar): Solicitado → Em produção → Em aprovação → Agendado → Publicado.
 - Projeto novo no Kanboard (como o 60 do audiovisual) — depende de admin do Kanboard.
@@ -73,7 +79,7 @@
 ### Fase 4 — Captura → propostas (com HITL)
 
 - Nova chain `atualizacao_por_captura` em `_configuracao/cadeias-fluxo.yaml` (sensível): `00-orquestrador` → `01-gestor` → `_pontes/kanboard`.
-- Comando `processar-entrada`: lê transcrições (já chegam em `_inbox/`) e e-mail/WhatsApp colados em `entrada/`; gera `01-gestor/saida/propostas-AAAA-MM-DD.yaml` com cards novos, movimentações, prazos combinados e comentários.
+- Comando `processar-entrada`: lê transcrições (já chegam em `_entrada/`) e e-mail/WhatsApp colados em `00-orquestrador/_entrada/`; gera `01-gestor/saida/propostas-AAAA-MM-DD.yaml` com cards novos, movimentações, prazos combinados e comentários.
 - Gestor aprova item a item (y/n/editar) — respeita "nada em batch sem ver cada um".
 - Cobrança sem atrito: para card parado, rascunho na voz do Marquito + link `wa.me/…?text=` pré-preenchido; ele só clica e envia.
 

@@ -14,6 +14,9 @@
 # Papéis esqueleto V0 (ativam em V1.X):
 #   02-design-educacional | 03-audiovisual | 04-design | 05-acessibilidade |
 #   06-tecnologia | 07-institucional | 08-ciencia
+#
+# Área separada (não é especialista da CGTE; tem caixa, board e HITL próprios):
+#   comunicacao-cefor
 
 workflow_chains:
 
@@ -56,6 +59,51 @@ workflow_chains:
       - from: 01-gestor
         to: 04-design
         when: "Gestor identificou que a demanda é da área de Design e aprovou HITL o encaminhamento."
+
+# ============================================================
+# Comunicação do Cefor (área separada -- comunicacao-cefor/)
+# ============================================================
+# A comunicação tem porta de entrada própria (caixa cso.cefor@ifes.edu.br) e
+# board próprio. Não passa pelo 00-orquestrador para o trabalho dela; só entra no
+# fluxo da CGTE quando pede produção (arte, vídeo, Libras).
+
+  - name: triagem_caixa_noticias
+    description: E-mail da caixa noticias.cefor triado como publicação ou demanda que a própria comunicação resolve. Vira card no board da comunicação após HITL do operador de comunicação.
+    steps:
+      - from: comunicacao-cefor
+        to: _pontes/kanboard
+        when: "Operador de comunicação aprovou (HITL) o kanboard_card_request para o board da comunicação (projeto 30)."
+        note: "HITL é do operador de comunicação (Marquito / Elton). Nunca escreve no board 47."
+      - from: comunicacao-cefor
+        to: _pontes/email
+        when: "Operador aprovou (HITL) o rascunho de resposta; salvo na pasta Rascunhos de cso.cefor."
+        note: "Só salva rascunho. Envio é humano, pelo webmail."
+
+  - name: pauta_informe_cefor
+    description: Tema triado como informe entra na pauta da próxima edição; ao fechar a edição, um único card por edição vai para o board da comunicação.
+    steps:
+      - from: comunicacao-cefor
+        to: comunicacao-cefor
+        when: "Operador aprovou (HITL) o item de pauta; entra em comunicacao-cefor/informe/pauta.yaml. Sem card."
+      - from: comunicacao-cefor
+        to: _pontes/kanboard
+        when: "fechar-informe: operador aprovou a seleção da edição e o card da edição (HITL)."
+
+  - name: pedido_producao_comunicacao
+    description: Publicação ou demanda da comunicação que precisa de produção da CGTE (peça visual, audiovisual, Libras). Entra na CGTE pelo orquestrador como qualquer demanda externa, já estruturada.
+    steps:
+      - from: comunicacao-cefor
+        to: 00-orquestrador
+        when: "Operador de comunicação aprovou (HITL) o pedido; case aberto com EN-001 carga demanda_comunicacao."
+      - from: 00-orquestrador
+        to: 01-gestor
+        when: "Orquestrador roteou pelo fluxo normal da CGTE (tarefa_distribuir, categoria do board 47)."
+      - from: 01-gestor
+        to: _pontes/kanboard
+        when: "Gestor da CGTE decidiu responsável e aprovou HITL do card no board 47."
+      - from: 01-gestor
+        to: 04-design
+        when: "Peça visual; gestor encaminhou ao Design (chain producao_peca_visual)."
 
 # ============================================================
 # V1+ (esqueletos -- ativar conforme servidores entram)

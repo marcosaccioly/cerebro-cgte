@@ -6,12 +6,14 @@ O contrato do orchestrator. O que entra, o que sai, para onde vai depois.
 
 O orchestrator é a **porta de entrada**. Eu não recebo entregas de outros especialistas no fluxo normal. O que eu recebo é **input bruto de fora do sistema**:
 
-- Um email encaminhado para `../entrada/`
-- Uma nota de uma reunião da coordenação (Marquito ou outro servidor escreve em texto e deposita em `../entrada/`)
+- Um email encaminhado para `../_entrada/`
+- Uma nota de uma reunião da coordenação (Marquito ou outro servidor escreve em texto e deposita em `../_entrada/`)
 - Um pedido de chefia ou parceiro chegando por canal informal (Telegram, conversa de corredor) e transformado em texto para o inbox
 - Uma notificação do Kanboard institucional avisando que um card chegou para a coordenação decidir (raro mas possível)
 
 Esses inputs não chegam estruturados. Chegam na forma natural. **Meu trabalho é converter para um envelope de entrega.**
+
+**Exceção -- pedidos da Comunicação do Cefor.** A área separada `../../comunicacao-cefor/` me manda entregas já estruturadas (`papel_origem: comunicacao-cefor`, carga `demanda_comunicacao`, chain `pedido_producao_comunicacao`). Trato como demanda externa: leio a carga, escrevo o 3-line plan e sigo para `../../01-gestor/` com `tarefa_distribuir` (categoria do board 47 conforme `tipo_producao`: peça visual → Comunicação Visual; audiovisual → Produção Audiovisual; Libras → Libras Tradução/Interpretação). O case já existe -- continuo nele com EN-002.
 
 ## O que eu produzo
 

@@ -1,6 +1,6 @@
 # Tema decidido -- "IA além do chat" (substitui a Opção B)
 
-Decidido em 2026-09-15, fora desta sessão de análise, e trazido pronto via `prompt-continuidade-ia-alem-do-chat.md` e `dossie-ia-alem-do-chat.md` (ambos movidos do `08-ciencia/_inbox/` para cá em 2026-09-15). Este arquivo sintetiza a decisão para uso rápido dentro do caso; o dossiê completo é a fonte, não este resumo.
+Decidido em 2026-09-15, fora desta sessão de análise, e trazido pronto via `prompt-continuidade-ia-alem-do-chat.md` e `dossie-ia-alem-do-chat.md` (ambos movidos do `08-ciencia/_entrada/` para cá em 2026-09-15). Este arquivo sintetiza a decisão para uso rápido dentro do caso; o dossiê completo é a fonte, não este resumo.
 
 ## Título (fixo -- 16 palavras, no limite do ESUD)
 

@@ -1,0 +1,39 @@
+# caixa.yaml -- configuração da captura e do HITL da comunicacao-cefor
+#
+# Lido pela etapa 01-captura e pelo comando /processar-noticias.
+# Credenciais NUNCA aqui: ficam no .env da raiz (CSO_*), fora do git.
+
+caixa: cso.cefor@ifes.edu.br     # nome de exibição "Notícias Cefor"; login do webmail: noticias.cefor
+servidor: "Exchange 2019 on-premise -- https://webmail.ifes.edu.br (OWA) / EWS"
+
+captura:
+  # ews:    _pontes/email/facade.ts lê a caixa via EWS (padrão).
+  # manual: operador cola o e-mail no chat ou salva .eml/.txt/.md em _entrada/
+  #         (use também para pedidos que chegam por WhatsApp).
+  modo: ews
+  janela_padrao_dias: 7    # usada quando o comando vem sem argumento
+  limite_por_varredura: 40 # acima disso, processa os mais antigos primeiro e avisa que há mais
+
+  # Remetentes que são ruído conhecido -> sem_acao direto na triagem (sem ler o corpo).
+  ruido:
+    - "@facebookmail.com"
+    - "ifes-antispam01@ifes.edu.br"
+
+  # Endereços da própria equipe: mensagem deles numa conversa indica que alguém já tratou.
+  equipe:
+    - "cso.cefor@ifes.edu.br"
+    - "cgte.cefor@ifes.edu.br"
+    - "eltonvinicius@ifes.edu.br"
+    - "marcos.accioly@ifes.edu.br"
+
+hitl:
+  # Quem aprova propostas e rascunhos da comunicação (decidido em 2026-09-29).
+  operadores: [marquito, elton]
+
+informe:
+  nome: "Informe Cefor"
+  cadencia: "1ª e 3ª semana de cada mês"
+  ultima_edicao: 56          # Especial #56 - Fevereiro de 2026, enviada em 2026-03-05
+  proxima_edicao: 57
+  proxima_semana: "Semana 1 - Outubro de 2026"   # definido em 2026-09-29 (Elton)
+  proxima_janela: { de: 2026-10-01, ate: 2026-10-07 }   # itens da pauta com janela até aqui entram na #57

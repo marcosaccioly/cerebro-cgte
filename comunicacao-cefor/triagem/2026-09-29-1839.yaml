@@ -1,0 +1,366 @@
+# Registro de triagem -- caixa cso.cefor
+# Etapa 02 (proposta). A etapa 03 preenche hitl / resultado item a item.
+# Board 30 sem token/colunas: propostas de card ficam em hitl: aguardando_board;
+# deduplicação contra o board 30 não foi possível nesta varredura.
+
+varredura: 2026-09-29T18:39
+caixa: cso.cefor@ifes.edu.br
+janela: 7d                           # + itens de 16-21/09 já capturados antes e ainda sem triagem
+fonte_captura: ews
+conferido_em_enviadas: 14d           # _enviadas/ lido para saber o que a caixa já respondeu
+operador: null                       # marquito | elton -- definido antes da etapa 03
+itens:
+  - id: TRI-20260929-01
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAB8L3aVZ2sxAnggUg6AiSa8="
+    mensagem_id: "<bfcce199-598d-4408-b6b1-7ca9d7e0b432@facebookmail.com>"
+    mensagens: ["<bfcce199-598d-4408-b6b1-7ca9d7e0b432@facebookmail.com>"]
+    arquivo_entrada: "2026-09-16_0850_93d476e7.md"
+    atualiza: null
+    recebido_em: 2026-09-16
+    remetente: "Facebook <close_friend_updates@facebookmail.com>"
+    assunto: "Notificação de comentário em post"
+    resumo: "Notificação automática do Facebook."
+    decisao:
+      tipo: sem_acao
+      confianca: alta
+      por_que: "Remetente na lista de ruído (@facebookmail.com)."
+
+  - id: TRI-20260929-02
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAFGzUBtlEIRAsOB4EkzUdiM="
+    mensagem_id: "<b1d6fa80-5a9f-4af5-9c4a-833ada69de5e@facebookmail.com>"
+    mensagens: ["<b1d6fa80-5a9f-4af5-9c4a-833ada69de5e@facebookmail.com>"]
+    arquivo_entrada: "2026-09-16_0850_faeef6f7.md"
+    atualiza: null
+    recebido_em: 2026-09-16
+    remetente: "Facebook <reminders@facebookmail.com>"
+    assunto: "Resumo de atualizações de amigos"
+    resumo: "Lembrete automático do Facebook."
+    decisao:
+      tipo: sem_acao
+      confianca: alta
+      por_que: "Remetente na lista de ruído (@facebookmail.com)."
+
+  - id: TRI-20260929-03
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAF5xC1M4PXdOkVKtrJt35gs="
+    mensagem_id: "<08b91b8c-51f8-416e-b408-738875a91d14@facebookmail.com>"
+    mensagens: ["<08b91b8c-51f8-416e-b408-738875a91d14@facebookmail.com>"]
+    arquivo_entrada: "2026-09-16_2017_833f6d2f.md"
+    atualiza: null
+    recebido_em: 2026-09-16
+    remetente: "Facebook <close_friend_updates@facebookmail.com>"
+    assunto: "Notificação de comentário em post"
+    resumo: "Notificação automática do Facebook."
+    decisao:
+      tipo: sem_acao
+      confianca: alta
+      por_que: "Remetente na lista de ruído (@facebookmail.com)."
+
+  - id: TRI-20260929-04
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAKewA4fIbjxFkTu2tTfJuCM="
+    mensagem_id: "<b51063dd0c4b480a976925bf8e10d9a5@ifes.edu.br>"
+    mensagens: ["<b51063dd0c4b480a976925bf8e10d9a5@ifes.edu.br>"]
+    arquivo_entrada: "2026-09-18_1250_8d135dab.md"
+    atualiza: null
+    recebido_em: 2026-09-18
+    remetente: "Napne/Cefor <napne.cefor@ifes.edu.br>"
+    assunto: "Solicitação de divulgação - Setembro Verde no Instagram do Cefor"
+    resumo: "Adriano Goldner (coord. Napne/Cefor) pede a publicação de uma arte do Setembro Verde no Instagram do Cefor, com texto pronto citando 21/09, 26/09 e 30/09. A arte foi feita pelo Napne com IA e eles aceitam ajustes ou nova versão. Enviado também à CGTE; não há resposta nem na caixa nem nos Enviados (14 dias)."
+    decisao:
+      tipo: publicacao
+      tambem: []
+      subdestino: null
+      confianca: baixa
+      por_que: "Pedido explícito de post no Instagram, mas está há 11 dias sem resposta e o mês que a arte cobre termina amanhã (30/09)."
+      pergunta: "O post chegou a ser feito no Instagram (por alguém da comunicação ou da CGTE)? Se não: ainda posta até 30/09 ou encerra com uma resposta ao Napne?"
+    falta: ["conferir a arte (selo de 20 anos, formato feed x story) -- anexos não são baixados"]
+    propostas:
+      - destino: board-comunicacao
+        kanboard_card_request:
+          operacao: criar-tarefa
+          projeto_id: 30
+          card_id: null
+          campos:
+            title: "[Instagram] Setembro Verde -- arte do Napne -- até 30/09"
+            description: |
+              **Solicitante:** Adriano Goldner Costa (coordenador do Napne/Cefor)
+              **Contato:** napne.cefor@ifes.edu.br
+              **Origem:** e-mail para cso.cefor em 2026-09-18, assunto "Solicitação de divulgação - Setembro Verde no Instagram do Cefor"
+              **Pedido:** publicar a arte do Setembro Verde no Instagram do Cefor, com o texto enviado pelo Napne.
+              **Canais:** Instagram do Cefor (feed)
+              **Publicar até:** 2026-09-30
+              **Material recebido:** Setembro_Verde_Napne_Cefor.png; Setembro_Verde_Napne_Cefor_WhatsApp.png (anexos no e-mail); texto no corpo do e-mail
+              **Falta:** conferir a arte (feita com IA pelo Napne) -- selo de 20 anos e formato
+              **Próximo passo:** conferir a arte e postar
+              **Triagem:** TRI-20260929-04
+            column_id: null
+            category_id: null
+            owner_id: null
+            date_due: "2026-09-30"
+        hitl: aguardando_board
+        hitl_aprovado_em: null
+        hitl_aprovado_por: null
+        resultado: null
+        motivo_recusa: null
+      - destino: resposta
+        rascunho_resposta:
+          responder_a_todos: false
+          texto: |
+            Boa tarde, Adriano.
+            Recebido. Vamos postar a arte do Setembro Verde no Instagram do Cefor.
+
+            Atenciosamente,
+            <operador>
+
+            Comunicação Social - Cefor
+            Centro de Referência em Formação e em Educação a Distância - Ifes
+            27 3198-0933
+          nota: "Texto vale se a resposta à pergunta for 'ainda posta'. Se o post já saiu ou não vai sair, reescrever na etapa 03."
+        hitl: pendente
+        hitl_aprovado_em: null
+        hitl_aprovado_por: null
+        resultado: null
+
+  - id: TRI-20260929-05
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAAzxStCU1dJMr8rucz4BBM4="
+    mensagem_id: "<qSnnZWk3SRyNNlNKOYWDmg@geopod-ismtpd-17>"
+    mensagens: ["<qSnnZWk3SRyNNlNKOYWDmg@geopod-ismtpd-17>"]
+    arquivo_entrada: "2026-09-18_1102_ad19a081.md"
+    atualiza: null
+    recebido_em: 2026-09-18
+    remetente: "Esafi <analista.comunica@esafi.com.br>"
+    assunto: "Turmas abertas da Esafi em Novembro"
+    resumo: "Propaganda de cursos de uma escola privada em outros estados."
+    decisao:
+      tipo: sem_acao
+      confianca: alta
+      por_que: "Newsletter/propaganda externa, sem pedido e sem relação com o Cefor."
+
+  - id: TRI-20260929-06
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAA86QPkWPJtFvfil6sOvVIU="
+    mensagem_id: "<a30523b646b14c9b9c5ba7e179557bd1@ifes.edu.br>"
+    mensagens:
+      - "<0ddaea65fbf44a92a13cddb3b33e1c43@ifes.edu.br>"
+      - "<3c0e7117cd3f41328e69957a861a40f8@ifes.edu.br>"
+      - "<a30523b646b14c9b9c5ba7e179557bd1@ifes.edu.br>"
+    arquivo_entrada: "2026-09-18_1720_e5513231.md"
+    atualiza: null
+    recebido_em: 2026-09-21
+    remetente: "Napne/Cefor <napne.cefor@ifes.edu.br>"
+    assunto: "Solicitação de publicação de matéria - Dia Nacional de Luta da Pessoa com Deficiência (21/09)"
+    resumo: "Napne pediu em 18/09 a publicação de matéria para 21/09. A CGTE (Marcos Accioly) publicou e respondeu com o link em 21/09 (notícia 17714). A última mensagem é o agradecimento do Napne avisando que mandaria mais duas matérias (chegaram no item 07)."
+    decisao:
+      tipo: sem_acao
+      confianca: alta
+      por_que: "Já publicado e respondido pela CGTE em 21/09; a última mensagem é agradecimento, sem pedido novo. O tema entra na pauta pelo item 07 (série Setembro Verde)."
+
+  - id: TRI-20260929-07
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQALKNz/yXzcBImZ6OY0ivqtc="
+    mensagem_id: "<27f46a896f9446f5bf38539fedcdedb0@ifes.edu.br>"
+    mensagens:
+      - "<2f7c6ead9e2e4b5887f680f206a451d2@ifes.edu.br>"
+      - "<4097c565a6ae4de395721bac1db75e74@ifes.edu.br>"
+      - "<a446060993ea448490d2bac9faac1356@ifes.edu.br>"
+      - "<27f46a896f9446f5bf38539fedcdedb0@ifes.edu.br>"
+    arquivo_entrada: "2026-09-24_1041_ada3ae20.md"   # mensagem original do Napne (resposta vai para ela)
+    atualiza: null
+    recebido_em: 2026-09-28
+    remetente: "Napne/Cefor <napne.cefor@ifes.edu.br>"
+    assunto: "Solicitação de publicação de matérias — Dia Nacional dos Surdos e Dia Internacional do Tradutor e Intérprete"
+    resumo: "Napne pediu em 24/09 a publicação de duas matérias (26/09 e 30/09). A CGTE respondeu 'será agendado'; Elton publicou a de 26/09 (notícia 17718) e agendou a de 30/09 (17719), mas avisou só a caixa e a CGTE -- o Napne não recebeu os links."
+    decisao:
+      tipo: publicacao
+      tambem: [informe]
+      subdestino: null
+      confianca: media
+      por_que: "Publicação já feita/agendada pela CGTE; falta fechar com o Napne (links). Série Setembro Verde (itens 06 e 07) vale nota em Últimas notícias."
+      pergunta: null
+    propostas:
+      - destino: informe-pauta
+        item_pauta:
+          id: PAU-20260929-02
+          titulo: "Setembro Verde: Napne/Cefor publica série de matérias sobre inclusão, surdez e tradução em Libras"
+          resumo: "O Napne/Cefor publicou no site do Cefor três matérias do Setembro Verde: Dia Nacional de Luta da Pessoa com Deficiência (21/09), Dia Nacional dos Surdos (26/09) e Dia Internacional da Tradução (30/09), com entrevistas de servidores do Cefor."
+          secao: ultimas_noticias
+          janela: "2026-09-30"
+          fonte: [TRI-20260929-07, TRI-20260929-06]
+          link:
+            - "https://cefor.ifes.edu.br/index.php/noticias/17714-dia-nacional-de-luta-da-pessoa-com-deficiencia"
+            - "https://cefor.ifes.edu.br/index.php/noticias/17718-26-de-setembro-dia-nacional-dos-surdos"
+            - "https://cefor.ifes.edu.br/index.php/noticias/17719-30-de-setembro-dia-internacional-da-traducao"
+          falta: []
+          status: candidato
+          edicao: null
+        hitl: pendente
+        hitl_aprovado_em: null
+        hitl_aprovado_por: null
+        resultado: null
+      - destino: resposta
+        rascunho_resposta:
+          responder_a_todos: true      # cópia: CGE, Diretoria e as servidoras envolvidas nas matérias
+          texto: |
+            Bom dia, Adriano.
+            A matéria do Dia Nacional dos Surdos foi publicada no site do Cefor:
+            https://cefor.ifes.edu.br/index.php/noticias/17718-26-de-setembro-dia-nacional-dos-surdos
+
+            A do Dia Internacional da Tradução está agendada para 30/09:
+            https://cefor.ifes.edu.br/index.php/noticias/17719-30-de-setembro-dia-internacional-da-traducao
+
+            Atenciosamente,
+            <operador>
+
+            Comunicação Social - Cefor
+            Centro de Referência em Formação e em Educação a Distância - Ifes
+            27 3198-0933
+        hitl: pendente
+        hitl_aprovado_em: null
+        hitl_aprovado_por: null
+        resultado: null
+
+  - id: TRI-20260929-08
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAFKGyC1R4B9BrBkTnGkkoFk="
+    mensagem_id: "<e6e24d2a42a54dd4b3542ecce7e37225@ifes.edu.br>"
+    mensagens:
+      - "<328185e1f39648afbdab615e8d93237f@ifes.edu.br>"
+      - "<e6e24d2a42a54dd4b3542ecce7e37225@ifes.edu.br>"
+    arquivo_entrada: "2026-09-24_1726_93942993.md"
+    atualiza: null
+    recebido_em: 2026-09-28
+    remetente: "Seleção UAB <selecaouab@ifes.edu.br>"
+    assunto: "Divulgação do Edital 91.2026 (Professor Regente)"
+    resumo: "Seleção UAB pediu divulgação do Edital 91/2026 (cadastro de reserva de professores regentes UAB), inscrições até 12/10. Elton publicou banner no site e o post do Instagram já existia; a caixa já respondeu 'Postado segundo solicitação' em 28/09."
+    decisao:
+      tipo: publicacao
+      tambem: [informe]
+      subdestino: null
+      confianca: alta
+      por_que: "Publicado e já respondido pela caixa em 28/09; processo seletivo com inscrições até 12/10 cabe na #57. Nota única para os três editais UAB (08, 09, 10)."
+      pergunta: null
+    propostas:
+      - destino: informe-pauta
+        item_pauta:
+          id: PAU-20260929-01
+          titulo: "UAB/Ifes abre cadastro de reserva para mediadores pedagógicos, tutores e professores regentes"
+          resumo: "Estão abertos os Editais 89, 90 e 91/2026 para cadastro de reserva de mediadores pedagógicos, tutores e professores regentes dos cursos da Universidade Aberta do Brasil (UAB) ofertados pelo Ifes. Inscrições até 12 de outubro."
+          secao: ultimas_noticias
+          janela: "2026-10-12"
+          fonte: [TRI-20260929-08, TRI-20260929-09, TRI-20260929-10]
+          link:
+            - "https://cefor.ifes.edu.br/index.php/processo-seletivo/tutores/17717-edital-89-2026-processo-de-selecao-de-cadastro-de-reserva-de-mediadores-pedagogicos-para-atuarem-nos-cursos-do-programa-universidade-aberta-do-brasil-uab-ofertados-pelo-ifes"
+            - "https://cefor.ifes.edu.br/index.php/processo-seletivo/tutores/17716-edital-90-2026-processo-de-selecao-de-cadastro-de-reserva-de-tutores-para-atuarem-nos-cursos-do-programa-universidade-aberta-do-brasil-uab-ofertados-pelo-ifes"
+            - "https://cefor.ifes.edu.br/index.php/processo-seletivo/bolsistas-e-estagiarios/17715-edital-91-2026-processo-de-selecao-de-cadastro-de-reserva-de-professores-regentes-para-atuarem-nos-cursos-do-programa-universidade-aberta-do-brasil-uab-ofertados-pelo-ifes"
+          falta: []
+          status: candidato
+          edicao: null
+        hitl: pendente
+        hitl_aprovado_em: null
+        hitl_aprovado_por: null
+        resultado: null
+    nota: "Sem proposta de resposta: a caixa já respondeu em 28/09 (Enviados). Sem card: publicação concluída."
+
+  - id: TRI-20260929-09
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQACbINl2EIbZChYhUU1Vuebc="
+    mensagem_id: "<cf46f5b9cb7d46c997ee5dc433cfe2af@ifes.edu.br>"
+    mensagens:
+      - "<fda9ef0ff9ea4f6da313d34221ecd76e@ifes.edu.br>"
+      - "<cf46f5b9cb7d46c997ee5dc433cfe2af@ifes.edu.br>"
+    arquivo_entrada: "2026-09-24_1755_b7817a35.md"
+    atualiza: null
+    recebido_em: 2026-09-28
+    remetente: "Seleção UAB <selecaouab@ifes.edu.br>"
+    assunto: "Divulgação do Edital 90.2026 (Tutores)"
+    resumo: "Seleção UAB pediu divulgação do Edital 90/2026 (cadastro de reserva de tutores UAB), inscrições até 12/10. A caixa encaminhou ao Elton, que publicou banner no site e post no Instagram em 28/09 e avisou só a caixa. A Seleção UAB ainda não recebeu confirmação."
+    decisao:
+      tipo: publicacao
+      tambem: [informe]
+      subdestino: null
+      confianca: alta
+      por_que: "Publicado em 28/09; falta confirmar ao solicitante. Pauta agrupada no item 08 (PAU-20260929-01)."
+      pergunta: null
+    propostas:
+      - destino: resposta
+        rascunho_resposta:
+          responder_a_todos: false
+          texto: |
+            Bom dia.
+            Publicado segundo solicitação: banner na página inicial do site do Cefor (fica no ar até o fim das inscrições, 12/10) e post no Instagram:
+            https://www.instagram.com/p/Dd2L6dXGwyB/
+
+            Atenciosamente,
+            <operador>
+
+            Comunicação Social - Cefor
+            Centro de Referência em Formação e em Educação a Distância - Ifes
+            27 3198-0933
+        hitl: pendente
+        hitl_aprovado_em: null
+        hitl_aprovado_por: null
+        resultado: null
+
+  - id: TRI-20260929-10
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAGFdqAqdGJVDmxZPLCM/3YQ="
+    mensagem_id: "<b67036a7660b4bffbbd48717afbd49e8@ifes.edu.br>"
+    mensagens:
+      - "<a723ded92dff4b08bff9f78ee8b3eedc@ifes.edu.br>"
+      - "<b67036a7660b4bffbbd48717afbd49e8@ifes.edu.br>"
+    arquivo_entrada: "2026-09-25_0821_a6b5d650.md"
+    atualiza: null
+    recebido_em: 2026-09-28
+    remetente: "Seleção UAB <selecaouab@ifes.edu.br>"
+    assunto: "Divulgação do Edital 89.2026 (Mediadores Pedagógicos)"
+    resumo: "Seleção UAB pediu divulgação do Edital 89/2026 (cadastro de reserva de mediadores pedagógicos UAB), inscrições até 12/10. A caixa encaminhou ao Elton, que publicou banner no site e post no Instagram em 28/09 e avisou só a caixa. A Seleção UAB ainda não recebeu confirmação."
+    decisao:
+      tipo: publicacao
+      tambem: [informe]
+      subdestino: null
+      confianca: alta
+      por_que: "Publicado em 28/09; falta confirmar ao solicitante. Pauta agrupada no item 08 (PAU-20260929-01)."
+      pergunta: null
+    propostas:
+      - destino: resposta
+        rascunho_resposta:
+          responder_a_todos: false
+          texto: |
+            Bom dia.
+            Publicado segundo solicitação: banner na página inicial do site do Cefor (fica no ar até o fim das inscrições, 12/10) e post no Instagram:
+            https://www.instagram.com/p/Dd2Lib5my95/
+
+            Atenciosamente,
+            <operador>
+
+            Comunicação Social - Cefor
+            Centro de Referência em Formação e em Educação a Distância - Ifes
+            27 3198-0933
+        hitl: pendente
+        hitl_aprovado_em: null
+        hitl_aprovado_por: null
+        resultado: null
+
+  - id: TRI-20260929-11
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAOZMosG2lQ9LoQRrQrwtTKo="
+    mensagem_id: "<010301a0ef0d5db4-1f9d1342-fb96-4ba2-be7f-e4a9e939fea9-000000@sa-east-1.amazonses.com>"
+    mensagens: ["<010301a0ef0d5db4-1f9d1342-fb96-4ba2-be7f-e4a9e939fea9-000000@sa-east-1.amazonses.com>"]
+    arquivo_entrada: "2026-09-29_1824_d1ca7dbe.md"
+    atualiza: null
+    recebido_em: 2026-09-29
+    remetente: "Pesquisa Relacionamentos <divulgacao@divulga.relacionamentos.app.br>"
+    assunto: "Divulgação da Pesquisa Nacional sobre Relacionamentos Românticos"
+    resumo: "Doutorando do PPG em Neurociências da UFRGS pede divulgação, para toda a comunidade, de pesquisa on-line sobre relacionamentos amorosos (recrutamento de voluntários). Disparo em massa com link de descadastro."
+    decisao:
+      tipo: sem_acao
+      confianca: media
+      por_que: "Pedido de divulgação de pesquisa externa (UFRGS), sem relação com o Cefor, em disparo em massa; nenhum canal do Cefor cobre esse tipo de conteúdo."
+
+  - id: TRI-20260929-12
+    conversa_id: "AAQkAGQ4YTdhNWM5LTAxNzctNDJiNi04MzdkLTQwODg0YzA5NGRhMgAQAJaPx8RnMp1IpWYwn4AFysc="
+    mensagem_id: "<20260920030545.9F6D4701462@ifes-antispam01.cefetes.br>"
+    mensagens: ["<20260920030545.9F6D4701462@ifes-antispam01.cefetes.br>"]
+    arquivo_entrada: "2026-09-20_0005_973d7e30.md"
+    atualiza: null
+    recebido_em: 2026-09-20
+    remetente: "AntiSpam do IFES <ifes-antispam01@ifes.edu.br>"
+    assunto: "Relatório diário de spam"
+    resumo: "Relatório automático do AntiSpam."
+    decisao:
+      tipo: sem_acao
+      confianca: alta
+      por_que: "Remetente na lista de ruído (ifes-antispam01@ifes.edu.br)."

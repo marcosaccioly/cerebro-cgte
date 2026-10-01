@@ -1,7 +1,7 @@
 # Análise — 08-ciencia
 
 **Edital:** Chamada Universal 06/2026 (CNPq/FNDCT) — pesquisa científica/tecnológica, qualquer área
-**Fonte analisada:** `08-ciencia/_inbox/ChamadaUniversal062026.pdf`
+**Fonte analisada:** `08-ciencia/_entrada/ChamadaUniversal062026.pdf`
 **Especialista:** 08-ciencia (Produção Científica)
 **Data da análise original:** 2026-06-26 (sessões Claude Code em `cerebro-cgte` e no workspace `solution-design`)
 **Consolidado em:** 2026-07-02 — recuperado do histórico das conversas; nada disto havia sido salvo em arquivo.
@@ -75,7 +75,7 @@ Critérios de julgamento e pesos (item 7.1.1 — nota final é a **média ponder
 ## 4. Temas candidatos (do mais forte ao mais exploratório)
 
 1. **Geração e validação de itens/enunciados avaliativos com IA** — continuação direta do projeto da Juliana. O mais forte: já existe *prior art* (protótipo, método, resultados preliminares). Vira facilmente projeto de 24–36 meses com bolsa, validação com professores e estudo de impacto na avaliação em EaD.
-2. **Ecossistema de IA em instituição de EaD pública** — o tema do artigo em `_inbox` (Custom GPTs + Manual de IA + formação). O artigo já admite que "a avaliação de impacto constitui o próximo ciclo" (EDR) — **o Universal financia exatamente esse próximo ciclo**. Encaixe quase perfeito.
+2. **Ecossistema de IA em instituição de EaD pública** — o tema do artigo em `_entrada` (Custom GPTs + Manual de IA + formação). O artigo já admite que "a avaliação de impacto constitui o próximo ciclo" (EDR) — **o Universal financia exatamente esse próximo ciclo**. Encaixe quase perfeito.
 3. **IA + acessibilidade** (Libras automática, audiodescrição, legendagem) — cruza dois eixos da CGTE e tem apelo altíssimo no critério A.
 4. **IA para design educacional / produção de OERs em escala** — mais amplo, menos maduro.
 

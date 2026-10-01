@@ -4,11 +4,11 @@ Como uma demanda flui por este workspace.
 
 ## Fluxo da tarefa
 
-1. **Captura.** A demanda chega de fora (email, conversa, reunião da coordenação, notificação do board 47) e é registrada como texto em `entrada/`.
+1. **Captura.** A demanda chega de fora (email, conversa, reunião da coordenação, notificação do board 47) e é registrada como texto em `_entrada/`.
 2. **Triagem.** Aplica o 3-line plan (situação / especialista / por que) usando `contrato/regras.md` e, se a decisão for ambígua, `referencias/arvore-decisao-roteamento.md`.
 3. **Validação da chain.** Confirma em `../_configuracao/cadeias-fluxo.yaml` que o `papel_destino` escolhido é um próximo-passo válido a partir de `00-orquestrador`.
 4. **Empacotamento.** Escreve a entrega seguindo `contrato/entrega.md` + o envelope canônico em `../_configuracao/ESQUEMA_ENTREGA.md`. Salva em `../casos/CASO-YYYY-NNNN-shortslug/entregas/EN-001.yaml`.
-5. **Saída.** A demanda sai de `entrada/` (arquivada ou apagada) e o case fica visível para o destinatário em `../casos/`.
+5. **Saída.** A demanda sai de `_entrada/` (arquivada ou apagada) e o case fica visível para o destinatário em `../casos/`.
 
 ## Ordem de leitura ao assumir o papel
 

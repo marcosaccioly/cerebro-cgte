@@ -23,7 +23,7 @@ cerebro-cgte/
 ├── CONTEXTO.md            (roteamento de workflow entre workspaces)
 ├── README.md
 │
-├── 00-orquestrador/       ATIVO V0  -- roteia demanda nova
+├── 00-orquestrador/       ATIVO V0  -- roteia demanda nova (inbox: `_entrada/`)
 ├── 01-gestor/             ATIVO V0  -- HITL, decide cards no Kanboard
 ├── 02-design-educacional/ rascunho  -- MOOC, Conteúdo Educacional, Formação, Co-criação pedagógica
 ├── 03-audiovisual/        esqueleto -- Produção Audiovisual, Evento
@@ -32,6 +32,8 @@ cerebro-cgte/
 ├── 06-tecnologia/         esqueleto -- Interface Digital, IA
 ├── 07-institucional/      esqueleto -- Gestão / PGD, Comissão
 ├── 08-ciencia/            esqueleto -- Produção Científica
+│
+├── comunicacao-cefor/     ÁREA SEPARADA (não é CGTE) -- caixa cso.cefor, Informe Cefor, board da comunicação
 │
 ├── _configuracao/         (schemas, regras de negócio, padrões, voz)
 ├── _pontes/               (bridges Kanboard / GitLab)
@@ -63,8 +65,10 @@ Se você está carregando L3 + L4 de vários cases ao mesmo tempo, provavelmente
 | Distribuir uma tarefa para a equipe | `01-gestor/CLAUDE.md` | `01-gestor/contrato/identidade.md` + `regras.md`, depois `01-gestor/referencias/projetos-cgte.yaml` e `_pontes/kanboard/README.md` |
 | Criar ou atualizar card no Kanboard | `_pontes/kanboard/README.md` | `_pontes/kanboard/operacoes/<operação>.ts`, `_pontes/kanboard/projetos-cgte.yaml` |
 | Sincronizar com git | `_pontes/gitlab/sincronizar.md` | `_pontes/gitlab/sincronizar.ts` |
+| Ler a caixa cso.cefor / salvar rascunho de resposta | `_pontes/email/README.md` | `_pontes/email/facade.ts` |
 | Escrever um entrega | `_configuracao/ESQUEMA_ENTREGA.md` (sempre antes de escrever) | O `<workspace>/contrato/entrega.md` do especialista atual |
 | Ativar um especialista esqueleto (V1+) | `<workspace>/configuracao/questionario.md` | Os 4 arquivos em `<workspace>/contrato/` |
+| Processar a caixa cso.cefor / pauta do Informe Cefor | `comunicacao-cefor/CLAUDE.md` | `comunicacao-cefor/CONTEXTO.md` + a etapa atual em `comunicacao-cefor/etapas/` |
 
 ## Regras de carregamento
 
@@ -74,6 +78,17 @@ Se você está carregando L3 + L4 de vários cases ao mesmo tempo, provavelmente
 4. **Carregue L3 seletivamente.** Só o arquivo de regra, voz ou referência relevante para a tarefa, não todos.
 5. **Carregue L4 para o case atual.** Quando terminar com um case, solte-o antes de pegar o próximo.
 6. **Sempre carregue `_configuracao/ESQUEMA_ENTREGA.md` antes de escrever um entrega.** Schema é barato; escrever sem ele é como o envelope desliza com o tempo.
+
+## Convenção: pastas de entrada = `_entrada/`
+
+Toda pasta cujo papel é ser **inbox** (onde material bruto pousa antes de ser triado, roteado ou virar entrega) chama-se **`_entrada/`**. O prefixo `_` mantém a pasta no topo e a distingue de pastas de trabalho.
+
+- Nunca use `entrada/`, `_inbox/`, `inbox/` ou variantes. Ao criar um workspace ou área nova que receba material bruto, crie `_entrada/` (com `.gitkeep`).
+- Uma por escopo: `<workspace>/_entrada/` (hoje: `00-orquestrador/`, `08-ciencia/`, `comunicacao-cefor/`). Material de um workspace não pousa na entrada de outro. Se não houver dono claro, vai para `00-orquestrador/_entrada/`.
+- A pasta é de passagem: depois de triado, o item sai (move para o `caso`, arquiva ou apaga). Não vira depósito permanente.
+- Subpastas auxiliares dentro de `_entrada/` (ex.: `_enviadas/`) também levam `_`.
+- `comunicacao-cefor/_entrada/` fica fora do git (dado pessoal); ver `.gitignore`.
+- Não confundir com os campos de contrato/entrega YAML nem com "Caixa de Entrada" do e-mail.
 
 ## O que NÃO fazer
 
@@ -94,6 +109,7 @@ Se você está carregando L3 + L4 de vários cases ao mesmo tempo, provavelmente
 | `ativar-especialista <NN-nome>` | V1.X: onboarding de ~3h via `<workspace>/configuracao/questionario.md` |
 | `sync` | Dispara `_pontes/gitlab/sincronizar.ts` com HITL em merges sensíveis |
 | `friday-review` | Abre `operacoes/revisao-sexta.md` da semana |
+| `/processar-noticias [janela]` | Entra em `comunicacao-cefor/`: varre a caixa cso.cefor, faz a triagem e encaminha com HITL item a item |
 
 Cada workspace também tem seus próprios triggers (ver `<workspace>/CLAUDE.md`).
 

@@ -17,7 +17,7 @@ O bridge fica no meio: detecta arquivos sensiveis no diff, pede HITL, e so depoi
 
 Em `sincronizar.md` esta a tabela autoritativa. Resumo:
 
-- **Auto-merge / auto-push:** arquivos em `casos/`, `00-orquestrador/entrada/`, `01-gestor/saida/`, READMEs novos de esqueleto.
+- **Auto-merge / auto-push:** arquivos em `casos/`, `00-orquestrador/_entrada/`, `01-gestor/saida/`, READMEs novos de esqueleto.
 - **HITL obrigatório:** mudanças em `_configuracao/voz/*`, `_configuracao/regras-negocio.md`, `_configuracao/ESQUEMA_ENTREGA.md`, `_configuracao/padroes-qualidade.md`, `.env*` (que nem deveria entrar -- coberto por .gitignore).
 - **Em conflito de merge:** sempre HITL, independente do arquivo. Conflito significa duas pessoas / duas sessões mexeram no mesmo lugar; precisa de decisão humana.
 

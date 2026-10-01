@@ -31,5 +31,5 @@ Roteamento segue `../_configuracao/cadeias-fluxo.yaml`. Envelopes seguem `../_co
 - `contrato/entrega.md` -- o que recebo e o que produzo
 - `configuracao/questionario.md` -- onboarding deste papel
 - `referencias/arvore-decisao-roteamento.md` -- árvore de decisão por tipo de demanda
-- `entrada/` -- onde demandas externas pousam antes de virarem entrega
+- `_entrada/` -- onde demandas externas pousam antes de virarem entrega
 - `etapas/` -- (vazio em V0) stages internas em V1+

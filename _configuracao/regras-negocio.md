@@ -11,12 +11,13 @@ Coordenadoria do Cefor / Ifes (CGTE). Setor educacional institucional. 10 servid
 - **O Kanboard institucional (board 47 -- "CGTE - Atividades") e a verdade oficial.** O workspace não cria checkpoint paralelo. Toda escrita gera card / movimentação / comentario no board real.
 - **Os gates do board são a verdade de aprovação.** Colunas "Início autorizado" e "Em aprovação" são gates institucionais. O workspace não duplica esses gates internamente -- usa os do board.
 - **Projetos secundarios existem mas não geram chain V0.** `58 CGTE - Projetos`, `60 CGTE - Audiovisual`, `73 CGTE - Informações fixas e recorrentes` existem; em V0, toda escrita comeca no projeto 47. Cards podem ser MOVIDOS para os secundarios depois (manualmente ou em chain V1+).
+- **Exceção: board da Comunicação do Cefor.** A comunicação é área separada da CGTE (`comunicacao-cefor/`). A triagem da caixa `cso.cefor@ifes.edu.br` escreve direto no board da comunicação (não no 47), com HITL do **operador de comunicação**. Quando a comunicação precisa de produção da CGTE, entra pelo `00-orquestrador` e segue a regra do projeto 47. O workspace da comunicação nunca escreve no board 47.
 
 ## HITL (Human in the Loop) -- não negociavel
 
 Toda escrita no Kanboard passa por HITL antes de chegar na API:
 
-1. O especialista (em V0, sempre o gestor) preenche um `kanboard_card_request` completo.
+1. O especialista (em V0, sempre o gestor; no board da comunicação, o operador de comunicação) preenche um `kanboard_card_request` completo.
 2. O bridge mostra o payload final na CLI: título, descrição, categoria, responsavel, prazo, coluna destino.
 3. O gestor confirma explicitamente (ou edita o payload, ou recusa).
 4. So depois o bridge chama a API JSON-RPC.
@@ -30,6 +31,7 @@ Os campos `hitl_aprovado_em` e `hitl_aprovado_por` do payload ficam no entrega Y
 - Não escreva vários cards em batch sem o gestor ver cada um.
 - Não mova cards entre colunas com base em sinais inferidos ("parece que terminou"). So move se houve confirmação explicita.
 - Não adicione comentarios automáticos. Cada comentario passa por HITL.
+- **Caixa da Comunicação Social (`cso.cefor`, via `_pontes/email/`):** a única escrita permitida é salvar rascunho de resposta na pasta Rascunhos, após HITL do operador. Nada é enviado, movido, marcado ou apagado pelo cérebro; o envio é sempre humano, pelo webmail.
 - A voz da CGTE (`_configuracao/voz/cgte.md`) e do Marquito (`marquito.md`) estão preenchidas em **v1** (2026-06-26) a partir de exemplos reais -- comunicação destravada. Toda comunicação gerada ainda passa por HITL; refinar a voz com mais exemplos ao longo do tempo.
 
 ## Sensibilidade de arquivos

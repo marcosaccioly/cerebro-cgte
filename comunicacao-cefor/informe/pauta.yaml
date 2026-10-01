@@ -1,0 +1,7 @@
+# pauta.yaml -- temas candidatos ao Informe Cefor
+#
+# Alimentado pela triagem da caixa cso.cefor (etapa 03, destino informe-pauta)
+# ou à mão. Formato de cada item em ../contrato/entrega.md ("Item de pauta do informe").
+# Status: candidato -> aprovado (entrou numa edição) -> publicado | descartado.
+
+itens: []

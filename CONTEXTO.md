@@ -18,6 +18,14 @@ Cada um dos 9 especialistas é um **workspace MWP próprio** com seu `CLAUDE.md`
 | `07-institucional/` | esqueleto | Cobre Gestão / PGD, Comissão, Colaboração Institucional | (V1.X) | (V1.X) |
 | `08-ciencia/` | esqueleto | Cobre Produção Científica | (V1.X) | (V1.X) |
 
+## Área separada: `comunicacao-cefor/`
+
+A Comunicação do Cefor não é especialista da CGTE. Fica no cérebro como **área separada**, com porta de entrada própria (caixa `cso.cefor@ifes.edu.br`), board próprio no Kanboard e operador HITL próprio.
+
+- **Trabalho da comunicação** (publicar, pauta do Informe Cefor, responder a caixa): não passa pelo `00-orquestrador`. Chains `triagem_caixa_noticias` e `pauta_informe_cefor`.
+- **Pedido de produção à CGTE** (arte, vídeo, Libras): entrega `comunicacao-cefor` → `00-orquestrador`, carga `demanda_comunicacao`. Daí segue o fluxo normal da CGTE. Chain `pedido_producao_comunicacao`.
+- Comando de entrada: `/processar-noticias`. Detalhes em `comunicacao-cefor/CONTEXTO.md`.
+
 ## Como os entregas funcionam
 
 Todo entrega é um arquivo YAML que segue `_configuracao/ESQUEMA_ENTREGA.md`. O arquivo vive na pasta do case relevante:

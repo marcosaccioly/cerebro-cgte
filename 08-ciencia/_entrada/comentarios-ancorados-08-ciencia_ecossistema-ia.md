@@ -1,7 +1,7 @@
 # Comentários ancorados — 08-ciencia
 
 **Artigo:** "Ecossistema de Inteligência Artificial em uma Instituição de Educação a Distância: experiência da CGTE no Cefor/Ifes"
-**Fonte:** `08-ciencia/_inbox/splnproc1703_mac.docm.md`
+**Fonte:** `08-ciencia/_entrada/splnproc1703_mac.docm.md`
 **Como usar:** cada item traz o **trecho-âncora** (o que selecionar no Word/Docs), o **comentário** (pronto para colar como comment) e a **ação**. Prioridade: 🔴 bloqueio · 🟠 substantivo · 🟡 ajuste.
 
 ---

@@ -6,7 +6,7 @@ Três exemplos cobrindo as três chains V0: `anotar_tarefa_propria`, `distribuir
 
 ## Exemplo 1: Tarefa própria do gestor (`anotar_tarefa_propria`)
 
-**Demanda chegando (de `../entrada/`):**
+**Demanda chegando (de `../_entrada/`):**
 ```
 Marquito, anotação da reunião de coordenação de hoje (14/05):
 "Preciso preparar os slides do MOOC X (eixo Educação -> MOOC) até próxima sexta.
@@ -47,7 +47,7 @@ carga:
 
 ## Exemplo 2: Distribuir tarefa para a equipe (`distribuir_tarefa`)
 
-**Demanda chegando (de `../entrada/`):**
+**Demanda chegando (de `../_entrada/`):**
 ```
 Email da chefia (Reitoria), 14/05:
 "Precisamos de uma notícia institucional sobre o lançamento do Programa Y
@@ -90,7 +90,7 @@ carga:
 
 ## Exemplo 3: Demanda fora das categorias ativas (`demanda_extraordinaria`)
 
-**Demanda chegando (de `../entrada/`):**
+**Demanda chegando (de `../_entrada/`):**
 ```
 Mensagem de servidor da Pro-Reitoria de Pesquisa, 14/05:
 "Voces podem ajudar a montar um piloto de uso de IA para revisão de textos

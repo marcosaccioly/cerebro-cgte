@@ -120,3 +120,21 @@ projetos:
   - id: 73
     nome: "CGTE - Informações fixas e recorrentes"
     papel: secundario
+
+  # Board da Comunicação Social do Cefor -- área separada da CGTE (workspace comunicacao-cefor/).
+  # Recebe escrita direta da triagem da caixa cso.cefor, com HITL do operador de
+  # comunicação (Marquito / Elton). Enquanto as colunas estiverem sem id, propostas de
+  # card ficam em hitl: aguardando_board.
+  # URL: https://board.cefor.ifes.edu.br/?controller=BoardViewController&action=show&project_id=30
+  # Preencher colunas/categorias com: bun run _pontes/kanboard/varredura.ts --projeto 30
+  # (exige KANBOARD_API_TOKEN e o usuário api.cgte como membro do projeto 30).
+  - id: 30
+    nome: null                         # confirmar na varredura
+    papel: comunicacao
+    workspace: comunicacao-cefor
+    # Decisão de 2026-09-29 (Elton): cards criados antes de 2023 são ignorados em
+    # qualquer leitura do board 30 (deduplicação, histórico, painel, exportação).
+    ignorar_antes_de: 2023-01-01
+    coluna_entrada: null               # confirmar na varredura (plano sugeria "Solicitado")
+    colunas: []                        # IDs reais após varredura
+    categorias: []                     # IDs reais após varredura

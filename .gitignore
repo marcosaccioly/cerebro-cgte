@@ -2,6 +2,13 @@
 .env.*
 !.env.example
 
+# comunicacao-cefor: e-mails capturados (corpo completo, dados pessoais) e
+# payloads transitórios do bridge ficam só na máquina do operador.
+comunicacao-cefor/_entrada/*
+!comunicacao-cefor/_entrada/.gitkeep
+comunicacao-cefor/saida/*
+!comunicacao-cefor/saida/.gitkeep
+
 node_modules/
 bun.lockb
 

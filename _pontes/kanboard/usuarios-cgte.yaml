@@ -38,7 +38,7 @@ usuarios:
 
   # ============================================================
   # AUDIOVISUAL (03-audiovisual)
-  # Nota: area usa pouco / quase nada o Kanboard hoje -- ver _inbox de melhoria.
+  # Nota: area usa pouco / quase nada o Kanboard hoje -- ver _entrada de melhoria.
   # ============================================================
   - kanboard_user_id: 16
     username: "tiago"

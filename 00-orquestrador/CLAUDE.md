@@ -17,7 +17,7 @@ Workspace MWP do especialista orquestrador do cerebro-cgte. Ponto de entrada do 
 ├── configuracao/
 │   └── questionario.md  (onboarding deste papel)
 ├── etapas/            (vazio em V0 -- stages desenhadas em V1+)
-├── entrada/           (demandas capturadas ainda não roteadas)
+├── _entrada/          (demandas capturadas ainda não roteadas)
 └── referencias/
     └── arvore-decisao-roteamento.md
 ```
@@ -27,7 +27,7 @@ Workspace MWP do especialista orquestrador do cerebro-cgte. Ponto de entrada do 
 | Comando | Ação |
 |---------|------|
 | `setup` | Roda o questionário em `configuracao/questionario.md` |
-| `status` | Mostra estado dos contratos e demandas em `entrada/` |
+| `status` | Mostra estado dos contratos e demandas em `_entrada/` |
 | `nova-demanda` | Captura uma demanda nova e produz a entrega de roteamento |
 
 ## Routing
