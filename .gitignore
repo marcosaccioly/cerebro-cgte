@@ -8,8 +8,6 @@ comunicacao-cefor/_entrada/*
 !comunicacao-cefor/_entrada/.gitkeep
 comunicacao-cefor/saida/*
 !comunicacao-cefor/saida/.gitkeep
-# pedidos de divulgação: artes e texto do e-mail colado (info.txt) ficam locais.
-comunicacao-cefor/divulgacao/pedidos/*/anexos/
 
 node_modules/
 bun.lockb
