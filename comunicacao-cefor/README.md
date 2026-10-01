@@ -13,6 +13,16 @@ No Claude Code, dentro do `cerebro-cgte`:
 
 O agente lê a caixa (`_pontes/email/`, via EWS do Exchange do Ifes), faz a triagem, mostra uma tabela com a decisão de cada conversa e pede aprovação **item a item**. Aprovados: item na pauta do informe, card no board 30, pedido à CGTE e rascunho de resposta salvo na pasta **Rascunhos** do webmail -- você revisa e envia por lá.
 
+Para publicar um pedido no site (banner) e/ou no Instagram:
+
+```
+/divulgar                    # processa a fila de pedidos em _entrada/*/
+/divulgar edital-90          # só aquela subpasta (ou o assunto de um e-mail)
+/publicar-banner edital-90   # só o banner do site
+```
+
+Como deixar um pedido na fila: `_entrada/LEIA-ME.md`. Registros em `divulgacao/pedidos/`. Usa o Claude in Chrome com as sessões já logadas (ver `referencias/sistemas.md`).
+
 ## Pré-requisitos
 
 - `.env` na raiz com `CSO_EWS_URL`, `CSO_EMAIL`, `CSO_DOMINIO`, `CSO_USUARIO`, `CSO_SENHA` (ver `.env.example`).

@@ -47,6 +47,10 @@ Nem toda informação vira card. Vira card quando existe **trabalho com dono e e
 
 Cada etapa tem seu `CONTEXTO.md` com entradas, processo e saída.
 
+## Depois da triagem: divulgação (`/divulgar`)
+
+O fluxo acima decide e registra; quem **publica de fato** no site (banner) e no Instagram é o fluxo de divulgação: `_entrada/<pasta>/` (artes + `info.txt`) → `divulgacao/00-plano/` (plano, 1 aprovação) → `divulgacao/01-banner-site/` e/ou `divulgacao/02-instagram-feed/` (confirmação antes de publicar) → registro em `divulgacao/pedidos/AAAA-MM-DD_slug/`. Cada pasta tem seu `CONTEXTO.md`; o mapa está em `CLAUDE.md`, seção "Dois fluxos".
+
 ## Estado e deduplicação
 
 O registro em `triagem/` é o estado do sistema. Um e-mail já foi processado se o `mensagem_id` dele aparece em algum `triagem/*.yaml` (o script de captura já pula esses). Se a conversa ganhou mensagem nova (resposta, complemento), ela volta como item novo com `atualiza: <id do item anterior>`.

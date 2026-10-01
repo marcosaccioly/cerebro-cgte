@@ -25,6 +25,7 @@ A Comunicação do Cefor não é especialista da CGTE. Fica no cérebro como **�
 - **Trabalho da comunicação** (publicar, pauta do Informe Cefor, responder a caixa): não passa pelo `00-orquestrador`. Chains `triagem_caixa_noticias` e `pauta_informe_cefor`.
 - **Pedido de produção à CGTE** (arte, vídeo, Libras): entrega `comunicacao-cefor` → `00-orquestrador`, carga `demanda_comunicacao`. Daí segue o fluxo normal da CGTE. Chain `pedido_producao_comunicacao`.
 - Comando de entrada: `/processar-noticias`. Detalhes em `comunicacao-cefor/CONTEXTO.md`.
+- Publicação no site (banner) e no Instagram: `/divulgar` e `/publicar-banner`. Detalhes em `comunicacao-cefor/CLAUDE.md`, seção "Dois fluxos".
 
 ## Como os entregas funcionam
 

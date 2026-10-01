@@ -69,6 +69,7 @@ Se você está carregando L3 + L4 de vários cases ao mesmo tempo, provavelmente
 | Escrever um entrega | `_configuracao/ESQUEMA_ENTREGA.md` (sempre antes de escrever) | O `<workspace>/contrato/entrega.md` do especialista atual |
 | Ativar um especialista esqueleto (V1+) | `<workspace>/configuracao/questionario.md` | Os 4 arquivos em `<workspace>/contrato/` |
 | Processar a caixa cso.cefor / pauta do Informe Cefor | `comunicacao-cefor/CLAUDE.md` | `comunicacao-cefor/CONTEXTO.md` + a etapa atual em `comunicacao-cefor/etapas/` |
+| Divulgar um pedido no site (banner) / Instagram do Cefor | `comunicacao-cefor/CLAUDE.md` | `comunicacao-cefor/divulgacao/00-plano/CONTEXTO.md`, depois o `CONTEXTO.md` do canal aprovado no plano |
 
 ## Regras de carregamento
 
@@ -87,7 +88,7 @@ Toda pasta cujo papel é ser **inbox** (onde material bruto pousa antes de ser t
 - Uma por escopo: `<workspace>/_entrada/` (hoje: `00-orquestrador/`, `08-ciencia/`, `comunicacao-cefor/`). Material de um workspace não pousa na entrada de outro. Se não houver dono claro, vai para `00-orquestrador/_entrada/`.
 - A pasta é de passagem: depois de triado, o item sai (move para o `caso`, arquiva ou apaga). Não vira depósito permanente.
 - Subpastas auxiliares dentro de `_entrada/` (ex.: `_enviadas/`) também levam `_`.
-- `comunicacao-cefor/_entrada/` fica fora do git (dado pessoal); ver `.gitignore`.
+- `comunicacao-cefor/_entrada/` fica fora do git (dado pessoal); ver `.gitignore`. Ela recebe e-mails capturados (`.md` soltos) e a fila de pedidos de divulgação (uma subpasta por pedido, sem `_` no início).
 - Não confundir com os campos de contrato/entrega YAML nem com "Caixa de Entrada" do e-mail.
 
 ## O que NÃO fazer
@@ -110,6 +111,8 @@ Toda pasta cujo papel é ser **inbox** (onde material bruto pousa antes de ser t
 | `sync` | Dispara `_pontes/gitlab/sincronizar.ts` com HITL em merges sensíveis |
 | `friday-review` | Abre `operacoes/revisao-sexta.md` da semana |
 | `/processar-noticias [janela]` | Entra em `comunicacao-cefor/`: varre a caixa cso.cefor, faz a triagem e encaminha com HITL item a item |
+| `/divulgar [pasta ou assunto]` | Entra em `comunicacao-cefor/`: publica um pedido no banner do site e/ou no Instagram, com aprovação do plano e confirmação antes de publicar |
+| `/publicar-banner [pasta ou assunto]` | Igual ao `/divulgar`, só o banner do site |
 
 Cada workspace também tem seus próprios triggers (ver `<workspace>/CLAUDE.md`).
 

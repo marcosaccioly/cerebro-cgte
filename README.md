@@ -91,7 +91,7 @@ cerebro-cgte/
 |-- 06-tecnologia/                  (esqueleto V0)
 |-- 07-institucional/               (esqueleto V0)
 |-- 08-ciencia/                     (esqueleto V0)
-|-- comunicacao-cefor/              (área separada, não é CGTE -- caixa cso.cefor, Informe Cefor; /processar-noticias)
+|-- comunicacao-cefor/              (área separada, não é CGTE -- caixa cso.cefor, Informe Cefor; /processar-noticias, /divulgar)
 |-- _pontes/                       (infra, não especialista)
 |   |-- kanboard/
 |   `-- gitlab/
